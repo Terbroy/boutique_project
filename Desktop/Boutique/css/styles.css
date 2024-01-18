@@ -1,0 +1,17 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    --green : #43766C;
+    --white : #FFF;
+   
+    
+
+}
+
+.form-one, .form-two {
+    width: 400px;
+    border-width: 2px;
+    border-style: solid;
+
+}
