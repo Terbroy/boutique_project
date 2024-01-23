@@ -4,25 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boutique de las flores</title>
+    <link rel="shortcut icon" href="./src/images/nav-logo.svg" type="image/x-icon">
+    <link rel="stylesheet" href="./src/styles/style.css">
 </head>
 <body>
-   <header>
+    <header>
     <nav class="nav">
         <div class="nav__logo">
-            <img src="" alt="" class="logo__icon">
+            <img src="./src/images/nav-logo.svg" alt="" class="logo__icon">
             <div class="logo__info">
+                <hr>
                 <p class="logo__text">La Boutique de las Flores</p>
+                <hr>
             </div>
         </div>
         <ul class="nav__list">
             <li class="list__info">¿Quienes Somos?</li>
-            <li class="list__info">
+            <li class="list__info list__info--catalog">
                 <p class="info__catalog">Catalogo</p>
-                <i class="catalog__icon"><</i>
+                <img src="./src/images/arrow-down.svg" alt="" class="catalog__icon">
             </li>
             <li class="list__info">Contacto</li>
-            <li class="list__info"><i class="info__user-icon"></i></li>
-            <li class="list__info"><i class="info__car-icon"></i></li>
+            <li class="list__info">
+                <img src="./src/images/user.svg" alt="" class="info__icon">
+            </li>
+            <li class="list__info">
+                <img src="./src/images/cart.svg" alt="" class="info__icon">
+            </li>
         </ul>
     </nav>
     <section class="home">
