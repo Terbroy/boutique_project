@@ -1,9 +1,19 @@
-@import url("nav.css");
+@import url("./componentes/nav.css");
 @import url('https://fonts.googleapis.com/css2?family=Bona+Nova:ital,wght@0,400;0,700;1,400&display=swap');
+@import url("./pages/home.css");
 
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: 'Bona Nova', serif;
+}
+
+:root{
+    --primary-color:#43766C;
+    --background-color: #F5E9DA;
+    --light-green: #82B59D;
+    --soft-green:#BCCFBC;
+    --color-gold: #B19470;
+    --color-brown: 76453B
 }
