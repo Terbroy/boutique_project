@@ -16,13 +16,14 @@
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
+    <link rel="shortcut icon" href="./src/images/nav-logo.svg" type="image/x-icon">
     <title>Contactanos</title>
   </head>
   <body>
     <header>
       <nav class="nav">
         <div class="nav__logo">
-          <img src="/src/images/nav-logo.svg" alt="" class="logo__icon" />
+          <a href="/index.html"><img src="/src/images/nav-logo.svg" alt="" class="logo__icon" /></a>
           <div class="logo__info">
             <hr />
             <p class="logo__text">La Boutique de las Flores</p>
@@ -30,24 +31,25 @@
           </div>
         </div>
         <ul class="nav__list">
-          <li class="list__info">¿Quienes Somos?</li>
+          <a href="/pages/about.html"><li class="list__info">¿Quienes Somos?</li></a>
           <li class="list__info list__info--catalog">
             <p class="info__catalog">Catalogo</p>
             <img src="/src/images/arrow-down.svg" alt="" class="catalog__icon" />
           </li>
-          <li class="list__info">Contacto</li>
+          <a href="#"><li class="list__info">Contacto</li></a>
           <li class="list__info">
-            <img src="/src/images/user.svg" alt="" class="info__icon" />
+            <a href="/pages/login.html"><img src="/src/images/user.svg" alt="" class="info__icon" /></a>
           </li>
           <li class="list__info">
             <img src="/src/images/cart.svg" alt="" class="info__icon" />
           </li>
         </ul>
       </nav>
-      <h1 class="separadorNav">CONTACTANOS</h1>
+      
     </header>
     <main>
-      <div class="Contactanos">
+      <div class="separadorNav Contáctanos">
+        <h1>CONTÁCTANOS</h1>
         <p>Estamos para ayudarte si tienes dudas o peticiones, llena el formulario y en breve nos pondremos en contacto contigo.</p>
       </div>
       <hr />
@@ -67,8 +69,8 @@
             <div class="invalid-feedback">Por favor ingrese un apellido.</div>
           </div>
           <div class="mb-3 form-input">
-            <label for="email">Email</label><br>
-            <input type="email" id="email" placeholder="Ingrese su email" required />
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Ingrese su correo electronico" required />
             <div class="valid-feedback">¡Correcto!</div>
             <div class="invalid-feedback">Por favor ingrese un email valido.</div>
           </div>
@@ -78,10 +80,12 @@
             <div class="valid-feedback">¡Correcto!</div>
             <div class="invalid-feedback">Por favor ingrese un telefono, solo numeros.</div>
           </div>
-          <div class="mb-3">
+          <div class="mb-3 form-input2">
           <textarea name="mensaje" id="mensaje" rows="5" placeholder="Ingrese un mensaje"></textarea>
           </div>
-          <button type="submit" class="btnSubmit">Submit</button>
+          <div class="conteiner-btn">
+          <button type="submit">Enviar</button>
+          </div>
         </form>
       </div>
     </main>
