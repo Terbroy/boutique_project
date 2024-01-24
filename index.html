@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="./src/styles/style.css">
 </head>
 <body>
-    <header>
+    <header class="header">
+    <div class="header__opacity"></div>
     <nav class="nav">
         <div class="nav__logo">
             <img src="./src/images/nav-logo.svg" alt="" class="logo__icon">
@@ -22,6 +23,13 @@
             <li class="list__info">¿Quienes Somos?</li>
             <li class="list__info list__info--catalog">
                 <p class="info__catalog">Catalogo</p>
+                <div class="info__categories">
+                    <ul class="categories__list">
+                        <li class="list__info">Flores secas</li>
+                        <li class="list__info">Bouquets</li>
+                        <li class="list__info">Centros</li>
+                    </ul>
+                </div>
                 <img src="./src/images/arrow-down.svg" alt="" class="catalog__icon">
             </li>
             <li class="list__info">Contacto</li>
@@ -36,18 +44,18 @@
     <section class="home">
         <h1 class="home__title">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi, blanditiis.</h1>
         <button class="home__see-more">Ver más</button>
-    </section>
+    </section> 
 </header>
-<main>
+<main class="main">
     <section class="featured">
-        <h2 class="section__title">DESTACADAS</h2>
+        <h2 class="section__title section__title--vertical">DESTACADAS</h2>
         <article class="featured__collage">
-            <img src="" alt="" class="collage__item">
-            <img src="" alt="" class="collage__item">
-            <img src="" alt="" class="collage__item">
-            <img src="" alt="" class="collage__item">
-            <img src="" alt="" class="collage__item">
-            <img src="" alt="" class="collage__item">
+            <img class="collage__image collage__image-1" src="./src/images/img-here.png" alt="" class="collage__item">
+            <img class="collage__image collage__image-2" src="./src/images/img-here-1.png" alt="" class="collage__item">
+            <img class="collage__image collage__image-3" src="./src/images/img-here-2.png" alt="" class="collage__item">
+            <img class="collage__image collage__image-4" src="./src/images/img-here-3.png" alt="" class="collage__item">
+            <img class="collage__image collage__image-5" src="./src/images/img-here-4.png" alt="" class="collage__item">
+            <img class="collage__image collage__image-6" src="./src/images/img-here-5.png" alt="" class="collage__item">
         </article>
     </section>
     <section class="about">
@@ -93,25 +101,27 @@
         </article>
     </section>
 </main>
-<footer>
-    <ul class="footer__list">
-        <li class="list__info">Inicio</li>
-        <li class="list__info">Sobre Nosotros</li>
-        <li class="list__info">Catalogo</li>
-        <li class="list__info">Categorias</li>
-    </ul>
-    <ul class="footer__list">
-        <li class="list__info">Contacto</li>
-        <li class="list__info">Inicio de Sesion</li>
-        <li class="list__info">Registro</li>
-        <li class="list__info">Mas Compras</li>
-    </ul>
-    <ul class="footer__list">
-        <li class="list__info">+1234567890</li>
-        <li class="list__info">boutiuqe@gmail.com</li>
-        <li class="list__info">Colombia Bogota DC</li>
-        <li class="list__info">10:00 - 19:00</li>
-    </ul>
+<footer class="footer">
+    <section class="footer__info">
+        <ul class="footer__list">
+            <li class="list__info">Inicio</li>
+            <li class="list__info">Sobre Nosotros</li>
+            <li class="list__info">Catalogo</li>
+            <li class="list__info">Categorias</li>
+        </ul>
+        <ul class="footer__list">
+            <li class="list__info">Contacto</li>
+            <li class="list__info">Inicio de Sesion</li>
+            <li class="list__info">Registro</li>
+            <li class="list__info">Mas Compras</li>
+        </ul>
+        <ul class="footer__list">
+            <li class="list__info">+1234567890</li>
+            <li class="list__info">boutiuqe@gmail.com</li>
+            <li class="list__info">Colombia Bogota DC</li>
+            <li class="list__info">10:00 - 19:00</li>
+        </ul>
+    </section>
     <span class="footer__copyright">Binary Beasts ©Copyright 2024. All rights reserved. </span>
 </footer>
 </body>
