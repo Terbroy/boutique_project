@@ -1,4 +1,43 @@
-
 * {
-    background-color: var(--background-color);
+    --primary-color:#43766C;
+    --background-color: #F5E9DA;
+    --light-green: #82B59D;
+    --soft-green:#BCCFBC;
+    --color-gold: #B19470;
+    --color-brown: #76453B;
+}
+
+.separadorNav{
+    padding-top: 8rem;
+}
+
+.conteiner-form{
+    display: flex;
+    width: 70vw;
+    justify-content: center;
+    align-items: center;
+    margin: 0 15vw;
+    background: var(--color-gold);
+    border-radius: 20px;
+}
+.img-formulario{
+    width: 40%;
+}
+form{
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.form-input{
+    width: 45%;
+    border-style: solid;
+    border-radius: 10px;
+    border-width: 1px;
+    padding: 3px;
+    margin-left: 2.5%;
+}
+
+.form-input input{
+    background-color: var(--color-gold);
+    border-style: none;
 }
