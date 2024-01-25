@@ -1,4 +1,4 @@
-.nav{
+.header__nav, .nav{
     width: 100vw;
     position: fixed;
     display: flex;
