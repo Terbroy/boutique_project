@@ -18,12 +18,15 @@
 }
 .footer__list a{
     text-decoration: none;
+    color:#fff
 }
 .footer__list a:hover{
     text-decoration: underline;
+    color: #fff;
 }
 .footer__list a:visited {
     text-decoration: none;
+    color: #fff;
   }
 
 .footer__copyright{
