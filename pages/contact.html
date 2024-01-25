@@ -1,64 +1,117 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/styles/componentes/nav.css" />
+    <link rel="stylesheet" href="/src/styles/componentes/footer.css">
+    <link rel="stylesheet" href="/src/styles/pages/contact.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="shortcut icon" href="./src/images/nav-logo.svg" type="image/x-icon">
     <title>Contactanos</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <nav class="nav">
-            <div class="nav__logo">
-                <img src="" alt="" class="logo__icon">
-                <div class="logo__info">
-                    <p class="logo__text">La Boutique de las Flores</p>
-                </div>
-            </div>
-            <ul class="nav__list">
-                <li class="list__info">¿Quienes Somos?</li>
-                <li class="list__info">
-                    <p class="info__catalog">Catalogo</p>
-                    <i class="catalog__icon"></i>
-                </li>
-                <li class="list__info">Contacto</li>
-                <li class="list__info"><i class="info__user-icon"></i></li>
-                <li class="list__info"><i class="info__car-icon"></i></li>
-            </ul>
-        </nav>
-        <h1>CONTACTANOS</h1>
+      <nav class="nav">
+        <div class="nav__logo">
+          <a href="/index.html"><img src="/src/images/nav-logo.svg" alt="" class="logo__icon" /></a>
+          <div class="logo__info">
+            <hr />
+            <p class="logo__text">La Boutique de las Flores</p>
+            <hr />
+          </div>
+        </div>
+        <ul class="nav__list">
+          <a href="/pages/about.html"><li class="list__info">¿Quienes Somos?</li></a>
+          <li class="list__info list__info--catalog">
+            <p class="info__catalog">Catalogo</p>
+            <img src="/src/images/arrow-down.svg" alt="" class="catalog__icon" />
+          </li>
+          <a href="#"><li class="list__info">Contacto</li></a>
+          <li class="list__info">
+            <a href="/pages/login.html"><img src="/src/images/user.svg" alt="" class="info__icon" /></a>
+          </li>
+          <li class="list__info">
+            <img src="/src/images/cart.svg" alt="" class="info__icon" />
+          </li>
+        </ul>
+      </nav>
+      
     </header>
     <main>
-    <div class="Contactanos">
-        <p>¡Haz que cada día sea especial con Flores! Contáctanos hoy para hacer tu pedido y déjanos ser parte de tus momentos más significativos. Puedes comunicarte con nosotros a través de nuestro formulario de contacto en línea, por teléfono o correo electrónico. Estamos ansiosos por ayudarte a elegir el arreglo perfecto que hará florecer emociones y alegrías.</p>
-    </div>
-
-    <section>
-        <article>
-
-        </article>
-    </section>
-    <hr>
+      <div class="separadorNav Contáctanos">
+        <h1>CONTÁCTANOS</h1>
+        <p>Estamos para ayudarte si tienes dudas o peticiones, llena el formulario y en breve nos pondremos en contacto contigo.</p>
+      </div>
+      <hr />
+      <div class="conteiner-form">
+        <img class="img-formulario" src="/src/images/contact.png" alt="flores de colores en un ramo" />
+        <form class="needs-validation" novalidate>
+          <div class="mb-3 form-input">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" placeholder="Ingrese su nombre" required />
+            <div class="valid-feedback">¡Correcto!</div>
+            <div class="invalid-feedback">Por favor ingrese un nombre.</div>
+          </div>
+          <div class="mb-3 form-input">
+            <label for="apellido">Apellido</label>
+            <input type="text" id="apellido" placeholder="Ingrese su apellido" required />
+            <div class="valid-feedback">¡Correcto!</div>
+            <div class="invalid-feedback">Por favor ingrese un apellido.</div>
+          </div>
+          <div class="mb-3 form-input">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Ingrese su correo electrónico" required />
+            <div class="valid-feedback">¡Correcto!</div>
+            <div class="invalid-feedback">Por favor ingrese un email valido.</div>
+          </div>
+          <div class="mb-3 form-input">
+            <label for="tel">Teléfono</label>
+            <input type="tel" id="tel" placeholder="Ingrese su teléfono" required />
+            <div class="valid-feedback">¡Correcto!</div>
+            <div class="invalid-feedback">Por favor ingrese un telefono, solo numeros.</div>
+          </div>
+          <div class="mb-3 form-input2">
+          <textarea name="mensaje" id="mensaje" rows="5" placeholder="Ingrese un mensaje"></textarea>
+          </div>
+          <div class="conteiner-btn">
+          <button type="submit">Enviar</button>
+          </div>
+        </form>
+      </div>
     </main>
-    <footer>
-        <ul class="footer__list">
-            <li class="list__info">Inicio</li>
-            <li class="list__info">Sobre Nosotros</li>
-            <li class="list__info">Catalogo</li>
-            <li class="list__info">Categorias</li>
-        </ul>
-        <ul class="footer__list">
-            <li class="list__info">Contacto</li>
-            <li class="list__info">Inicio de Sesion</li>
-            <li class="list__info">Registro</li>
-            <li class="list__info">Mas Compras</li>
-        </ul>
-        <ul class="footer__list">
-            <li class="list__info">+1234567890</li>
-            <li class="list__info">boutiuqe@gmail.com</li>
-            <li class="list__info">Colombia Bogota DC</li>
-            <li class="list__info">10:00 - 19:00</li>
-        </ul>
-        <span class="footer__copyright">Binary Beasts ©Copyright 2024. All rights reserved. </span>
-    </footer>
-</body>
-</html>
+    <footer class="footer">
+      <section class="footer__info">
+          <ul class="footer__list">
+              <li class="list__info">Inicio</li>
+              <li class="list__info">Sobre Nosotros</li>
+              <li class="list__info">Catalogo</li>
+              <li class="list__info">Categorias</li>
+          </ul>
+          <ul class="footer__list">
+              <li class="list__info">Contacto</li>
+              <li class="list__info">Inicio de Sesion</li>
+              <li class="list__info">Registro</li>
+              <li class="list__info">Mas Compras</li>
+          </ul>
+          <ul class="footer__list">
+              <li class="list__info">+1234567890</li>
+              <li class="list__info">boutiuqe@gmail.com</li>
+              <li class="list__info">Colombia Bogota DC</li>
+              <li class="list__info">10:00 - 19:00</li>
+          </ul>
+      </section>
+      <span class="footer__copyright">Binary Beasts ©Copyright 2024. All rights reserved. </span>
+  </footer>
+  </body>
+  </html>
