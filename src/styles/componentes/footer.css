@@ -1,7 +1,7 @@
 .footer{
     background-color: var(--primary-color);
     color: #fff;
-    padding: 2rem;
+    padding: 2rem 3rem;
     margin-top: 2rem;
     font-family: 'Poppins', sans-serif;
 }
