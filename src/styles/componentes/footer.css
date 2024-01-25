@@ -16,6 +16,15 @@
     flex-direction: column;
     gap: 0.4rem;
 }
+.footer__list a{
+    text-decoration: none;
+}
+.footer__list a:hover{
+    text-decoration: underline;
+}
+.footer__list a:visited {
+    text-decoration: none;
+  }
 
 .footer__copyright{
     display: block;
