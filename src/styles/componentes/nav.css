@@ -12,6 +12,11 @@
     z-index: 100;
 }
 
+.ancor{
+    text-decoration: none;
+    color: #ffff;
+}
+
 .nav__logo{
     display: flex;
     align-items: center;
