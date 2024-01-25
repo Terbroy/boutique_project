@@ -1,16 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bona+Nova:ital,wght@0,400;0,700;1,400&display=swap');
 
-* {
-    --primary-color:#43766C;
-    --background-color: #F5E9DA;
-    --light-green: #82B59D;
-    --soft-green:#BCCFBC;
-    --color-gold: #B19470;
-    --color-brown: #76453B;
-    --text-brown: #482b25;
-    --soft-pink:#f5e9d9;
-
-}
 
 .separadorNav{
     padding-top: 8rem;
