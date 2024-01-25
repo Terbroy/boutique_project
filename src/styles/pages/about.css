@@ -1,0 +1,112 @@
+body{
+    font-family: 'Bona nova', serif;
+}
+.banner__filter{
+    filter: blur(3px);
+    /* background-color: black; */
+    z-index: 1;
+}
+.banner__img{
+    width: 100%;
+}
+.banner__title{
+    z-index: 99;
+    position: absolute;
+    margin-left: 50%;
+    margin-top: 15%;
+    font-size: 3rem;
+    color: white;
+    text-shadow: 3px 2px black;
+}
+.banner__text{
+    padding: 30px 180px; 
+    font-size: 1.8rem;
+    text-align: center;
+}
+.services{
+    padding: 60px 0 80px 0;
+}
+.services__title{
+    padding-left: 30px;
+    color: var(--primary-color);
+    font-size: 1.6rem;
+}
+.services__serv1{
+    display: flex;
+    align-items: center;
+}
+.serv1__textbox{
+    background-color: var(--light-green);
+    margin-right: 100px;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px;
+    color: white;
+}
+.serv1__title{
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+.serv1__text{
+    font-size: 1.2rem;
+}
+.serv1__img{
+    border-radius: 50px; 
+    width: 400px;
+    margin-right: 50px;
+}
+.services__serv2{
+    display: flex;
+    align-items: center;
+}
+.serv2__textbox{
+    background-color: var(--soft-green);
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px;
+    color: white;
+}
+.serv2__title{
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+.serv2__text{
+    font-size: 1.2rem;
+}
+.serv2__img{
+    border-radius: 50px; 
+    width: 400px;
+    margin-left: 50px;
+}
+.services__serv3{
+    display: flex;
+    align-items: center;
+}
+.serv3__textbox{
+    background-color: var(--light-green);
+    margin-right: 100px;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px;
+    color: white;
+}
+.serv3__title{
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+.serv3__text{
+    font-size: 1.2rem;
+}
+.serv3__img{
+    border-radius: 50px; 
+    width: 400px;
+    margin-right: 50px;
+}
+
+
