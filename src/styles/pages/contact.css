@@ -1,4 +1,4 @@
-
+@import url("../style.css");
 
 .separadorNav{
     padding-top: 8rem;
@@ -57,7 +57,7 @@ form label{
     margin: 0 2.5%;
 }
 .form-input input{
-    background-color: var(--soft-pink);
+    background-color: var(--soft-green);
     border-style: none;
     border: none;
     color: var(--color-brown);
