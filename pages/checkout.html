@@ -9,15 +9,15 @@
 
 <body>
     <header>
-        <nav class="nav">
+        <nav class="nav nav--light">
             <div class="nav__logo">
                 <a href="../index.html" class="logo__icon">
                     <img src="../src/images/nav-logo.svg" alt="" class="logo__icon">
                 </a> 
                 <div class="logo__info">
-                    <hr>
+                    <hr class="line">
                     <p class="logo__text">La Boutique de las Flores</p>
-                    <hr>
+                    <hr class="line">
                 </div>
             </div>
             <ul class="nav__list">
@@ -31,14 +31,16 @@
                             <li class="list__info"><a href="" class="ancor">Centros</a></li>
                         </ul>
                     </div>
-                    <img src="../src/images/arrow-down.svg" alt="" class="catalog__icon">
+                    <img src="../src/images/arrow-down-brown.svg" alt="" class="catalog__icon">
                 </li>
                 <li class="list__info"> <a href="contact.html" class="ancor">Contacto</a></li>
                 <li class="list__info">
-                    <img src="../src/images/user.svg" alt="" class="info__icon">
+                    <a href="./login.html">
+                        <img src="../src/images/user-brown.svg" alt="" class="info__icon">
+                    </a>
                 </li>
                 <li class="list__info">
-                    <img src="../src/images/cart.svg" alt="" class="info__icon">
+                    <img src="../src/images/cart-brown.svg" alt="" class="info__icon">
                 </li>
             </ul>
         </nav>
@@ -109,25 +111,27 @@
             <p>Servicio al cliente</p>
         </div>
     </section>
-    <footer>
-        <ul class="footer__list">
-            <li class="list__info">Inicio</li>
-            <li class="list__info">Sobre Nosotros</li>
-            <li class="list__info">Catalogo</li>
-            <li class="list__info">Categorias</li>
-        </ul>
-        <ul class="footer__list">
-            <li class="list__info">Contacto</li>
-            <li class="list__info">Inicio de Sesion</li>
-            <li class="list__info">Registro</li>
-            <li class="list__info">Mas Compras</li>
-        </ul>
-        <ul class="footer__list">
-            <li class="list__info">+1234567890</li>
-            <li class="list__info">boutiuqe@gmail.com</li>
-            <li class="list__info">Colombia Bogota DC</li>
-            <li class="list__info">10:00 - 19:00</li>
-        </ul>
+    <footer class="footer">
+        <section class="footer__info">
+            <ul class="footer__list">
+                <a href="../index.html"><li class="list__info">Inicio</li></a>
+                <a href="about.html"><li class="list__info">Sobre Nosotros</li></a>
+                <a href="catalog.html"><li class="list__info">Catálogo</li></a>
+                <a href="categories.html"><li class="list__info">Categorías</li></a>
+            </ul>
+            <ul class="footer__list">
+                <a href="contact.html"><li class="list__info">Contacto</li></a>
+                <a href="login.html"><li class="list__info">Inicio de sesión</li></a>
+                <a href="login.html"><li class="list__info">Registro</li></a>
+                <a href=""><li class="list__info">Mis compras</li></a>
+            </ul>
+            <ul class="footer__list">
+                <li class="list__info">+1234567890</li>
+                <li class="list__info">boutique@gmail.com</li>
+                <li class="list__info">Colombia Bogotá DC</li>
+                <li class="list__info">10:00 - 19:00</li>
+            </ul>
+        </section>
         <span class="footer__copyright">Binary Beasts ©Copyright 2024. All rights reserved. </span>
     </footer>
 </body>
