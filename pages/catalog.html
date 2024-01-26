@@ -43,7 +43,24 @@
             </ul>
         </nav>
     </header>
+    <main class="main__catalog">
     <section class="catalog">
+        <div class="banner__functions">
+                <img src="../src/images/filterimg.svg" class="filter__img">
+                <p class="filter__text">Filtrar</p>
+                <img class="filter__line" src="../src/images/line.svg">
+                <p class="results__shown">Mostrando 12 de 12 resultados</p>
+                <form class="form__search" role="search">
+                    <input type="search" class="input__search" placeholder="Buscar..." aria-label="Buscar en el sitio">
+                    <button class="search__button"><img class="button__img" src="../src/images/lupa.svg"></button>
+                  </form>
+                <select class="order">
+                    <option value="empty">Ordenar por...</option>
+                    <option value="pricedesc">Precio de menor a mayor</option>
+                    <option value="priceasc">Precio de mayor a menor</option>
+                    <option value="type">Tipo de arreglo</option>
+                </select>
+        </div>
         <h1 class="catalog__title">CATÁLOGO</h1>
         <div class="catalog__products">
             <div class="product">
@@ -53,7 +70,6 @@
                     <p class="product__price">$100.000</p>
                 <div class="product__options">
                     <button class="options__cart">Añadir al carrito</button>
-                    <button class="options__like">Me gusta</button>
                     <button class="options__share">Compartir</button>
                 </div>
             </div>
@@ -64,7 +80,6 @@
                     <p class="product__price">$100.000</p>
                 <div class="product__options">
                     <button class="options__cart">Añadir al carrito</button>
-                    <button class="options__like">Me gusta</button>
                     <button class="options__share">Compartir</button>
                 </div>
             </div>
@@ -75,7 +90,6 @@
                     <p class="product__price">$63.000</p>
                 <div class="product__options">
                     <button class="options__cart">Añadir al carrito</button>
-                    <button class="options__like">Me gusta</button>
                     <button class="options__share">Compartir</button>
                     </div>
             </div>
@@ -86,7 +100,6 @@
                     <p class="product__price">$100.000</p>
                 <div class="product__options">
                     <button class="options__cart">Añadir al carrito</button>
-                    <button class="options__like">Me gusta</button>
                     <button class="options__share">Compartir</button>
                 </div>
             </div>
@@ -97,7 +110,6 @@
                     <p class="product__price">$100.000</p>
                 <div class="product__options">
                     <button class="options__cart">Añadir al carrito</button>
-                    <button class="options__like">Me gusta</button>
                     <button class="options__share">Compartir</button>
                 </div>
             </div>
@@ -108,7 +120,6 @@
                     <p class="product__price">$63.000</p>
                 <div class="product__options">
                     <button class="options__cart">Añadir al carrito</button>
-                    <button class="options__like">Me gusta</button>
                     <button class="options__share">Compartir</button>
                     </div>
             </div>   
@@ -120,6 +131,7 @@
             <button class="next" onclick="location.href='';">Siguiente</button>
         </div>   
     </section>
+    </main>
     <footer class="footer">
         <section class="footer__info">
             <ul class="footer__list">

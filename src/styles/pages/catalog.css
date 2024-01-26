@@ -1,0 +1,63 @@
+@import url("../style.css");
+
+.main__catalog{
+    font-family: 'Bona nova', serif;
+}
+.catalog{
+    padding-top: 7rem;
+}
+.banner__functions{
+    display: flex;
+    padding: 15px 50px;
+    align-items: center;
+    background-color: var(--primary-color);
+    height: 80px;
+    font-size: 1rem;
+    color: var(--soft-pink);
+    gap: 20px;
+    text-align: center;
+}
+.filter__text{
+    width: 100px;
+    align-items: center;
+    
+}
+.results__shown{
+    width: 250px;
+    align-items: center;
+}
+.filter__img{
+    width: 20px;
+}
+.filter__line{
+    height: 40px ;
+    align-items: center;
+}
+.form_search{
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+}
+.input__search{
+    padding: 10px;
+    border-radius: 6px;
+    border-color: var(--primary-color);
+    font-family: 'Bona nova', serif;
+    font-size: 0.8rem;
+}
+.search__button{
+    background-color: var(--soft-pink);
+    height: 5px;
+    display: flex;
+    justify-content: center;
+    vertical-align: middle;
+}
+.button__img{
+    color: var(--soft-pink);
+    width: 10px;
+}
+
+.order{
+    width: 200px;
+    align-items: center;
+}
