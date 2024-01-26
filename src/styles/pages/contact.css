@@ -86,10 +86,10 @@ textarea::placeholder{
     display: flex;
     justify-content: center;
 }
-button{
+/* button{
     padding: 10px 45px;
     border-radius: 20px!important;
     color: white;
     background-color: var(--primary-color);
     border: none;
-}
+} */

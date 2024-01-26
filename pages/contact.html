@@ -46,7 +46,43 @@
             </a>
             </li>
             <li class="list__info">
-                <img src="../src/images/cart-brown.svg" alt="" class="info__icon">
+              <img id="nav-cart" src="../src/images/cart-brown.svg" alt="" class="info__icon info__icon--cart">
+              <div id="cart" class="cart display--none">
+                <div class="cart__background"></div>
+                <div class="cart__card">
+                  <h3 class="cart__title">Shopping Cart</h3>
+                  <b class="cart__close" id="cart-close">x</b>
+                  <hr>
+                  <div class="container__items">
+                    <div class="cart__item">
+                      <img src="../src/images/item-card.jpg" alt="" class="item__image">
+                      <div class="item__info">
+                        <h4 class="item__title">Asgaard sofa</h4>
+                        <p class="item__price"><span>1</span> X <span>Rs. 250,000,00 </span></p>
+                      </div>
+                      <div class="item__delete-container"> <!-- Nuevo contenedor para el botón de eliminar -->
+                        <img src="../src/images/delete.svg" alt="" class="item__delete">
+                      </div>
+                    </div>
+                    <div class="cart__item">
+                      <img src="../src/images/item-card.jpg" alt="" class="item__image">
+                      <div class="item__info">
+                          <h4 class="item__title">Asgaard sofa</h4>
+                          <p class="item__price"><span>1</span> X <span>Rs. 250,000,00 </span></p>
+                      </div>
+                      <div class="item__delete-container"> <!-- Nuevo contenedor para el botón de eliminar -->
+                        <img src="../src/images/delete.svg" alt="" class="item__delete">
+                    </div>  
+                    </div>
+                  </div>
+                  <div class="cart__total">
+                    <p class="cart__subtotal">Subtotal</p>
+                    <b>Rs. 520,000.00</b>
+                  </div>
+                  <hr>
+                  <button class="cart__checkout">Checkout</button>
+                </div>
+              </div>
             </li>
         </ul>
     </nav>
@@ -121,6 +157,6 @@
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"
       ></script>
-      <script src="/js/contact.js"></script>
+      <script src="../src/js/cart.js"></script>
     </body>
     </html>
