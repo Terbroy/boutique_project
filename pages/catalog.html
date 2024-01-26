@@ -46,8 +46,14 @@
     <main class="main__catalog">
     <section class="catalog">
         <div class="banner__functions">
-                <img src="../src/images/filterimg.svg" class="filter__img">
-                <p class="filter__text">Filtrar</p>
+                 <li class="filter__text"> <img src="../src/images/filterimg.svg" class="filter__img"> Filtrar</li>
+                 <div class="filter__options">
+                    <ul class="filter__list">
+                        <li class="list__filter"> Flores secas</li>
+                        <li class="list__filter">Bouquets</li>
+                        <li class="list__filter">Centros</li>
+                    </ul>
+                </div> 
                 <img class="filter__line" src="../src/images/line.svg">
                 <p class="results__shown">Mostrando 12 de 12 resultados</p>
                 <form class="form__search" role="search">
@@ -56,9 +62,8 @@
                   </form>
                 <select class="order">
                     <option value="empty">Ordenar por...</option>
-                    <option value="pricedesc">Precio de menor a mayor</option>
-                    <option value="priceasc">Precio de mayor a menor</option>
-                    <option value="type">Tipo de arreglo</option>
+                    <option class="order_option" value="pricedesc">Precio de menor a mayor</option>
+                    <option class="order_option" value="priceasc">Precio de mayor a menor</option>
                 </select>
         </div>
         <h1 class="catalog__title">CATÁLOGO</h1>

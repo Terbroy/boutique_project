@@ -20,7 +20,19 @@
 .filter__text{
     width: 100px;
     align-items: center;
-    
+    display: flex;
+    gap: 5px;   
+    cursor: pointer;
+    list-style: none;
+}
+.filter__options{
+    display: none;
+}
+.filter__text:hover+.filter__options{
+    display: block;
+}
+.filter__list{
+    list-style: none;
 }
 .results__shown{
     width: 250px;
@@ -28,36 +40,45 @@
 }
 .filter__img{
     width: 20px;
+    justify-content: center;
+    vertical-align: middle;
 }
 .filter__line{
     height: 40px ;
     align-items: center;
 }
-.form_search{
-    padding: 20px;
+.form__search{
+    padding: 10px;
+    display: flex;
+    gap: 5px;
     align-items: center;
-    justify-content: center;
 }
 .input__search{
     padding: 10px;
-    border-radius: 6px;
+    border-radius: 15px;
     border-color: var(--primary-color);
     font-family: 'Bona nova', serif;
     font-size: 0.8rem;
 }
 .search__button{
     background-color: var(--soft-pink);
-    height: 5px;
+    padding: 6px;
+    height: 26px;
+    width: 26px;
     display: flex;
-    justify-content: center;
-    vertical-align: middle;
+    align-items: center;
 }
 .button__img{
-    color: var(--soft-pink);
-    width: 10px;
+    fill: var(--soft-pink);
+    max-width: 100%;
+    
 }
 
 .order{
     width: 200px;
-    align-items: center;
+    height:35px;
+    padding: 8px;
+    border-radius: 15px;
+    font-family: 'Bona nova', serif;
+    cursor: pointer;
 }
