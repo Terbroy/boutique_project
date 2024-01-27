@@ -86,7 +86,7 @@ textarea::placeholder{
     display: flex;
     justify-content: center;
 }
-button{
+.button__contact{
     padding: 10px 45px;
     border-radius: 20px!important;
     color: white;
