@@ -38,7 +38,6 @@
     left: -1rem;
     position: absolute;
     list-style: none;
-    
 }
 .filter__text:hover+.filter__options, .filter__options:hover {
     display: block;
@@ -105,13 +104,14 @@
     text-align: center;
     padding-top: 50px;
 }
+/* SECCION PRODUCTOS */
 .catalog__products{
     padding: 50px 100px;
     display: grid;
     grid-template-columns: auto auto auto auto;
     align-content: center;
-    row-gap: 30px;
-    column-gap: 50px;
+    row-gap: 50px;
+    column-gap: 60px;
 }
 .product{
     display: flex;
@@ -174,8 +174,6 @@
     gap: 6px;
     background-color: transparent;
 }
-
-
 .nextpage__buttons{
     display: flex;
     justify-content: center;
