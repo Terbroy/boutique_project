@@ -15,75 +15,78 @@
 
 <body>
   <header>
-    <nav class="nav nav--light">
+    <nav class="header__nav nav--light">
       <div class="nav__logo">
-        <a href="../index.html" class="logo__icon">
-          <img src="../src/images/nav-logo.svg" alt="" class="logo__icon">
-        </a>
-        <div class="logo__info">
-          <hr>
-          <p class="logo__text">La Boutique de las Flores</p>
-          <hr>
-        </div>
+          <a href="../index.html" class="logo__icon">
+              <img src="../src/images/nav-logo.svg" alt="" class="logo__icon">
+          </a>
+          <div class="logo__info">
+              <hr>
+              <p class="logo__text">La Boutique de las Flores</p>
+              <hr>
+          </div>
       </div>
       <ul class="nav__list">
-        <li class="list__info"><a class="ancor" href="./about.html">¿Quiénes Somos?</a></li>
-        <li class="list__info list__info--catalog">
-          <p class="info__catalog"><a href="catalog.html" class="ancor">Catálogo</a></p>
-          <div class="info__categories">
-            <ul class="categories__list">
-              <li class="list__info"> <a href="" class="ancor">Flores secas</a></li>
-              <li class="list__info"><a href="" class="ancor">Bouquets</a></li>
-              <li class="list__info"><a href="" class="ancor">Centros</a></li>
-            </ul>
-          </div>
-          <img src="../src/images/arrow-down-brown.svg" alt="" class="catalog__icon">
-        </li>
-        <li class="list__info"> <a href="contact.html" class="ancor">Contacto</a></li>
-        <li class="list__info">
-          <a href="./login.html" class="info__icon">
-              <img src="../src/images/user-brown.svg" alt="" class="info__icon">
-          </a>
-        </li>
-        <li class="list__info">
-          <img id="nav-cart" src="../src/images/cart-brown.svg" alt="" class="info__icon info__icon--cart">
-          <div id="cart" class="cart display--none">
-            <div class="cart__background"></div>
-            <div class="cart__card">
-              <h3 class="cart__title">Shopping Cart</h3>
-              <b class="cart__close" id="cart-close">x</b>
-              <hr>
-              <div class="container__items">
-                <div class="cart__item">
-                  <img src="../src/images/item-card.jpg" alt="" class="item__image">
-                  <div class="item__info">
-                    <h4 class="item__title">Asgaard sofa</h4>
-                    <p class="item__price"><span>1</span> X <span>Rs. 250,000,00 </span></p>
-                  </div>
-                  <div class="item__delete-container"> <!-- Nuevo contenedor para el botón de eliminar -->
-                    <img src="../src/images/delete.svg" alt="" class="item__delete">
-                  </div>
-                </div>
-                <div class="cart__item">
-                  <img src="../src/images/item-card.jpg" alt="" class="item__image">
-                  <div class="item__info">
-                      <h4 class="item__title">Asgaard sofa</h4>
-                      <p class="item__price"><span>1</span> X <span>Rs. 250,000,00 </span></p>
-                  </div>
-                  <div class="item__delete-container"> <!-- Nuevo contenedor para el botón de eliminar -->
-                    <img src="../src/images/delete.svg" alt="" class="item__delete">
-                </div>  
-                </div>
+          <li class="list__info"><a class="ancor" href="./about.html">¿Quienes Somos?</a></li>
+          <li class="list__info list__info--catalog">
+              <p class="info__catalog"><a href="./catalog.html" class="ancor">Catalogo</a></p>
+              <div class="info__categories">
+                  <ul class="categories__list">
+                      <li class="list__info"> <a href="" class="ancor">Flores secas</a></li>
+                      <li class="list__info"><a href="" class="ancor">Bouquets</a></li>
+                      <li class="list__info"><a href="" class="ancor">Centros</a></li>
+                  </ul>
               </div>
-              <div class="cart__total">
-                <p class="cart__subtotal">Subtotal</p>
-                <b>Rs. 520,000.00</b>
+              <img src="../src/images/arrow-down.svg" alt="" class="catalog__icon">
+          </li>
+          <li class="list__info"> <a href="../pages/contact.html" class="ancor">Contacto</a></li>
+          <li class="list__info">
+              <a href="../pages/login.html">
+
+                  <img src="../src/images/user-brown.svg" alt="" class="info__icon">
+              </a>
+          </li>
+          <li class="list__info">
+              <img id="nav-cart" src="../src/images/cart-brown.svg" alt="" class="info__icon info__icon--cart">
+              <div id="cart" class="cart display--none">
+                  <div class="cart__background"></div>
+                  <div class="cart__card">
+                      <h3 class="cart__title">Shopping Cart</h3>
+                      <b class="cart__close" id="cart-close">x</b>
+                      <hr>
+                      <div class="container__items">
+                          <div class="cart__item">
+                              <img src="../src/images/item-card.jpg" alt="" class="item__image">
+                              <div class="item__info">
+                                  <h4 class="item__title">Asgaard sofa</h4>
+                                  <p class="item__price"><span>1</span> X <span>Rs. 250,000,00 </span></p>
+                              </div>
+                              <div class="item__delete-container">
+                                  <!-- Nuevo contenedor para el botón de eliminar -->
+                                  <img src="../src/images/delete.svg" alt="" class="item__delete">
+                              </div>
+                          </div>
+                          <div class="cart__item">
+                              <img src="../src/images/item-card.jpg" alt="" class="item__image">
+                              <div class="item__info">
+                                  <h4 class="item__title">Asgaard sofa</h4>
+                                  <p class="item__price"><span>1</span> X <span>Rs. 250,000,00 </span></p>
+                              </div>
+                              <div class="item__delete-container">
+                                  <!-- Nuevo contenedor para el botón de eliminar -->
+                                  <img src="../src/images/delete.svg" alt="" class="item__delete">
+                              </div>
+                          </div>
+                      </div>
+                      <div class="cart__total">
+                          <p class="cart__subtotal">Subtotal</p>
+                          <b>Rs. 520,000.00</b>
+                      </div>
+                      <hr>
+                      <button class="cart__checkout">Checkout</button>
+                  </div>
               </div>
-              <hr>
-              <button class="cart__checkout">Checkout</button>
-            </div>
-          </div>
-        </li>
+          </li>
       </ul>
     </nav>
   </header>
