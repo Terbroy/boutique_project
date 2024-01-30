@@ -23,6 +23,17 @@
     fill: var(--color-brown);
 }
 
+.nav.nav--light .logo__info, .line{
+    color: var(--color-brown) ;
+    stroke: 1px;
+}
+
+.header__nav .logo__info, .line{
+    color: var(--color-brown) ;
+    stroke: 1px;
+}
+
+
 .nav.nav--light, .nav.nav--light .logo__info, .nav.nav--light .info__categories{
     background-color: #ffff;
 }
@@ -96,9 +107,14 @@
     width: 15px;
 }
 
+
 .info__catalog, .catalog__icon{
     position: relative;
     z-index: 1;
+}
+
+.header__nav .catalog__icon{
+    top: -.4rem;
 }
 
 .info__categories{

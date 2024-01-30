@@ -1,0 +1,116 @@
+@import url(../style.css);
+
+.cart{
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 3;
+    cursor:default;
+}
+
+.cart__background{
+    width: 100vw;
+    height: 100vh;
+    background-color: #000000c9;
+    position: fixed;
+    left: 0;
+}
+
+.cart__card{
+    padding: 2rem;
+    position: relative;
+    z-index: 2;
+    background-color: var(--background-color);
+    width: 30vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    color: var(--color-gold);
+}
+
+.cart__title{
+    color: var(--color-brown);
+    font-weight: 600;
+    font-size: 1.8rem; 
+}
+
+.cart__close{
+    position: absolute;
+    top: 1rem;
+    font-family: 'Poppins';
+    font-size: 1.2rem;
+    right: 2rem;
+    color: var(--color-brown);
+    cursor: pointer;
+}
+
+.cart__title + hr {
+    color: var(--color-brown);
+}
+
+.container__items{
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+}
+
+.cart__item{
+    width: 100%;
+    padding: 1rem;
+    font-family: "Poppins";
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    color: var(--color-brown);
+}
+
+.item__image{
+    width: 100px;
+    border-radius: 10px;
+    box-shadow: 5px 2px 5px 1px #dbc7a5;
+}
+
+.item__info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: baseline;
+    gap: 10px;
+}
+
+.item__price{
+    font-size: 14px;
+}
+
+.item__delete-container{
+    margin-left: auto;
+}
+
+.item__delete{
+    vertical-align: middle;
+    width: 1.5rem;
+}
+
+.cart__total{
+    display: flex;
+    justify-content: space-between;
+    justify-self:end;
+    font-family: 'Poppins';
+    color: var(--color-brown);
+    padding: 0 1rem;
+}
+
+.cart__checkout{
+    padding: .5rem 2.5rem;
+    border-radius: 100px;
+    background-color: transparent;
+    border-color: var(--color-gold) ;
+    color: var(--color-gold) ;
+    width: max-content;
+    align-items: center;
+    margin-right: auto;
+}
+/* 
+                    <button class="cart__checkout">Checkout</button> */
