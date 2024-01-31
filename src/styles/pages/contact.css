@@ -74,7 +74,7 @@ form label{
     color: var(--text-brown);
     font-size: small;
 }
-textarea{
+.message-box{
     width: 100%;
     background-color: var(--soft-pink);
     border-radius: 10px;
@@ -82,10 +82,10 @@ textarea{
     color: var(--text-brown);
     padding-left: 10px;
 }
-textarea:focus{
+.message-box:focus{
     outline: none;
 }
-textarea::placeholder{
+.message_box::placeholder::placeholder{
     color: var(--text-brown);
 }
 .conteiner-btn{
@@ -93,7 +93,7 @@ textarea::placeholder{
     display: flex;
     justify-content: center;
 }
-.button__contact{
+button{
     padding: 10px 45px;
     border-radius: 20px!important;
     color: white;
