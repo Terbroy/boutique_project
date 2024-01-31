@@ -33,6 +33,7 @@
     border-top-left-radius: 30px;
     border-bottom-left-radius: 30px;
 }
+/*
 form{
     width: 60%;
     display: flex;
@@ -42,7 +43,7 @@ form label{
     color: var(--text-brown);
     font-weight: 600;
     padding-bottom: 6px;
-}
+}*/
 .form-input{
     display: flex;
     flex-direction: column;
@@ -69,7 +70,7 @@ form label{
 }
 .form-input input::placeholder{
     color: var(--text-brown);
-}
+}/*
 textarea{
     width: 100%;
     background-color: var(--soft-pink);
@@ -83,13 +84,13 @@ textarea:focus{
 }
 textarea::placeholder{
     color: var(--text-brown);
-}
+}*/
 .conteiner-btn{
     width: 100%;
     display: flex;
     justify-content: center;
 }
-.button__contact{
+button{
     padding: 10px 45px;
     border-radius: 20px!important;
     color: white;
