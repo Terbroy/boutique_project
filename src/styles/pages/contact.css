@@ -17,6 +17,7 @@
 
 .Contáctanos p {
     color: var(--color-brown);
+    
 }
 
 .conteiner-form{
@@ -71,6 +72,7 @@ form label{
 }
 .form-input input::placeholder{
     color: var(--text-brown);
+    font-size: small;
 }
 textarea{
     width: 100%;
