@@ -33,6 +33,7 @@
     border-top-left-radius: 30px;
     border-bottom-left-radius: 30px;
 }
+/*
 form{
     width: 60%;
     display: flex;
@@ -41,7 +42,8 @@ form{
 form label{
     color: var(--text-brown);
     font-weight: 600;
-}
+    padding-bottom: 6px;
+}*/
 .form-input{
     display: flex;
     flex-direction: column;
@@ -50,11 +52,12 @@ form label{
     border-radius: 10px;
     border-width: 1px;
     padding: 3px;
-    margin-left: 2.5%;
+    margin-left: 3.5%;
+    padding-left: 10px;
 }
 .form-input2{
-    width: 92.5%;
-    margin: 0 2.5%;
+    width: 99.5%;
+    margin: 0 3.5%;
 }
 .form-input input{
     background-color: var(--soft-pink);
@@ -67,20 +70,21 @@ form label{
 }
 .form-input input::placeholder{
     color: var(--text-brown);
-}
+}/*
 textarea{
     width: 100%;
     background-color: var(--soft-pink);
     border-radius: 10px;
     border-color: black;
     color: var(--text-brown);
+    padding-left: 10px;
 }
 textarea:focus{
     outline: none;
 }
 textarea::placeholder{
     color: var(--text-brown);
-}
+}*/
 .conteiner-btn{
     width: 100%;
     display: flex;
