@@ -98,36 +98,36 @@
       <hr />
       <div class="conteiner-form">
         <img class="img-formulario" src="/src/images/contact.png" alt="flores de colores en un ramo" />
-        <form class="needs-validation" novalidate>
+        <form action="https://formsubmit.co/velosaangelica@gmail.com"  method="POST" class="needs-validation" class="validation" novalidate>
           <div class="mb-3 form-input">
             <label for="nombre">Nombre</label>
-            <input type="text" id="nombre" placeholder="Ingrese su nombre" required />
+            <input type="text" name="name" id="nombre" placeholder="Ingrese su nombre" required />
             <div class="valid-feedback">¡Correcto!</div>
             <div class="invalid-feedback">Por favor ingrese un nombre.</div>
           </div>
           <div class="mb-3 form-input">
             <label for="apellido">Apellido</label>
-            <input type="text" id="apellido" placeholder="Ingrese su apellido" required />
+            <input type="text" name="lastname" id="apellido" placeholder="Ingrese su apellido" required />
             <div class="valid-feedback">¡Correcto!</div>
             <div class="invalid-feedback">Por favor ingrese un apellido.</div>
           </div>
           <div class="mb-3 form-input">
             <label for="email">Email</label>
-            <input type="email" id="email" placeholder="Ingrese su correo electrónico" required />
+            <input type="email" name="email" id="email" placeholder="Ingrese su correo electrónico" required />
             <div class="valid-feedback">¡Correcto!</div>
             <div class="invalid-feedback">Por favor ingrese un email válido.</div>
           </div>
           <div class="mb-3 form-input">
             <label for="tel">Teléfono</label>
-            <input type="tel" id="tel" placeholder="Ingrese su teléfono" required />
+            <input type="tel" name="phone" id="tel" placeholder="Ingrese su teléfono" required />
             <div class="valid-feedback">¡Correcto!</div>
             <div class="invalid-feedback">Por favor ingrese un télefono, sólo números.</div>
           </div>
           <div class="mb-3 form-input2">
-          <textarea name="mensaje" id="mensaje" rows="5" placeholder="Ingrese un mensaje"></textarea>
+          <textarea class="message-box" name="mensaje" id="mensaje" rows="5" placeholder="Ingrese un mensaje"></textarea>
           </div>
           <div class="conteiner-btn">
-          <button class="button__contact" type="submit">Enviar</button>
+          <button class="form__button" type="submit">Enviar</button>
         </div>
       </form>
       </div>
@@ -161,5 +161,6 @@
         crossorigin="anonymous"
       ></script>
       <script src="../src/js/cart.js"></script>
+      <script src="/src/js/contact.js"></script>
     </body>
     </html>

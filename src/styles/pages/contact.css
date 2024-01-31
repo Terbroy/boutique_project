@@ -17,11 +17,13 @@
 
 .Contáctanos p {
     color: var(--color-brown);
+    
 }
 
 .conteiner-form{
     display: flex;
     width: 80vw;
+    height: 80vh;
     justify-content: center;
     align-items: center;
     margin: 0 10vw;
@@ -29,13 +31,13 @@
     border-radius: 30px;
 }
 .img-formulario{
-    width: 40%;
+    width: 35%;
+    height: 100%;
     border-top-left-radius: 30px;
     border-bottom-left-radius: 30px;
 }
-/*
 form{
-    width: 60%;
+    width: 65%;
     display: flex;
     flex-wrap: wrap;
 }
@@ -43,7 +45,7 @@ form label{
     color: var(--text-brown);
     font-weight: 600;
     padding-bottom: 6px;
-}*/
+}
 .form-input{
     display: flex;
     flex-direction: column;
@@ -70,8 +72,9 @@ form label{
 }
 .form-input input::placeholder{
     color: var(--text-brown);
-}/*
-textarea{
+    font-size: small;
+}
+.message-box{
     width: 100%;
     background-color: var(--soft-pink);
     border-radius: 10px;
@@ -79,18 +82,18 @@ textarea{
     color: var(--text-brown);
     padding-left: 10px;
 }
-textarea:focus{
+.message-box:focus{
     outline: none;
 }
-textarea::placeholder{
+.message_box::placeholder::placeholder{
     color: var(--text-brown);
-}*/
+}
 .conteiner-btn{
     width: 100%;
     display: flex;
     justify-content: center;
 }
-button{
+.form__button{
     padding: 10px 45px;
     border-radius: 20px!important;
     color: white;
