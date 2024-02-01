@@ -56,19 +56,39 @@
 
 .ini-regis{
     display: flex;
+    margin-top: 50px;
+    width: 350px;
+    padding: 6px;
+    margin: 0 auto;
+    border-radius: 100px;
     justify-content: center;
-    padding: 20px;
-    margin: 10px;
-    cursor: pointer;
+    background-color: var(--background-color);
 
 }
 
+
+
 .button-regis{
-    background-color: var(--soft-pink);
+    background-color: var(--background-color);
     color: black;
-    border-radius: 100px;
+    border: none;
+    margin-right: 70px;
+
+
 
     
+}
+
+.button-ini1{
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 100px;
+    width: 170px;
+    padding: 12px;
+    margin-right:auto;
+    
+
 }
 
 .button-ini2{
@@ -79,6 +99,7 @@
     margin: 0 auto;
     border-radius: 100px;
     justify-content: center;
+    background-color: #43766C;
 
 }
 
