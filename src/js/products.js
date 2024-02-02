@@ -2,7 +2,7 @@ let infoJson = []; //[{producto1}, {producto2},.....]
 const h1 = document.getElementById("ejemplo");
 
 async function traerInfromacion(){
-    await fetch("http://127.0.0.1:5500/boutique_project/src/JSON/product.json")
+    await fetch("http://127.0.0.1:5500/src/JSON/product.json")
         .then(res => res.json())
         .then(data=> infoJson.push(data.products))
         .catch(error => console.log(error));
@@ -17,13 +17,13 @@ async function mostrarProductosEnCatalaogo(){
         hijo.innerHTML = `
         <div class="img__options">
         <div class="product__options">
-        <button class="options__cart">AÃ±adir al carrito</button>
+        <button class="options__cart">Añadir al carrito</button>
             <button class="options__share"><img src="../src/images/share.svg">Compartir</button>
             </div>
             <img class="product__img" src="${product.images[0]}">
             </div>
             <div class="product__text">
-            <p class="product__title">${product.name}</p>
+            <p class="product__title">${product.title}s</p>
             <p class="product__description">${product.description}</p>
             <p class="product__price">${product.price}</p>
             </div>
@@ -40,4 +40,5 @@ async function mostrarProductosEnCatalaogo(){
 
 
 mostrarProductosEnCatalaogo();
+
 

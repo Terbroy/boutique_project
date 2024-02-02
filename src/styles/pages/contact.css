@@ -93,10 +93,10 @@ form label {
   display: flex;
   justify-content: center;
 }
-.form__button {
-  padding: 10px 45px;
-  border-radius: 20px !important;
-  color: white;
-  background-color: var(--primary-color);
-  border: none;
+.form__button{
+    padding: 10px 45px;
+    border-radius: 20px!important;
+    color: white;
+    background-color: var(--primary-color);
+    border: none;
 }
