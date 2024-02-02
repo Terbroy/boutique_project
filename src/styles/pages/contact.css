@@ -36,16 +36,12 @@
     border-top-left-radius: 30px;
     border-bottom-left-radius: 30px;
 }
-form{
+.needs-validation{
     width: 65%;
     display: flex;
     flex-wrap: wrap;
 }
-form label{
-    color: var(--text-brown);
-    font-weight: 600;
-    padding-bottom: 6px;
-}
+
 .form-input{
     display: flex;
     flex-direction: column;
