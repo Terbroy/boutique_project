@@ -2,154 +2,167 @@
     "products": [
         {
             "id": 1,
-            "name": "Ramo de Rosas",
-            "main-info": "rosas jejej",
-            "description": "combinacion de rosas etc",
-            "price": 123.0,
+            "name": "Centro de mesa flores secas",
+            "main-info": "Flores secas",
+            "description": "Variedad de flores y arreglos",
+            "price": 100000,
             "stock": 6,
             "images": [
-                "https://img.freepik.com/foto-gratis/primer-disparo-flor-morada_181624-25863.jpg",
-                "https://img.freepik.com/foto-gratis/primer-disparo-flor-morada_181624-25863.jpg",
-                "https://img.freepik.com/foto-gratis/primer-disparo-flor-morada_181624-25863.jpg",
-                "https://img.freepik.com/foto-gratis/primer-disparo-flor-morada_181624-25863.jpg"
+                "https://img.freepik.com/free-photo/home-plant-vase-decoration-arrangement_23-2149090589.jpg?w=360&t=st=1706828228~exp=1706828828~hmac=8db0ae68676f1e0a436ebd8d06e2aeb983b6ee6ab161498bb04983bfb61920bc",
+                "https://img.freepik.com/free-photo/still-life-beautiful-vase-with-dried-flowers_169016-5359.jpg?w=360&t=st=1706828886~exp=1706829486~hmac=bc62f297865022e622c74d918a65f4e8e0ed674fb0179c5bb050021350421a5f",
+                "https://img.freepik.com/free-photo/brown-pom-poms-vase_23-2149482922.jpg?w=360&t=st=1706828966~exp=1706829566~hmac=c37da5f7d9a52d98c0a5d288b5b2dd4db4a79d05e4c63bc91d22d2a355e316f6",
+                "https://img.freepik.com/premium-photo/autumn-home-decor-vase-with-bouquet-dried-hydrangea-spikelets-ears-plants_149112-2215.jpg?w=360"
             ]
         },
         {
             "id": 2,
-            "name": "Centro de flores",
-            "main-info": "un centro de flores",
-            "description": "combinacion de rosas etc",
-            "price": 123.0,
-            "stock": 6,
+            "name": "Ramo de flores secas",
+            "main-info": "Flores secas",
+            "description": "Combinación de flores",
+            "price": 80000,
+            "stock": 5,
             "images": [
-                "https://img.freepik.com/foto-gratis/primer-disparo-flor-morada_181624-25863.jpg",
-                "https://img.freepik.com/foto-gratis/primer-disparo-flor-morada_181624-25863.jpg",
-                "https://img.freepik.com/foto-gratis/primer-disparo-flor-morada_181624-25863.jpg",
-                "https://img.freepik.com/foto-gratis/primer-disparo-flor-morada_181624-25863.jpg"
+                "https://img.freepik.com/premium-photo/trendy-composition-dried-flowers_169016-10867.jpg?w=360",
+                "https://img.freepik.com/premium-photo/dry-flowers-background_863013-155774.jpg?w=740",
+                "https://img.freepik.com/premium-photo/dried-flowers-are-arranged-white-surface-with-white-background-generative-ai_1034036-26955.jpg?w=360",
+                "https://img.freepik.com/premium-photo/there-are-two-wrapped-presents-table-with-candles-background-generative-ai_901242-4759.jpg?w=740"
             ]
         },
         {
-            "id": 2,
-            "name": "Centro de flores",
-            "main-info": "un centro de flores",
-            "description": "combinacion de rosas etc",
-            "price": 123.0,
-            "stock": 6,
+            "id": 3,
+            "name": "Centro de rosas",
+            "main-info": "Centro de mesa de rosas",
+            "description": "Combinación de rosas",
+            "price": 120000,
+            "stock": 8,
             "images": [
-                "https://img.freepik.com/foto-gratis/primer-disparo-flor-morada_181624-25863.jpg",
-                "https://img.freepik.com/foto-gratis/primer-disparo-flor-morada_181624-25863.jpg",
-                "https://img.freepik.com/foto-gratis/primer-disparo-flor-morada_181624-25863.jpg",
-                "https://img.freepik.com/foto-gratis/primer-disparo-flor-morada_181624-25863.jpg"
+                "https://img.freepik.com/free-photo/beautiful-blooming-roses-vase_23-2150718931.jpg?t=st=1706829345~exp=1706832945~hmac=17e7fc172fbbae0814658ac64b21860bb41410ab7799facfc74b5f1693592aa9&w=740",
+                "https://img.freepik.com/free-photo/beautiful-blooming-roses-vase_23-2150718933.jpg?t=st=1706829343~exp=1706832943~hmac=84ce0ab16aa4f63c66160821070888634872d34112a4174dd30ee5a3f8e886f0&w=740",
+                "https://img.freepik.com/free-photo/delicate-roses-vase-by-window_23-2150772488.jpg?t=st=1706829333~exp=1706832933~hmac=456b3d4089dfbbfdc88d088d0f31bbe0041de1193ca1ace04c947c6cf569d16a&w=360",
+                "https://img.freepik.com/free-photo/beautiful-blooming-roses-vase_23-2150719037.jpg?t=st=1706829591~exp=1706833191~hmac=ff6619ee9ffeebd61e0b5d266a5fa3c837332a31e801fd0aa9c7d12bc642ffb6&w=360"
             ]
         },
         {
-            "id": 2,
-            "name": "Centro de flores",
-            "main-info": "un centro de flores",
-            "description": "combinacion de rosas etc",
-            "price": 123.0,
-            "stock": 6,
+            "id": 4,
+            "name": "Centro de flores secas sencillo",
+            "main-info": "Centro de flores secas",
+            "description": "Variedad de flores secas",
+            "price": 60000,
+            "stock": 7,
             "images": [
-                "https://img.freepik.com/foto-gratis/primer-disparo-flor-morada_181624-25863.jpg",
-                "https://img.freepik.com/foto-gratis/primer-disparo-flor-morada_181624-25863.jpg",
-                "https://img.freepik.com/foto-gratis/primer-disparo-flor-morada_181624-25863.jpg",
-                "https://img.freepik.com/foto-gratis/primer-disparo-flor-morada_181624-25863.jpg"
+                "https://img.freepik.com/premium-photo/dry-reeds-reeds-vase-craft-paper-wood-neutral-colors-still-life_165293-1110.jpg?w=360",
+                "https://img.freepik.com/free-photo/elegant-plants-decoration-vase_23-2149334650.jpg?w=360&t=st=1706829097~exp=1706829697~hmac=bc3c870e34f8b83b9bbf59dfc30acbcffce1343197e06ba6f49e7fab8c0d4344",
+                "https://img.freepik.com/free-photo/dry-plants-large-vase_23-2149400858.jpg?w=360&t=st=1706829106~exp=1706829706~hmac=f2cd26748b1f609b7c797d690248ab60c020f5a5a0042d33cf96653ba43d88fb",
+                "https://img.freepik.com/free-photo/home-plant-vase-decoration-arrangement_23-2149090597.jpg?w=360&t=st=1706829119~exp=1706829719~hmac=6274629b263f5ef5ba7dc21e0d6d978aa91c43f9d19271b44d57eb562cd4b956"
             ]
         },
         {
-            "id": 2,
-            "name": "Centro de flores",
-            "main-info": "un centro de flores",
-            "description": "combinacion de rosas etc",
-            "price": 123.0,
-            "stock": 6,
+            "id": 5,
+            "name": "Centro de flores varias",
+            "main-info": "Centro de varias flores",
+            "description": "Variedad de flores y arreglos",
+            "price": 150000,
+            "stock": 9,
             "images": [
-                "https://img.freepik.com/foto-gratis/primer-disparo-flor-morada_181624-25863.jpg",
-                "https://img.freepik.com/foto-gratis/primer-disparo-flor-morada_181624-25863.jpg",
-                "https://img.freepik.com/foto-gratis/primer-disparo-flor-morada_181624-25863.jpg",
-                "https://img.freepik.com/foto-gratis/primer-disparo-flor-morada_181624-25863.jpg"
+                "https://img.freepik.com/free-photo/beautiful-flower-vase-studio_23-2150788607.jpg?t=st=1706829353~exp=1706832953~hmac=e2e7410cdd16ef1646ba1033dfaa925005a42e7a5521404767e18bc36ba99036&w=360",
+                "https://img.freepik.com/free-photo/beautiful-flower-vase-studio_23-2150788597.jpg?t=st=1706829851~exp=1706833451~hmac=2258d3fc49986ed2de79a0775818478410b8235fe5370bac9bd5533348cffa05&w=360",
+                "https://img.freepik.com/free-photo/beautiful-flower-vase-studio_23-2150788595.jpg?t=st=1706829889~exp=1706833489~hmac=430713e586069679909f681d61e494d2584526ecbe687cf65afe64a4bc30686d&w=360",
+                "https://img.freepik.com/free-photo/beautiful-flower-vase-studio_23-2150788611.jpg?t=st=1706829926~exp=1706833526~hmac=9fecd3ab6523cb1e53eba42b34d9fc7cb376d8b2b5d10aacf049a00ae8599f73&w=360"
             ]
         },{
-            "id": 2,
-            "name": "Centro de flores",
-            "main-info": "un centro de flores",
-            "description": "combinacion de rosas etc",
-            "price": 123.0,
-            "stock": 6,
+            "id": 6,
+            "name": "Ramo de rosas",
+            "main-info": "Combinación de rosas",
+            "description": "Varieda de rosas",
+            "price": 110000,
+            "stock": 10,
             "images": [
-                "https://img.freepik.com/foto-gratis/primer-disparo-flor-morada_181624-25863.jpg",
-                "https://img.freepik.com/foto-gratis/primer-disparo-flor-morada_181624-25863.jpg",
-                "https://img.freepik.com/foto-gratis/primer-disparo-flor-morada_181624-25863.jpg",
-                "https://img.freepik.com/foto-gratis/primer-disparo-flor-morada_181624-25863.jpg"
+                "https://img.freepik.com/free-photo/beautiful-bouquet-roses_23-2150718727.jpg?t=st=1706829982~exp=1706833582~hmac=6dce2cfe0e7240a03fca145280a2bc13e5d2dcf92bacd08f249e25206b3b9345&w=360",
+                "https://img.freepik.com/premium-photo/beautiful-roses-bouquet-with-pink-ribbon_884296-41.jpg?size=626&ext=jpg&ga=GA1.1.1215190443.1703089669&semt=ais_ai_generated",
+                "https://img.freepik.com/premium-photo/bouquet-red-roses-with-soft-pastel-pink-background-ai-generated_981309-1078.jpg?size=626&ext=jpg&ga=GA1.1.1215190443.1703089669&semt=ais_ai_generated",
+                "https://img.freepik.com/premium-photo/flower-bouquet-red-roses-white-background_1009855-4.jpg?size=626&ext=jpg&ga=GA1.1.1215190443.1703089669&semt=ais_ai_generated"
             ]
         },
         {
-            "id": 2,
-            "name": "Centro de flores",
-            "main-info": "un centro de flores",
-            "description": "combinacion de rosas etc",
-            "price": 123.0,
-            "stock": 6,
+            "id": 7,
+            "name": "Ramo de flores varias",
+            "main-info": "Variedad de flores",
+            "description": "Combinación de flores",
+            "price": 120000,
+            "stock": 4,
             "images": [
-                "https://img.freepik.com/foto-gratis/primer-disparo-flor-morada_181624-25863.jpg",
-                "https://img.freepik.com/foto-gratis/primer-disparo-flor-morada_181624-25863.jpg",
-                "https://img.freepik.com/foto-gratis/primer-disparo-flor-morada_181624-25863.jpg",
-                "https://img.freepik.com/foto-gratis/primer-disparo-flor-morada_181624-25863.jpg"
+                "https://img.freepik.com/free-photo/close-up-delicate-tulip-bouquet_23-2150772394.jpg?t=st=1706830243~exp=1706833843~hmac=1fcd312f444b4a639fb4723671975043e9c49a06e0197acd81e09535d4b046a3&w=360",
+                "https://img.freepik.com/premium-photo/mexican-fiesta-summer-pink-themed-wedding-with-vibrant-flair_802234-7555.jpg?size=626&ext=jpg&ga=GA1.2.1215190443.1703089669&semt=ais_ai_generated",
+                "https://img.freepik.com/premium-photo/flower-bouquet-with-tag-ribbon-pink-background-variation-1_178416-142.jpg?size=626&ext=jpg&ga=GA1.2.1215190443.1703089669&semt=ais_ai_generated",
+                "https://img.freepik.com/premium-photo/bunch-flowers-isolated-white-background_665280-24593.jpg?size=626&ext=jpg&ga=GA1.1.1215190443.1703089669&semt=ais_ai_generated"
             ]
         },
         {
-            "id": 2,
-            "name": "Centro de flores",
-            "main-info": "un centro de flores",
-            "description": "combinacion de rosas etc",
-            "price": 123.0,
-            "stock": 6,
+            "id": 8,
+            "name": "Ramos de novia",
+            "main-info": "Ramo de flores para bodas",
+            "description": "Combinación de flores",
+            "price": 160000,
+            "stock": 11,
             "images": [
-                "https://img.freepik.com/foto-gratis/primer-disparo-flor-morada_181624-25863.jpg",
-                "https://img.freepik.com/foto-gratis/primer-disparo-flor-morada_181624-25863.jpg",
-                "https://img.freepik.com/foto-gratis/primer-disparo-flor-morada_181624-25863.jpg",
-                "https://img.freepik.com/foto-gratis/primer-disparo-flor-morada_181624-25863.jpg"
+                "https://img.freepik.com/free-photo/front-view-bride-with-roses-bouquet_23-2150851157.jpg?size=626&ext=jpg&ga=GA1.2.1215190443.1703089669&semt=ais_ai_generated",
+                "https://img.freepik.com/free-photo/front-view-bride-with-roses-bouquet_23-2150851145.jpg?size=626&ext=jpg&ga=GA1.2.1215190443.1703089669&semt=ais_ai_generated",
+                "https://img.freepik.com/premium-photo/mexican-fiesta-summer-pink-themed-wedding-with-vibrant-flair_802234-7555.jpg?size=626&ext=jpg&ga=GA1.2.1215190443.1703089669&semt=ais_ai_generated",
+                "https://img.freepik.com/premium-photo/bride-holds-bouquet-white-lilies-lilies_895799-26667.jpg?size=626&ext=jpg&ga=GA1.1.1215190443.1703089669&semt=ais_ai_generated"
             ]
         },
         {
-            "id": 2,
-            "name": "Centro de flores",
-            "main-info": "un centro de flores",
-            "description": "combinacion de rosas etc",
-            "price": 123.0,
-            "stock": 6,
+            "id": 9,
+            "name": "Centro de flores para eventos",
+            "main-info": "Centro de mesa",
+            "description": "Centros para eventos",
+            "price": 120000,
+            "stock": 12,
             "images": [
-                "https://img.freepik.com/foto-gratis/primer-disparo-flor-morada_181624-25863.jpg",
-                "https://img.freepik.com/foto-gratis/primer-disparo-flor-morada_181624-25863.jpg",
-                "https://img.freepik.com/foto-gratis/primer-disparo-flor-morada_181624-25863.jpg",
-                "https://img.freepik.com/foto-gratis/primer-disparo-flor-morada_181624-25863.jpg"
+                "https://img.freepik.com/free-photo/beautiful-table-arrangement-with-roses_23-2150737361.jpg?size=626&ext=jpg&ga=GA1.2.1215190443.1703089669&semt=ais_ai_generated",
+                "https://img.freepik.com/free-photo/beautiful-table-arrangement-with-roses_23-2150737351.jpg?size=626&ext=jpg&ga=GA1.2.1215190443.1703089669&semt=ais_ai_generated",
+                "https://img.freepik.com/free-photo/beautiful-table-arrangement-with-roses_23-2150737359.jpg?size=626&ext=jpg&ga=GA1.2.1215190443.1703089669&semt=ais_ai_generated",
+                "https://img.freepik.com/premium-photo/country-life-garden-floral-decor-peony-flowers-bouquet-countryside-country-cottage-style-generative-ai_360074-69608.jpg?size=626&ext=jpg&ga=GA1.2.1215190443.1703089669&semt=ais_ai_generated"
             ]
         },
         {
-            "id": 2,
-            "name": "Centro de flores",
-            "main-info": "un centro de flores",
-            "description": "combinacion de rosas etc",
-            "price": 123.0,
-            "stock": 6,
+            "id": 10,
+            "name": "Ramos de flores otoñales",
+            "main-info": "Ramo de flores",
+            "description": "Combinación de flores",
+            "price": 15000,
+            "stock": 14,
             "images": [
-                "https://img.freepik.com/foto-gratis/primer-disparo-flor-morada_181624-25863.jpg",
-                "https://img.freepik.com/foto-gratis/primer-disparo-flor-morada_181624-25863.jpg",
-                "https://img.freepik.com/foto-gratis/primer-disparo-flor-morada_181624-25863.jpg",
-                "https://img.freepik.com/foto-gratis/primer-disparo-flor-morada_181624-25863.jpg"
+                "https://img.freepik.com/premium-photo/dried-flower-icecone-pink-background_118124-74146.jpg?size=626&ext=jpg&ga=GA1.2.1215190443.1703089669&semt=ais_ai_generated",
+                "https://img.freepik.com/premium-photo/cone-dried-flowers-pink-background_118124-72986.jpg?size=626&ext=jpg&ga=GA1.2.1215190443.1703089669&semt=ais_ai_generated",
+                "https://img.freepik.com/premium-photo/cone-dried-flowers-pink-background_118124-72985.jpg?size=626&ext=jpg&ga=GA1.2.1215190443.1703089669&semt=ais_ai_generated",
+                "https://img.freepik.com/premium-photo/flower-bouquet-with-tag-ribbon-pink-background-variation-1_178416-142.jpg?size=626&ext=jpg&ga=GA1.2.1215190443.1703089669&semt=ais_ai_generated"
             ]
         },{
-            "id": 2,
-            "name": "Centro de flores",
-            "main-info": "un centro de flores",
-            "description": "combinacion de rosas etc",
-            "price": 123.0,
-            "stock": 6,
+            "id": 11,
+            "name": "Arreglo de flores cabello",
+            "main-info": "Arreglo de flores para el cabello",
+            "description": "Flores como accesorio",
+            "price": 100000,
+            "stock": 3,
             "images": [
-                "https://img.freepik.com/foto-gratis/primer-disparo-flor-morada_181624-25863.jpg",
-                "https://img.freepik.com/foto-gratis/primer-disparo-flor-morada_181624-25863.jpg",
-                "https://img.freepik.com/foto-gratis/primer-disparo-flor-morada_181624-25863.jpg",
-                "https://img.freepik.com/foto-gratis/primer-disparo-flor-morada_181624-25863.jpg"
+                "https://img.freepik.com/free-photo/ai-generated-woman-bloom-portrait_23-2150693084.jpg?t=st=1706831698~exp=1706835298~hmac=81cdb4c0779935731847f5bdf2fc4f8df6248aa5c8fface1132698aa66c1d99c&w=360",
+                "https://img.freepik.com/free-photo/ai-generated-woman-bloom-portrait_23-2150693022.jpg?t=st=1706831700~exp=1706835300~hmac=bc62329c710d86b0ddc3cd752c6a18cdfcecc08194f7b7b573aff2cc684fa1c0&w=360",
+                "https://img.freepik.com/free-photo/ai-generated-woman-bloom-portrait_23-2150693020.jpg?t=st=1706831696~exp=1706835296~hmac=65d0087f7552f8d833515a0eec96df049934afde276be25502596aba18477b10&w=360",
+                "https://img.freepik.com/free-photo/ai-generated-woman-bloom-portrait_23-2150693106.jpg?size=626&ext=jpg&ga=GA1.1.1215190443.1703089669&semt=ais_ai_generated"
+            ]
+        },{
+            "id": 12,
+            "name": "Ramo de flores primaverales",
+            "main-info": "Combinación de flores primaverales",
+            "description": "Variedad de flores",
+            "price": 100000,
+            "stock": 5,
+            "images": [
+                "https://img.freepik.com/premium-photo/bouquet-tulips-with-blue-yellow-flower_900958-42031.jpg?size=626&ext=jpg&ga=GA1.2.1215190443.1703089669&semt=ais_ai_generated",
+                "https://img.freepik.com/free-photo/close-up-rose-fence_23-2150866611.jpg?size=626&ext=jpg&ga=GA1.2.1215190443.1703089669&semt=ais_ai_generated",
+                "https://img.freepik.com/free-photo/closeup-beautiful-flower-bouquet_23-2150772304.jpg?size=626&ext=jpg&ga=GA1.2.1215190443.1703089669&semt=ais_ai_generated",
+                "https://img.freepik.com/free-photo/hand-holding-flower-bouquet_23-2150772340.jpg?size=626&ext=jpg&ga=GA1.2.1215190443.1703089669&semt=ais_ai_generated"
             ]
         }
     ]
