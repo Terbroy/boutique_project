@@ -9,10 +9,9 @@
     --color-brown: #76453B;
     --text-brown: #482b25;
     --soft-pink:#f5e9d9;
-
 }
 
-.contenedor-formulario {
+.total-login{
     border: none;
     margin: 0;
     padding: 400px;
@@ -21,41 +20,60 @@
     align-items: center;
     height: 90vh;
     background-color: white;
-
 }
 
 
-.formu{
+.form--login{
     display: flex;
+    margin-top: 50px;
+    width: 650px;
+    padding: 6px;
+    margin: 0 auto;
+    border-radius: 100px;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.form--regis{
+    display: flex;
+    margin-top: 50px;
+    width: 650px;
+    padding: 6px;
+    margin: 0 auto;
+    border-radius: 100px;
+    justify-content: center;
     flex-direction: column;
 }
 
 .par{
     display: flex;
     text-align: center;
+    width: 650px;
+    margin-top: 40px;
 }
 
+.label0,
 .label1,
 .label2,
 .label3 {
-    margin-bottom: 20px;
+    margin-bottom: 2px;
 }
 
+.input0,
 .input1,
-.input2 {
+.input2,
+.imput3 {
     display: flex;
     padding: 15px;
     margin-bottom: 16px;
     background-color: var(--background-color);
     border-radius: 50px;
     border: none;
-
 }
-
-
 
 .ini-regis{
     display: flex;
+
     margin-top: 50px;
     width: 350px;
     padding: 6px;
@@ -63,20 +81,13 @@
     border-radius: 100px;
     justify-content: center;
     background-color: var(--background-color);
-
 }
-
-
 
 .button-regis{
     background-color: var(--background-color);
     color: black;
     border: none;
-    margin-right: 70px;
-
-
-
-    
+    margin-right: 70px; 
 }
 
 .button-ini1{
@@ -87,8 +98,6 @@
     width: 170px;
     padding: 12px;
     margin-right:auto;
-    
-
 }
 
 .button-ini2{
@@ -99,8 +108,8 @@
     margin: 0 auto;
     border-radius: 100px;
     justify-content: center;
+    color: white;
     background-color: #43766C;
-
 }
 
 .olvidPass{
