@@ -3,164 +3,163 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../src/styles/style.css" />
+    <link rel="stylesheet" href="../src/styles/style.css"/>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
-    <link rel="shortcut icon" href="./src/images/nav-logo.svg" type="image/x-icon" />
+    <link rel="shortcut icon" href="./src/images/nav-logo.svg" type="image/x-icon">
     <title>Contactanos</title>
   </head>
   <body>
     <header>
-      <nav class="nav nav--light">
+      <nav class="header__nav nav--light">
         <div class="nav__logo">
-          <a href="../index.html" class="logo__icon">
-            <img src="../src/images/nav-logo.svg" alt="" class="logo__icon" />
-          </a>
-          <div class="logo__info">
-            <hr />
-            <p class="logo__text">La Boutique de las Flores</p>
-            <hr />
-          </div>
+            <a href="../index.html" class="logo__icon">
+                <img src="../src/images/nav-logo.svg" alt="" class="logo__icon">
+            </a>
+            <div class="logo__info">
+                <hr>
+                <p class="logo__text">La Boutique de las Flores</p>
+                <hr>
+            </div>
         </div>
         <ul class="nav__list">
-          <li class="list__info"><a class="ancor" href="./about.html">¿Quienes Somos?</a></li>
-          <li class="list__info list__info--catalog">
-            <p class="info__catalog"><a href="./catalog.html" class="ancor">Catalogo</a></p>
-            <div class="info__categories">
-              <ul class="categories__list">
-                <li class="list__info"><a href="" class="ancor">Flores secas</a></li>
-                <li class="list__info"><a href="" class="ancor">Bouquets</a></li>
-                <li class="list__info"><a href="" class="ancor">Centros</a></li>
-              </ul>
-            </div>
-            <img src="../src/images/arrow-down.svg" alt="" class="catalog__icon" />
-          </li>
-          <li class="list__info"><a href="../pages/contact.html" class="ancor">Contacto</a></li>
-          <li class="list__info">
-            <a href="../pages/login.html">
-              <img src="../src/images/user-brown.svg" alt="" class="info__icon" />
-            </a>
-          </li>
-          <li class="list__info">
-            <img id="nav-cart" src="../src/images/cart-brown.svg" alt="" class="info__icon info__icon--cart" />
-            <div id="cart" class="cart display--none">
-              <div class="cart__background"></div>
-              <div class="cart__card">
-                <h3 class="cart__title">Shopping Cart</h3>
-                <b class="cart__close" id="cart-close">x</b>
-                <hr />
-                <div class="container__items">
-                  <div class="cart__item">
-                    <img src="../src/images/item-card.jpg" alt="" class="item__image" />
-                    <div class="item__info">
-                      <h4 class="item__title">Asgaard sofa</h4>
-                      <p class="item__price"><span>1</span> X <span>Rs. 250,000,00 </span></p>
-                    </div>
-                    <div class="item__delete-container">
-                      <!-- Nuevo contenedor para el botón de eliminar -->
-                      <img src="../src/images/delete.svg" alt="" class="item__delete" />
-                    </div>
-                  </div>
-                  <div class="cart__item">
-                    <img src="../src/images/item-card.jpg" alt="" class="item__image" />
-                    <div class="item__info">
-                      <h4 class="item__title">Asgaard sofa</h4>
-                      <p class="item__price"><span>1</span> X <span>Rs. 250,000,00 </span></p>
-                    </div>
-                    <div class="item__delete-container">
-                      <!-- Nuevo contenedor para el botón de eliminar -->
-                      <img src="../src/images/delete.svg" alt="" class="item__delete" />
-                    </div>
-                  </div>
+            <li class="list__info"><a class="ancor" href="./about.html">¿Quienes Somos?</a></li>
+            <li class="list__info list__info--catalog">
+                <p class="info__catalog"><a href="./catalog.html" class="ancor">Catalogo</a></p>
+                <div class="info__categories">
+                    <ul class="categories__list">
+                        <li class="list__info"> <a href="" class="ancor">Flores secas</a></li>
+                        <li class="list__info"><a href="" class="ancor">Bouquets</a></li>
+                        <li class="list__info"><a href="" class="ancor">Centros</a></li>
+                    </ul>
                 </div>
-                <div class="cart__total">
-                  <p class="cart__subtotal">Subtotal</p>
-                  <b>Rs. 520,000.00</b>
-                </div>
-                <hr />
-                <button class="cart__checkout">Checkout</button>
-              </div>
-            </div>
-          </li>
-        </ul>
-      </nav>
-    </header>
-    <div class="separadorNav Contáctanos">
-      <h1>CONTÁCTANOS</h1>
-      <p>Estamos para ayudarte si tienes dudas o peticiones, llena el formulario y en breve nos pondremos en contacto contigo.</p>
-    </div>
-    <hr />
-    <div class="conteiner-form">
-      <img class="img-formulario" src="/src/images/contact.png" alt="flores de colores en un ramo" />
-      <form action="https://formsubmit.co/velosaangelica@gmail.com" method="POST" class="needs-validation" class="validation" novalidate>
-        <div class="mb-3 form-input">
-          <label for="nombre">Nombre</label>
-          <input type="text" name="name" id="nombre" placeholder="Ingrese su nombre" required />
-          <input type="text" name="name" id="nombre" placeholder="Ingrese su nombre" required />
-          <div class="valid-feedback">¡Correcto!</div>
-          <div class="invalid-feedback">Por favor ingrese un nombre.</div>
-        </div>
-        <div class="mb-3 form-input">
-          <label for="apellido">Apellido</label>
-          <input type="text" name="lastname" id="apellido" placeholder="Ingrese su apellido" required />
-          <input type="text" name="lastname" id="apellido" placeholder="Ingrese su apellido" required />
-          <div class="valid-feedback">¡Correcto!</div>
-          <div class="invalid-feedback">Por favor ingrese un apellido.</div>
-        </div>
-        <div class="mb-3 form-input">
-          <label for="email">Email</label>
-          <input type="email" name="email" id="email" placeholder="Ingrese su correo electrónico" required />
-          <input type="email" name="email" id="email" placeholder="Ingrese su correo electrónico" required />
-          <div class="valid-feedback">¡Correcto!</div>
-          <div class="invalid-feedback">Por favor ingrese un email válido.</div>
-        </div>
-        <div class="mb-3 form-input">
-          <label for="tel">Teléfono</label>
-          <input type="tel" name="phone" id="tel" placeholder="Ingrese su teléfono" required />
-          <input type="tel" name="phone" id="tel" placeholder="Ingrese su teléfono" required />
-          <div class="valid-feedback">¡Correcto!</div>
-          <div class="invalid-feedback">Por favor ingrese un télefono, sólo números.</div>
-        </div>
-        <div class="mb-3 form-input2">
+                <img src="../src/images/arrow-down.svg" alt="" class="catalog__icon">
+            </li>
+            <li class="list__info"> <a href="../pages/contact.html" class="ancor">Contacto</a></li>
+            <li class="list__info">
+                <a href="../pages/login.html">
+
+                    <img src="../src/images/user-brown.svg" alt="" class="info__icon">
+                </a>
+            </li>
+            <li class="list__info">
+                <img id="nav-cart" src="../src/images/cart-brown.svg" alt="" class="info__icon info__icon--cart">
+                <div id="cart" class="cart display--none">
+                    <div class="cart__background"></div>
+                    <div class="cart__card">
+                        <h3 class="cart__title">Shopping Cart</h3>
+                        <b class="cart__close" id="cart-close">x</b>
+                        <hr>
+                        <div class="container__items">
+                            <div class="cart__item">
+                                <img src="../src/images/item-card.jpg" alt="" class="item__image">
+                                <div class="item__info">
+                                    <h4 class="item__title">Asgaard sofa</h4>
+                                    <p class="item__price"><span>1</span> X <span>Rs. 250,000,00 </span></p>
+                                </div>
+                                <div class="item__delete-container">
+                                    <!-- Nuevo contenedor para el botón de eliminar -->
+                                    <img src="../src/images/delete.svg" alt="" class="item__delete">
+                                </div>
+                            </div>
+                            <div class="cart__item">
+                                <img src="../src/images/item-card.jpg" alt="" class="item__image">
+                                <div class="item__info">
+                                    <h4 class="item__title">Asgaard sofa</h4>
+                                    <p class="item__price"><span>1</span> X <span>Rs. 250,000,00 </span></p>
+                                </div>
+                                <div class="item__delete-container">
+                                    <!-- Nuevo contenedor para el botón de eliminar -->
+                                    <img src="../src/images/delete.svg" alt="" class="item__delete">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cart__total">
+                            <p class="cart__subtotal">Subtotal</p>
+                            <b>Rs. 520,000.00</b>
+                        </div>
+                        <hr>
+                        <button class="cart__checkout">Checkout</button>
+                    </div>
+                    <img src="../src/images/arrow-down.svg" alt="" class="catalog__icon">
+                </li>
+                </ul>
+              </nav>
+            </header>
+            <main>
+      <div class="separadorNav Contáctanos">
+        <h1>CONTÁCTANOS</h1>
+        <p>Estamos para ayudarte si tienes dudas o peticiones, llena el formulario y en breve nos pondremos en contacto contigo.</p>
+      </div>
+      <hr />
+      <div class="conteiner-form">
+        <img class="img-formulario" src="/src/images/contact.png" alt="flores de colores en un ramo" />
+        <form action="https://formsubmit.co/velosaangelica@gmail.com" method="POST" class="needs-validation" novalidate>
+          <div class="mb-3 form-input">
+            <label for="nombre">Nombre</label>
+            <input type="text" name="name" id="nombre" placeholder="Ingrese su nombre" required />
+            <div class="valid-feedback">¡Correcto!</div>
+            <div class="invalid-feedback">Por favor ingrese un nombre.</div>
+          </div>
+          <div class="mb-3 form-input">
+            <label for="apellido">Apellido</label>
+            <input type="text" name="lastname" id="apellido" placeholder="Ingrese su apellido" required />
+            <div class="valid-feedback">¡Correcto!</div>
+            <div class="invalid-feedback">Por favor ingrese un apellido.</div>
+          </div>
+          <div class="mb-3 form-input">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="Ingrese su correo electrónico" required />
+            <div class="valid-feedback">¡Correcto!</div>
+            <div class="invalid-feedback">Por favor ingrese un email válido.</div>
+          </div>
+          <div class="mb-3 form-input">
+            <label for="tel">Teléfono</label>
+            <input type="tel" name="phone" id="tel" placeholder="Ingrese su teléfono" required />
+            <div class="valid-feedback">¡Correcto!</div>
+            <div class="invalid-feedback">Por favor ingrese un télefono, sólo números.</div>
+          </div>
+          <div class="mb-3 form-input2">
           <textarea class="message-box" name="mensaje" id="mensaje" rows="5" placeholder="Ingrese un mensaje"></textarea>
-        </div>
-        <div class="conteiner-btn">
+          </div>
+          <div class="conteiner-btn">
           <button class="form__button" type="submit">Enviar</button>
         </div>
       </form>
-    </div>
+      </div>
+    </main>
     <footer class="footer">
       <section class="footer__info">
-        <ul class="footer__list">
-          <a href="../index.html"><li class="list__info">Inicio</li></a>
-          <a href="about.html"><li class="list__info">Sobre Nosotros</li></a>
-          <a href="catalog.html"><li class="list__info">Catálogo</li></a>
-          <a href="categories.html"><li class="list__info">Categorías</li></a>
-        </ul>
-        <ul class="footer__list">
-          <a href="contact.html"><li class="list__info">Contacto</li></a>
-          <a href="login.html"><li class="list__info">Inicio de sesión</li></a>
-          <a href="login.html"><li class="list__info">Registro</li></a>
-          <a href=""><li class="list__info">Mis compras</li></a>
-        </ul>
-        <ul class="footer__list">
-          <li class="list__info">+1234567890</li>
-          <li class="list__info">boutique@gmail.com</li>
-          <li class="list__info">Colombia Bogotá DC</li>
-          <li class="list__info">10:00 - 19:00</li>
-        </ul>
+          <ul class="footer__list">
+              <a href="../index.html"><li class="list__info">Inicio</li></a>
+              <a href="about.html"><li class="list__info">Sobre Nosotros</li></a>
+              <a href="catalog.html"><li class="list__info">Catálogo</li></a>
+              <a href="categories.html"><li class="list__info">Categorías</li></a>
+          </ul>
+          <ul class="footer__list">
+              <a href="contact.html"><li class="list__info">Contacto</li></a>
+              <a href="login.html"><li class="list__info">Inicio de sesión</li></a>
+              <a href="login.html"><li class="list__info">Registro</li></a>
+              <a href=""><li class="list__info">Mis compras</li></a>
+          </ul>
+          <ul class="footer__list">
+              <li class="list__info">+1234567890</li>
+              <li class="list__info">boutique@gmail.com</li>
+              <li class="list__info">Colombia Bogotá DC</li>
+              <li class="list__info">10:00 - 19:00</li>
+          </ul>
       </section>
       <span class="footer__copyright">Binary Beasts ©Copyright 2024. All rights reserved. </span>
-    </footer>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-      crossorigin="anonymous"
-    ></script>
-    <script src="/src/js/contact.js"></script>
-  </body>
-</html>
+  </footer>
+      <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"
+      ></script>
+      <script src="/src/js/contact.js"></script>
+    </body>
+    </html>
