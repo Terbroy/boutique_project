@@ -8,6 +8,7 @@
 @import url("./pages/login.css");
 @import url("./componentes/cart.css");
 @import url("pages/catalog.css");
+@import url("pages/product.css");
 
 
 *{
@@ -16,8 +17,8 @@
     box-sizing: border-box;
 }
 
-button:hover {
-    background-color: var(--light-green);}
+
+
 .display--none{
     display: none;
 }
