@@ -35,26 +35,22 @@
   border-top-left-radius: 30px;
   border-bottom-left-radius: 30px;
 }
-form {
-  width: 65%;
-  display: flex;
-  flex-wrap: wrap;
+.needs-validation{
+    width: 65%;
+    display: flex;
+    flex-wrap: wrap;
 }
-form label {
-  color: var(--text-brown);
-  font-weight: 600;
-  padding-bottom: 6px;
-}
-.form-input {
-  display: flex;
-  flex-direction: column;
-  width: 45%;
-  border-style: solid;
-  border-radius: 10px;
-  border-width: 1px;
-  padding: 3px;
-  margin-left: 3.5%;
-  padding-left: 10px;
+
+.form-input{
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    border-style: solid;
+    border-radius: 10px;
+    border-width: 1px;
+    padding: 3px;
+    margin-left: 3.5%;
+    padding-left: 10px;
 }
 .form-input2 {
   width: 99.5%;
