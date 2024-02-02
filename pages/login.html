@@ -90,49 +90,37 @@
       </ul>
     </nav>
   </header>
-  <section class="form-container">
-    <h5>Iniciar sesión</h5>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet quod, et blanditiis, facilis distinctio provident
-      quas est magnam repellat laudantium sint id dignissimos facere harum officiis ad labore. Quas, quam?</p>
-    <div class="form-one">
-      <form>
-        <div class="mb-3">
-          <label for="Usuario" class="form-label">Usuario</label>
-          <input type="email" class="form-control" id="Usuario" placeholder="Ingresa tu correo">
-          <div id="emailHelp" class="form-text">
+
+
+    <article>
+      <div class="contenedor-formulario">
+        <form class="formu"action="#">
+          <div class="ini-regis">
+            <button type="submit" class="button-ini1">Iniciar sesión </button>
+            <button class="button-regis"type="submit"> Registro </button> 
           </div>
-        </div>
-        <div class="mb-3">
-          <label for="Contraseña" class="form-label">Contraseña</label>
-          <input type="password" class="form-control" id="Contraseña" placeholder="Ingresa tu contraseña">
-        </div>
-        <button type="submit" class="btn btn-success">Iniciar sesión</button>
-        <a href="">¿Olvidaste tu contraseña?</a>
-        <label for="name"> Recuérdame </label>
-        <input type="checkbox" class="remember" name="Recuérdame" value="">
-      </form>
-    </div>
-    <!-- Aquí empieza el registro -->
-    <div class="form-two">
-      <form>
-        <div class="mb-3">
-          <label for="Correo" class="form-label">Correo</label>
-          <input type="email" class="form-control" id="Correo" placeholder="Ingresa tu correo" >
-          <div id="emailHelp" class="form-text">
-          </div>
-        </div>
-        <div class="mb-3">
-          <label for="Usuario" class="form-label">Usuario</label>
-          <input type="password" class="form-control" id="Usuario" placeholder="Ingresa tu usuario">
-        </div>
-        <div class="mb-3">
-          <label for="Contraseña" class="form-label">Contraseña</label>
-          <input type="password" class="form-control" id="Contraseña" placeholder="Ingresa tu contraseña">
-        </div>
-        <button type="submit" class="btn btn-success">Registro</button>
-      </form>
-    </div>
-  </section>
+            <P class="par">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet quod, et blanditiis, facilis distinctio provident
+            quas est magnam repellat laudantium sint id</P>
+
+            <label class="label1"for="usuario">Usuario:</label>
+            <input class="input1" type="text" id="usuario" name="usuario" required placeholder="Ingresa tu usuario">
+
+            <label class="label2" for="contrasena">Contraseña:</label>
+            
+            <input class="input2" type="password" id="contrasena" name="contrasena" required placeholder="Ingresa tu contraseña">
+
+            <div>
+              <input class="input3" type="checkbox" name="Recuérdame" value="">
+              <label class="label3" for="recuerdame"> Recuérdame </label>
+
+              <a class="olvidPass"> ¿Olvidaste tu contraseña? </a>
+            </div>
+
+            <button class="button-ini2" type="submit">Iniciar Sesión</button>
+        </form>
+      </div>
+    </article>
+
   <footer class="footer">
     <section class="footer__info">
         <ul class="footer__list">

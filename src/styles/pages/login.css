@@ -1,0 +1,89 @@
+@import url("../style.css");
+
+:root{
+    --primary-color:#43766C;
+    --background-color: #F5E9DA;
+    --light-green: #82B59D;
+    --soft-green:#BCCFBC;
+    --color-gold: #B19470;
+    --color-brown: #76453B;
+    --text-brown: #482b25;
+    --soft-pink:#f5e9d9;
+
+}
+
+.contenedor-formulario {
+    border: none;
+    margin: 0;
+    padding: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    background-color: white;
+
+}
+
+
+.formu{
+    display: flex;
+    flex-direction: column;
+}
+
+.par{
+    display: flex;
+    text-align: center;
+}
+
+.label1,
+.label2,
+.label3 {
+    margin-bottom: 20px;
+}
+
+.input1,
+.input2 {
+    display: flex;
+    padding: 15px;
+    margin-bottom: 16px;
+    background-color: var(--background-color);
+    border-radius: 50px;
+    border: none;
+
+}
+
+
+
+.ini-regis{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    margin: 10px;
+    cursor: pointer;
+
+}
+
+.button-regis{
+    background-color: var(--soft-pink);
+    color: black;
+    border-radius: 100px;
+
+    
+}
+
+.button-ini2{
+    display: flex;
+    margin-top: 50px;
+    width: 300px;
+    padding: 10px;
+    margin: 0 auto;
+    border-radius: 100px;
+    justify-content: center;
+
+}
+
+.olvidPass{
+    color: var(--text-brown);
+    margin-left: 300px;
+
+}

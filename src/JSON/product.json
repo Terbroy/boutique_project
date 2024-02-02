@@ -1,0 +1,156 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "name": "Ramo de Rosas",
+            "main-info": "rosas jejej",
+            "description": "combinacion de rosas etc",
+            "price": 123.0,
+            "stock": 6,
+            "images": [
+                "https://img.freepik.com/foto-gratis/primer-disparo-flor-morada_181624-25863.jpg",
+                "https://img.freepik.com/foto-gratis/primer-disparo-flor-morada_181624-25863.jpg",
+                "https://img.freepik.com/foto-gratis/primer-disparo-flor-morada_181624-25863.jpg",
+                "https://img.freepik.com/foto-gratis/primer-disparo-flor-morada_181624-25863.jpg"
+            ]
+        },
+        {
+            "id": 2,
+            "name": "Centro de flores",
+            "main-info": "un centro de flores",
+            "description": "combinacion de rosas etc",
+            "price": 123.0,
+            "stock": 6,
+            "images": [
+                "https://img.freepik.com/foto-gratis/primer-disparo-flor-morada_181624-25863.jpg",
+                "https://img.freepik.com/foto-gratis/primer-disparo-flor-morada_181624-25863.jpg",
+                "https://img.freepik.com/foto-gratis/primer-disparo-flor-morada_181624-25863.jpg",
+                "https://img.freepik.com/foto-gratis/primer-disparo-flor-morada_181624-25863.jpg"
+            ]
+        },
+        {
+            "id": 2,
+            "name": "Centro de flores",
+            "main-info": "un centro de flores",
+            "description": "combinacion de rosas etc",
+            "price": 123.0,
+            "stock": 6,
+            "images": [
+                "https://img.freepik.com/foto-gratis/primer-disparo-flor-morada_181624-25863.jpg",
+                "https://img.freepik.com/foto-gratis/primer-disparo-flor-morada_181624-25863.jpg",
+                "https://img.freepik.com/foto-gratis/primer-disparo-flor-morada_181624-25863.jpg",
+                "https://img.freepik.com/foto-gratis/primer-disparo-flor-morada_181624-25863.jpg"
+            ]
+        },
+        {
+            "id": 2,
+            "name": "Centro de flores",
+            "main-info": "un centro de flores",
+            "description": "combinacion de rosas etc",
+            "price": 123.0,
+            "stock": 6,
+            "images": [
+                "https://img.freepik.com/foto-gratis/primer-disparo-flor-morada_181624-25863.jpg",
+                "https://img.freepik.com/foto-gratis/primer-disparo-flor-morada_181624-25863.jpg",
+                "https://img.freepik.com/foto-gratis/primer-disparo-flor-morada_181624-25863.jpg",
+                "https://img.freepik.com/foto-gratis/primer-disparo-flor-morada_181624-25863.jpg"
+            ]
+        },
+        {
+            "id": 2,
+            "name": "Centro de flores",
+            "main-info": "un centro de flores",
+            "description": "combinacion de rosas etc",
+            "price": 123.0,
+            "stock": 6,
+            "images": [
+                "https://img.freepik.com/foto-gratis/primer-disparo-flor-morada_181624-25863.jpg",
+                "https://img.freepik.com/foto-gratis/primer-disparo-flor-morada_181624-25863.jpg",
+                "https://img.freepik.com/foto-gratis/primer-disparo-flor-morada_181624-25863.jpg",
+                "https://img.freepik.com/foto-gratis/primer-disparo-flor-morada_181624-25863.jpg"
+            ]
+        },{
+            "id": 2,
+            "name": "Centro de flores",
+            "main-info": "un centro de flores",
+            "description": "combinacion de rosas etc",
+            "price": 123.0,
+            "stock": 6,
+            "images": [
+                "https://img.freepik.com/foto-gratis/primer-disparo-flor-morada_181624-25863.jpg",
+                "https://img.freepik.com/foto-gratis/primer-disparo-flor-morada_181624-25863.jpg",
+                "https://img.freepik.com/foto-gratis/primer-disparo-flor-morada_181624-25863.jpg",
+                "https://img.freepik.com/foto-gratis/primer-disparo-flor-morada_181624-25863.jpg"
+            ]
+        },
+        {
+            "id": 2,
+            "name": "Centro de flores",
+            "main-info": "un centro de flores",
+            "description": "combinacion de rosas etc",
+            "price": 123.0,
+            "stock": 6,
+            "images": [
+                "https://img.freepik.com/foto-gratis/primer-disparo-flor-morada_181624-25863.jpg",
+                "https://img.freepik.com/foto-gratis/primer-disparo-flor-morada_181624-25863.jpg",
+                "https://img.freepik.com/foto-gratis/primer-disparo-flor-morada_181624-25863.jpg",
+                "https://img.freepik.com/foto-gratis/primer-disparo-flor-morada_181624-25863.jpg"
+            ]
+        },
+        {
+            "id": 2,
+            "name": "Centro de flores",
+            "main-info": "un centro de flores",
+            "description": "combinacion de rosas etc",
+            "price": 123.0,
+            "stock": 6,
+            "images": [
+                "https://img.freepik.com/foto-gratis/primer-disparo-flor-morada_181624-25863.jpg",
+                "https://img.freepik.com/foto-gratis/primer-disparo-flor-morada_181624-25863.jpg",
+                "https://img.freepik.com/foto-gratis/primer-disparo-flor-morada_181624-25863.jpg",
+                "https://img.freepik.com/foto-gratis/primer-disparo-flor-morada_181624-25863.jpg"
+            ]
+        },
+        {
+            "id": 2,
+            "name": "Centro de flores",
+            "main-info": "un centro de flores",
+            "description": "combinacion de rosas etc",
+            "price": 123.0,
+            "stock": 6,
+            "images": [
+                "https://img.freepik.com/foto-gratis/primer-disparo-flor-morada_181624-25863.jpg",
+                "https://img.freepik.com/foto-gratis/primer-disparo-flor-morada_181624-25863.jpg",
+                "https://img.freepik.com/foto-gratis/primer-disparo-flor-morada_181624-25863.jpg",
+                "https://img.freepik.com/foto-gratis/primer-disparo-flor-morada_181624-25863.jpg"
+            ]
+        },
+        {
+            "id": 2,
+            "name": "Centro de flores",
+            "main-info": "un centro de flores",
+            "description": "combinacion de rosas etc",
+            "price": 123.0,
+            "stock": 6,
+            "images": [
+                "https://img.freepik.com/foto-gratis/primer-disparo-flor-morada_181624-25863.jpg",
+                "https://img.freepik.com/foto-gratis/primer-disparo-flor-morada_181624-25863.jpg",
+                "https://img.freepik.com/foto-gratis/primer-disparo-flor-morada_181624-25863.jpg",
+                "https://img.freepik.com/foto-gratis/primer-disparo-flor-morada_181624-25863.jpg"
+            ]
+        },{
+            "id": 2,
+            "name": "Centro de flores",
+            "main-info": "un centro de flores",
+            "description": "combinacion de rosas etc",
+            "price": 123.0,
+            "stock": 6,
+            "images": [
+                "https://img.freepik.com/foto-gratis/primer-disparo-flor-morada_181624-25863.jpg",
+                "https://img.freepik.com/foto-gratis/primer-disparo-flor-morada_181624-25863.jpg",
+                "https://img.freepik.com/foto-gratis/primer-disparo-flor-morada_181624-25863.jpg",
+                "https://img.freepik.com/foto-gratis/primer-disparo-flor-morada_181624-25863.jpg"
+            ]
+        }
+    ]
+}
