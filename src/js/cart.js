@@ -1,12 +1,11 @@
-const navCart = document.getElementById("nav-cart");
 const cart = document.getElementById("cart");
-const cartClose = document.getElementById("cart-close");
 
-navCart.addEventListener( "click", e => {
-    cart.classList.remove("display--none")
+function toggleCart() {
+    cart.classList.toggle("display--none");
+}
+document.addEventListener("click", (event) => {
+    const clickedElement = event.target;
+    if (clickedElement.id === "nav-cart" || clickedElement.id === "cart-close") {
+        toggleCart();
+    }
 })
-
-cartClose.addEventListener( "click", e => {
-    cart.classList.add("display--none")
-})
-

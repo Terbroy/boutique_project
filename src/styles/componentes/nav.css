@@ -25,12 +25,10 @@
 
 .nav.nav--light .logo__info, .line{
     color: var(--color-brown) ;
-    stroke: 1px;
 }
 
 .header__nav .logo__info, .line{
     color: var(--color-brown) ;
-    stroke: 1px;
 }
 
 

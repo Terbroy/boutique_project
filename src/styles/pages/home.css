@@ -165,8 +165,9 @@
     text-align: end;
 }
 .categories__container{
+    width: 100%;
     display: flex;
-    margin: 0 auto;
+    justify-content: center;
     gap: 1.5rem;
     padding-top:2rem ;
 }

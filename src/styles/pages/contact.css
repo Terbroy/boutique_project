@@ -81,7 +81,7 @@
   outline: none;
 }
 
-.message_box::placeholder::placeholder {
+.message_box::placeholder {
   color: var(--text-brown);
 }
 .conteiner-btn {
