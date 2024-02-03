@@ -16,24 +16,25 @@
 }
 
 .Contáctanos p {
-  color: var(--color-brown);
+    color: var(--color-brown);
+    
 }
 
-.conteiner-form {
-  display: flex;
-  width: 80vw;
-  height: 80vh;
-  justify-content: center;
-  align-items: center;
-  margin: 0 10vw;
-  background: var(--soft-pink);
-  border-radius: 30px;
+.conteiner-form{
+    display: flex;
+    width: 80vw;
+    height: 80vh;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10vw;
+    background: var(--soft-pink);
+    border-radius: 30px;
 }
-.img-formulario {
-  width: 35%;
-  height: 100%;
-  border-top-left-radius: 30px;
-  border-bottom-left-radius: 30px;
+.img-formulario{
+    width: 35%;
+    height: 100%;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
 }
 .needs-validation{
     width: 65%;
@@ -65,24 +66,23 @@
 .form-input input:focus {
   outline: none;
 }
-.form-input input::placeholder {
-  color: var(--text-brown);
-  font-size: small;
+.form-input input::placeholder{
+    color: var(--text-brown);
+    font-size: small;
 }
-.message-box {
-  width: 100%;
-  background-color: var(--soft-pink);
-  border-radius: 10px;
-  border-color: black;
-  color: var(--text-brown);
-  padding-left: 10px;
+.message-box{
+    width: 100%;
+    background-color: var(--soft-pink);
+    border-radius: 10px;
+    border-color: black;
+    color: var(--text-brown);
+    padding-left: 10px;
 }
-.message-box:focus {
-  outline: none;
+.message-box:focus{
+    outline: none;
 }
-
-.message_box::placeholder::placeholder {
-  color: var(--text-brown);
+.message_box::placeholder::placeholder{
+    color: var(--text-brown);
 }
 .conteiner-btn {
   width: 100%;
