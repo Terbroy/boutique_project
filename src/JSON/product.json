@@ -2,8 +2,9 @@
     "products": [
         {
             "id": 1,
+            "category":"Bouquets",
             "name": "Centro de mesa flores secas",
-            "main-info": "Flores secas",
+            "main_info": "Flores secas",
             "description": "Variedad de flores y arreglos",
             "price": 100000,
             "stock": 6,
@@ -16,8 +17,9 @@
         },
         {
             "id": 2,
+            "category":"Bouquets",
             "name": "Ramo de flores secas",
-            "main-info": "Flores secas",
+            "main_info": "Flores secas",
             "description": "Combinación de flores",
             "price": 80000,
             "stock": 5,
@@ -30,8 +32,9 @@
         },
         {
             "id": 3,
+            "category":"Bouquets",
             "name": "Centro de rosas",
-            "main-info": "Centro de mesa de rosas",
+            "main_info": "Centro de mesa de rosas Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, corrupti.",
             "description": "Combinación de rosas",
             "price": 120000,
             "stock": 8,
@@ -44,8 +47,9 @@
         },
         {
             "id": 4,
+            "category":"Centros",
             "name": "Centro de flores secas sencillo",
-            "main-info": "Centro de flores secas",
+            "main_info": "Centro de flores secas Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, corrupti.",
             "description": "Variedad de flores secas",
             "price": 60000,
             "stock": 7,
@@ -58,9 +62,10 @@
         },
         {
             "id": 5,
+            "category":"Centros",
             "name": "Centro de flores varias",
-            "main-info": "Centro de varias flores",
-            "description": "Variedad de flores y arreglos",
+            "main_info": "Centro de varias flores Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, corrupti.",
+            "description": "Variedad de flores y arreglos Variedad de flores y arreglos Variedad de flores y arreglos",
             "price": 150000,
             "stock": 9,
             "images": [
@@ -71,8 +76,9 @@
             ]
         },{
             "id": 6,
+            "category":"Centros",
             "name": "Ramo de rosas",
-            "main-info": "Combinación de rosas",
+            "main_info": "Combinación de rosas Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, corrupti.",
             "description": "Varieda de rosas",
             "price": 110000,
             "stock": 10,
@@ -85,8 +91,9 @@
         },
         {
             "id": 7,
+            "category":"Centros",
             "name": "Ramo de flores varias",
-            "main-info": "Variedad de flores",
+            "main_info": "Variedad de flores Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, corrupti.",
             "description": "Combinación de flores",
             "price": 120000,
             "stock": 4,
@@ -99,8 +106,9 @@
         },
         {
             "id": 8,
+            "category":"Bouquets",
             "name": "Ramos de novia",
-            "main-info": "Ramo de flores para bodas",
+            "main_info": "Ramo de flores para bodas huriwehewr Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, corrupti.",
             "description": "Combinación de flores",
             "price": 160000,
             "stock": 11,
@@ -113,8 +121,9 @@
         },
         {
             "id": 9,
+            "category":"Bouquets",
             "name": "Centro de flores para eventos",
-            "main-info": "Centro de mesa",
+            "main_info": "Centro de mesa Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, corrupti.",
             "description": "Centros para eventos",
             "price": 120000,
             "stock": 12,
@@ -127,8 +136,9 @@
         },
         {
             "id": 10,
+            "category":"Bouquets",
             "name": "Ramos de flores otoñales",
-            "main-info": "Ramo de flores",
+            "main_info": "Ramo de flores Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, corrupti.",
             "description": "Combinación de flores",
             "price": 15000,
             "stock": 14,
@@ -140,8 +150,9 @@
             ]
         },{
             "id": 11,
+            "category":"Bouquets",
             "name": "Arreglo de flores cabello",
-            "main-info": "Arreglo de flores para el cabello",
+            "main_info": "Arreglo de flores para el cabello Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, corrupti.",
             "description": "Flores como accesorio",
             "price": 100000,
             "stock": 3,
@@ -153,8 +164,9 @@
             ]
         },{
             "id": 12,
+            "category":"Centros",
             "name": "Ramo de flores primaverales",
-            "main-info": "Combinación de flores primaverales",
+            "main_info": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, corrupti. Combinación de flores primaverales",
             "description": "Variedad de flores",
             "price": 100000,
             "stock": 5,

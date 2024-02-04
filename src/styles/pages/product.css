@@ -24,6 +24,7 @@
     font-size: 1.3rem;
 }
 
+
 .product{
     padding: 2rem 5rem;
     display: flex;
@@ -33,7 +34,8 @@
 }
 
 .product__carrousel{
-    min-width: 40%;
+    max-width: 40%;
+    width: 40%;
     height: 500px;
     display: grid;
     width: fit-content;
@@ -150,14 +152,15 @@
 }
 
 .related--product{
-        padding: 2rem 6rem;
-        max-width: 1300px;
-        display: grid;
-        margin: 0 auto;
-        grid-template-columns: repeat(5, auto);
+        padding: 2rem 1rem;
+        width: 100%;
+        display: flex;
+        overflow: scroll;
+        gap: 1rem;
         align-content: center;
+        scrollbar-color: #ffff;
 }
 
 .related--product .product--card{
-    max-width: 200px;
+    width: 250px;
 }
