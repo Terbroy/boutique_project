@@ -27,6 +27,7 @@
     flex-direction: column;
     gap: 2rem;
     color: var(--color-gold);
+    overflow: scroll;
 }
 
 .cart__title{
@@ -111,6 +112,7 @@
     width: max-content;
     align-items: center;
     margin-right: auto;
+
 }
 /* 
                     <button class="cart__checkout">Checkout</button> */
