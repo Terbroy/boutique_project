@@ -1,35 +1,32 @@
 const cart = document.getElementById("cart");
 
 function toggleCart() {
-    cart.classList.toggle("display--none");
+  cart.classList.toggle("display--none");
 }
 document.addEventListener("click", (event) => {
-    const clickedElement = event.target;
-    if (clickedElement.id === "nav-cart" || clickedElement.id === "cart-close") {
-        toggleCart();
-    }
-})
-
-
-
+  const clickedElement = event.target;
+  if (clickedElement.id === "nav-cart" || clickedElement.id === "cart-close") {
+    toggleCart();
+  }
+});
 
 //Logica para agregar o quitar productos
 const btnAddCart = document.getElementsByClassName("options__cart");
 const container__items = document.querySelector(".container__items");
 
 for (let i = 0; i < btnAddCart.length; i++) {
-    contador= 0;
-    btnAddCart[i].addEventListener('click', function(){
-        contador+=1;
-        console.log(contador);
-        addCart();
-})
+  contador = 0;
+  btnAddCart[i].addEventListener("click", function () {
+    contador += 1;
+    console.log(contador);
+    addCart();
+  });
 }
 
 function addCart() {
   console.log("Si se activa la funcion");
   let cart = "";
-    cart += `<div class="container__items">
+  cart += `<div class="container__items">
         <div class="cart__item">
         <img src="../src/images/item-card.jpg" alt="" class="item__image" />
         <div class="item__info">
@@ -40,9 +37,9 @@ function addCart() {
         <!-- Nuevo contenedor para el botón de eliminar -->
         <img src="../src/images/delete.svg" alt="" class="item__delete" />
         </div>
-        </div>`
-    container__items.innerHTML += cart;
+        </div>`;
+  container__items.innerHTML += cart;
 }
 btnAddCart.onclick = function () {
-    addCart();
+  addCart();
 };
