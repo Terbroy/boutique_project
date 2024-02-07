@@ -20,7 +20,7 @@
 
 
 }
-.catalog_filter_list{
+.catalog__filter__list{
     position: relative;
     display: flex;
     gap: .5rem;
