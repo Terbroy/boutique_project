@@ -35,14 +35,14 @@ function guardarDatos() {
         correo,
         contrasena
     };
-
-    // Convertir el objeto a formato JSON y almacenarlo en el localStorage
     localStorage.setItem('usuario', JSON.stringify(usuario));
+
+    alert('Usuario registrado con éxito');
+    // Convertir el objeto a formato JSON y almacenarlo en el localStorage
 
 
     document.getElementById('formularioRegistro').reset();
 
-            alert('Usuario registrado con éxito');
 }
 
 function iniciarSesion() {
