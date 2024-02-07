@@ -96,8 +96,8 @@
 
            <!--botones de inicio y registro-->
       <div class="ini-regis">
-          <button type="submit" class="button-ini1" onclick="mostrarFormulario('inicio')">Iniciar sesión </button>
-          <button class="button-regis"type="submit" onclick="mostrarFormulario('registro')"> Registro </button> 
+          <button type="button" class="button-ini1" onclick="mostrarFormulario('inicio')">Iniciar sesión </button>
+          <button class="button-regis"type="button" onclick="mostrarFormulario('registro')"> Registro </button> 
      </div>
             <!--parrafo-->
       <div>
@@ -107,33 +107,31 @@
             <!--este es el formulario de iniciar sesion-->
       <div id="formularioInicio" class="form-container">
           <form class="form--login" action="#">
-          <label class="label1"for="usuario">Usuario:</label>
-          <input class="input1" type="text" id="usuario" name="usuario" required placeholder="Ingresa tu usuario">
-          <label class="label2" for="contrasena">Contraseña:</label>
-          <input class="input2" type="password" id="contrasena" name="contrasena" required placeholder="Ingresa tu contraseña">
+          <label class="label1"for="correoLogin">Usuario:</label>
+          <input class="input1" type="email" id="correoLogin" name="correoLogin" required placeholder="Ingresa tu usuario">
+          <label class="label2" for="contraseñaLogin">Contraseña:</label>
+          <input class="input2" type="password" id="contrasenaLogin" name="contrasenaLogin" required placeholder="Ingresa tu contraseña">
           <div>
-          <input class="input3" type="checkbox" name="Recuérdame" value="">
-          <label class="label3" for="recuerdame"> Recuérdame </label>
+          <input class="input3" id="recordarUsuario" type="checkbox" name="recordarUsuario" value="">
+          <label class="label3" for="recordarUsuario"> Recuérdame </label>
           <a class="olvidPass"> ¿Olvidaste tu contraseña? </a>
           </div>
-          <button class="button-ini2" type="submit">Iniciar Sesión</button>
+          <button class="button-ini2" type="submit" onclick="iniciarSesion()">Iniciar Sesión</button>
           </form>
      </div>
            <!--este es el formulario de registro-->
       <div id="formularioRegistro" class="form-container">
           <form class="form--regis" action="#">
-            <label class="label0"for="correo">Correo electronico:</label>
-            <input class="input0" type="text" id="Correo" name="correo" required placeholder="Ingresa tu correo">
-            <label class="label1"for="usuario">Usuario:</label>
-            <input class="input1" type="text" id="usuario" name="usuario" required placeholder="Ingresa tu usuario">
+            <label class="label0"for="nombreCompleto">Nombre Completo:</label>
+            <input class="input0" type="text" id="nombreCompleto" name="nombreCompleto" required placeholder="Ingresa tu Nombre Completo">
+            <label class="label0"for="telefono">Telefono:</label>
+            <input class="input0" type="text" id="telefono" name="telefono" required placeholder="Ingresa tu Numero de Telefono">
+            <label class="label1"for="correo" >Correo (Usuario):</label>
+            <input class="input1" type="email" id="correo" name="correo" required placeholder="Ingresa tu correo (Usuario)">
             <label class="label2" for="contrasena">Contraseña:</label>
             <input class="input2" type="password" id="contrasena" name="contrasena" required placeholder="Ingresa tu contraseña">
-            <div>
-            <input class="input3" type="checkbox" name="Recuérdame" value="">
-            <label class="label3" for="recuerdame"> Recuérdame </label>
-            <a class="olvidPass"> ¿Olvidaste tu contraseña? </a>
-            </div>
-            <button class="button-ini2" type="submit">Iniciar Sesión</button>
+            
+            <button class="button-ini2" type="button" onclick="guardarDatos()">Registrarse</button>
             </form>
      </div>
 
