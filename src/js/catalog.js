@@ -78,8 +78,8 @@ function displayProductsInCatalog(){
         </div>
         `
     padreProductos.appendChild(card);
-    const title = document.getElementById(`product-title-${product.id}`);
-    const buttonProduct = document.getElementById(`btn-${product.id}`);
+    const title = document.getElementById(product-title-${product.id});
+    
     title.addEventListener("click",(event)=>{
 
 
@@ -97,5 +97,3 @@ function displayProductsInCatalog(){
 
 fetchProductData();
 displayProductsInCatalog();
-
-
