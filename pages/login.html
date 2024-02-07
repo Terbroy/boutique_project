@@ -4,11 +4,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-    crossorigin="anonymous"></script>
   <link rel="stylesheet" href="../src/styles/style.css">
   <title>Login</title>
 </head>
@@ -28,7 +23,7 @@
       </div>
       <ul class="nav__list">
           <li class="list__info"><a class="ancor" href="./about.html">¿Quienes Somos?</a></li>
-          <li class="list__info list__info--catalog">
+          <li class="list_info list_info--catalog">
               <p class="info__catalog"><a href="./catalog.html" class="ancor">Catalogo</a></p>
               <div class="info__categories">
                   <ul class="categories__list">
@@ -47,7 +42,7 @@
               </a>
           </li>
           <li class="list__info">
-              <img id="nav-cart" src="../src/images/cart-brown.svg" alt="" class="info__icon info__icon--cart">
+              <img id="nav-cart" src="../src/images/cart-brown.svg" alt="" class="info_icon info_icon--cart">
               <div id="cart" class="cart display--none">
                   <div class="cart__background"></div>
                   <div class="cart__card">
@@ -89,51 +84,54 @@
           </li>
       </ul>
     </nav>
-  </header>
-  <article class="total-login">
-    
-    <section>
-  
-             <!--botones de inicio y registro-->
-        <div class="ini-regis">
-            <button type="button" class="button-ini1" onclick="mostrarFormulario('inicio')">Iniciar sesión </button>
-            <button class="button-regis"type="button" onclick="mostrarFormulario('registro')"> Registro </button> 
-       </div>
-              <!--parrafo-->
-        <div>
-            <P class="par"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet quod, et blanditiis, facilis distinctio provident
-            quas est magnam repellat laudantium sint id</P>
-       </div>
-              <!--este es el formulario de iniciar sesion-->
-        <div id="formularioInicio" class="form-container">
-            <form class="form--login" action="#">
-            <label class="label1"for="correoLogin">Usuario:</label>
-            <input class="input1" type="email" id="correoLogin" name="correoLogin" required placeholder="Ingresa tu usuario">
-            <label class="label2" for="contraseñaLogin">Contraseña:</label>
-            <input class="input2" type="password" id="contrasenaLogin" name="contrasenaLogin" required placeholder="Ingresa tu contraseña">
-            <div>
-            <input class="input3" id="recordarUsuario" type="checkbox" name="recordarUsuario" value="">
-            <label class="label3" for="recordarUsuario"> Recuérdame </label>
-            <a class="olvidPass"> ¿Olvidaste tu contraseña? </a>
-            </div>
-            <button class="button-ini2" type="submit" onclick="iniciarSesion()">Iniciar Sesión</button>
+</header>
+
+<article class="total-login">
+  <section>
+
+           <!--botones de inicio y registro-->
+      <div class="ini-regis">
+          <button type="button" class="button-ini1" onclick="mostrarFormulario('inicio')">Iniciar sesión </button>
+          <button class="button-regis"type="button" onclick="mostrarFormulario('registro')"> Registro </button> 
+     </div>
+            <!--parrafo-->
+      <div>
+          <P class="par"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet quod, et blanditiis, facilis distinctio provident
+          quas est magnam repellat laudantium sint id</P>
+     </div>
+            <!--este es el formulario de iniciar sesion-->
+      <div id="formularioInicio" class="form-container">
+          <form class="form--login" action="#">
+          <label class="label1"for="correoLogin">Usuario:</label>
+          <input class="input1" type="email" id="correoLogin" name="correoLogin" required placeholder="Ingresa tu usuario">
+          <label class="label2" for="contraseñaLogin">Contraseña:</label>
+          <input class="input2" type="password" id="contrasenaLogin" name="contrasenaLogin" required placeholder="Ingresa tu contraseña">
+          <div>
+          <input class="input3" id="recordarUsuario" type="checkbox" name="recordarUsuario" value="">
+          <label class="label3" for="recordarUsuario"> Recuérdame </label>
+          <a class="olvidPass"> ¿Olvidaste tu contraseña? </a>
+          </div>
+          <button class="button-ini2" type="submit" onclick="iniciarSesion()">Iniciar Sesión</button>
+          </form>
+     </div>
+           <!--este es el formulario de registro-->
+      <div id="formularioRegistro" class="form-container">
+          <form class="form--regis" action="#">
+            <label class="label0"for="nombreCompleto">Nombre Completo:</label>
+            <input class="input0" type="text" id="nombreCompleto" name="nombreCompleto" required placeholder="Ingresa tu Nombre Completo">
+            <label class="label0"for="telefono">Telefono:</label>
+            <input class="input0" type="text" id="telefono" name="telefono" required placeholder="Ingresa tu Numero de Telefono">
+            <label class="label1"for="correo" >Correo (Usuario):</label>
+            <input class="input1" type="email" id="correo" name="correo" required placeholder="Ingresa tu correo (Usuario)">
+            <label class="label2" for="contrasena">Contraseña:</label>
+            <input class="input2" type="password" id="contrasena" name="contrasena" required placeholder="Ingresa tu contraseña">
+            
+            <button class="button-ini2" type="button" onclick="guardarDatos()">Registrarse</button>
             </form>
-       </div>
-             <!--este es el formulario de registro-->
-        <div id="formularioRegistro" class="form-container">
-            <form class="form--regis" action="#">
-              <label class="label0"for="nombreCompleto">Nombre Completo:</label>
-              <input class="input0" type="text" id="nombreCompleto" name="nombreCompleto" required placeholder="Ingresa tu Nombre Completo">
-              <label class="label0"for="telefono">Telefono:</label>
-              <input class="input0" type="text" id="telefono" name="telefono" required placeholder="Ingresa tu Numero de Telefono">
-              <label class="label1"for="correo" >Correo (Usuario):</label>
-              <input class="input1" type="email" id="correo" name="correo" required placeholder="Ingresa tu correo (Usuario)">
-              <label class="label2" for="contrasena">Contraseña:</label>
-              <input class="input2" type="password" id="contrasena" name="contrasena" required placeholder="Ingresa tu contraseña">
-  
-              <button class="button-ini2" type="button" onclick="guardarDatos()">Registrarse</button>
-              </form>
-       </div>
+     </div>
+
+  </section>
+</article>
 
   <footer class="footer">
     <section class="footer__info">
@@ -159,5 +157,6 @@
     <span class="footer__copyright">Binary Beasts ©Copyright 2024. All rights reserved. </span>
 </footer>
 <script src="../src/js/cart.js"></script>
+<script src="../src/js/login-regis.js"></script>
 </body>
 </html>
