@@ -1,6 +1,7 @@
 @import url("../style.css");
 
 .main__catalog, .options__cart{
+.main__catalog, .options__cart{
     font-family: 'Bona nova', serif;
 }
 .catalog{
@@ -18,10 +19,15 @@
     text-align: center;
 
 }
-.catalog__filter__list{
+.catalog_filter_list{
     position: relative;
     display: flex;
     gap: .5rem;
+}
+.filter__img{
+    width: 20px;
+    justify-content: center;
+    vertical-align: middle;
 }
 .filter__img{
     width: 20px;
@@ -53,6 +59,10 @@
     display: flex;
     flex-direction: column;
     gap: .5rem;
+}
+.filter__line{
+    height: 40px ;
+    align-items: center;
 }
 .filter__line{
     height: 40px ;
@@ -197,13 +207,4 @@
 }
 .button__catalognext:hover{
     background-color: var(--light-green) ;
-}
-/*SEARCH SECTION*/
-.results__search{
-    padding: 50px 100px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    align-content: center;
-    row-gap: 50px;
-    column-gap: 60px;
 }
