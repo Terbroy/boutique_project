@@ -10,7 +10,7 @@ function fetchProduct(id){
     console.log(selectedProduct);
 }
 async function fetchProductData() {
-    await fetch("http://127.0.0.1:5500/src/JSON/product.json")
+    await fetch("http://127.0.0.1:5500/boutique_project/src/JSON/product.json")
         .then(res => res.json())
         .then(data=> localStorage.setItem("products", JSON.stringify(data)))
         .catch(error => console.log(error));
@@ -39,8 +39,7 @@ function displayProductsInCatalog(){
         </div>
         `
     padreProductos.appendChild(card);
-    const title = document.getElementById(product-title-${product.id});
-    
+    const title = document.getElementById(`product-title-${product.id}`);
     title.addEventListener("click",(event)=>{
         fetchProduct(product.id);
     } );
@@ -52,3 +51,5 @@ function displayProductsInCatalog(){
 
 fetchProductData();
 displayProductsInCatalog();
+
+

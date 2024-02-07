@@ -1,6 +1,6 @@
 @import url("../style.css");
 
-.main__catalog, .options__cart, .options__share{
+.main__catalog, .options__cart{
     font-family: 'Bona nova', serif;
 }
 .catalog{
@@ -17,10 +17,15 @@
     gap: 20px;
     text-align: center;
 }
-.catalog__filter__list{
+.catalog_filter_list{
     position: relative;
     display: flex;
     gap: .5rem;
+}
+.filter__img{
+    width: 20px;
+    justify-content: center;
+    vertical-align: middle;
 }
 .filter__text{
     width: 100px;
@@ -48,17 +53,12 @@
     flex-direction: column;
     gap: .5rem;
 }
-.results__shown{
-    width: 250px;
-    align-items: center;
-}
-.filter__img{
-    width: 20px;
-    justify-content: center;
-    vertical-align: middle;
-}
 .filter__line{
     height: 40px ;
+    align-items: center;
+}
+.results__shown{
+    width: 250px;
     align-items: center;
 }
 .form__search{
@@ -157,15 +157,9 @@
     padding: 4px;
     cursor: pointer;
 }
-.options__share{
-    display: flex;
-    justify-content: center;
-    gap: 5px;
-    background-color: transparent;
-    border-color: transparent;
-    color: var(--soft-pink);
-    cursor: pointer;
-}  
+.options__cart:hover{
+    background-color: var(--light-green);
+}
 .product__title, .product__price{
     font-weight: bold;
     color: var(--color-brown);
@@ -173,21 +167,17 @@
 }
 
 .product__title:hover{
-    color: #fff;
+    color: var(--light-green);
 }
-
+.product__title a{
+    text-decoration: none;
+}
 .product__price, .button__catalognext{
     font-family: 'Poppins', sans-serif;
 }
 .product__text{
     padding: 10px;
     color: var(--color-brown);
-}
-.options__share{
-    display: flex;
-    justify-content: center;
-    gap: 6px;
-    background-color: transparent;
 }
 .nextpage__buttons{
     display: flex;
@@ -201,4 +191,7 @@
     border-color: transparent;
     color: var(--soft-pink);
     cursor: pointer;
+}
+.button__catalognext:hover{
+    background-color: var(--light-green) ;
 }
