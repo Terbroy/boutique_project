@@ -16,8 +16,9 @@
     color: var(--soft-pink);
     gap: 20px;
     text-align: center;
+
 }
-.catalog_filter_list{
+.catalog__filter__list{
     position: relative;
     display: flex;
     gap: .5rem;
@@ -93,6 +94,7 @@
     width: 200px;
     height:35px;
     padding: 8px;
+    margin-left: 25%;
     border-radius: 15px;
     font-family: 'Bona nova', serif;
     cursor: pointer;
