@@ -1,3 +1,4 @@
+@import url(../style.css);
 .header{
     font-family: "Bona Nova", sans-serif;
     background-image: url("../../images/background-main.png");
@@ -48,7 +49,7 @@
 }
 
 .featured{
-    padding: 3rem 5rem;
+    padding: 3rem 10rem;
     display: flex;
     gap: 4rem;
     height: 95vh;
@@ -70,13 +71,14 @@
     width: 100%;
     display: grid;
     grid-template-columns:  20% 30% 50%;
-    object-fit: contain;
+    object-fit: cover;
     gap: .5rem;
 }
 
 .collage__image{
     width: 100%;
     height: 100%;
+    object-fit: cover;
 }
 
 .collage__image-6{
@@ -104,3 +106,123 @@
     grid-row: 2/4;
 }
 
+
+.about{
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: 70% 30%;
+    background-color: var(--primary-color);
+    width: 100%;
+    position: relative;
+    padding: 4rem 7rem 4rem 3rem;
+}
+
+.about__arrow{
+    position: absolute;
+    right: 4rem;
+    top: 50%;
+}
+
+.about__title{
+    grid-column: 1/2;
+    width: fit-content;    
+}
+
+.about__title .section__title, .about__title hr{
+    color: #ffff;
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+
+.section__text{
+    grid-column: 1/2;
+    line-height: 2rem;
+    color: #fff;
+    font-size: 1.5rem;
+    text-align: justify;
+}
+
+.about__flower{
+    grid-column: 2/3;
+    grid-row: 1/3;
+    padding-left: 4rem;
+    height: 350px;
+}
+
+.categories{
+    padding: 3rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.categories .section__title{
+    font-weight: 600;
+    letter-spacing: 1rem;
+    font-size: 2.5rem;
+    text-align: end;
+}
+.categories__container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    padding-top:2rem ;
+}
+
+.container__card{
+    position: relative;
+    width: 300px;
+    height: auto;
+    max-height: 500px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card__image{
+    height:100% ;
+    object-fit: cover;
+    width: 100%;
+    object-position: 0 -1rem;
+}
+
+.card__info{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--soft-pink);
+    padding: 1.5rem;
+    padding-top: .5rem;
+    color: var(--color-gold);
+}
+
+.card__title{
+    padding-bottom: 1rem;
+    letter-spacing: .2rem;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.card__text{
+    font-size: .9rem;
+}
+
+.section__button{
+    align-self: center;
+    text-align: center;
+    width: max-content;
+    margin-top: 2rem;
+    background-color: var(--primary-color);
+    border: transparent;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+}
+
+.buttton__arrow{
+    width: 15px;
+}

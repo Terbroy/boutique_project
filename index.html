@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Boutique de las flores</title>
-    <link rel="shortcut icon" href="./src/images/nav-logo.svg" type="image/x-icon">
-    <link rel="stylesheet" href="./src/styles/style.css">
-</head>
-<body>
+    <link rel="shortcut icon" href="./src/images/nav-logo.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="src/styles/style.css" />
+  </head>
+  <body>
     <header class="header">
-    <div class="header__opacity"></div>
-    <nav class="nav">
+      <div class="header__opacity"></div>
+      <nav class="nav">
         <div class="nav__logo">
             <a href="./index.html" class="logo__icon">
                 <img src="./src/images/nav-logo.svg" alt="" class="logo__icon">
@@ -21,110 +21,144 @@
                 <hr>
             </div>
         </div>
-        <ul class="nav__list">
-            <li class="list__info"><a class="ancor" href="./pages/about.html">¿Quienes Somos?</a></li>
-            <li class="list__info list__info--catalog">
-                <p class="info__catalog"><a href="./pages/catalog.html" class="ancor">Catalogo</a></p>
-                <div class="info__categories">
-                    <ul class="categories__list">
-                        <li class="list__info"> <a href="" class="ancor">Flores secas</a></li>
-                        <li class="list__info"><a href="" class="ancor">Bouquets</a></li>
-                        <li class="list__info"><a href="" class="ancor">Centros</a></li>
-                    </ul>
+      </div>
+      <ul class="nav__list">
+        <li class="list__info"><a class="ancor" href="./pages/about.html">¿Quienes Somos?</a></li>
+        <li class="list__info list__info--catalog">
+          <p class="info__catalog"><a href="./pages/catalog.html" class="ancor">Catalogo</a></p>
+          <div class="info__categories">
+            <ul class="categories__list">
+              <li class="list__info"> <a href="" class="ancor">Flores secas</a></li>
+              <li class="list__info"><a href="" class="ancor">Bouquets</a></li>
+              <li class="list__info"><a href="" class="ancor">Centros</a></li>
+            </ul>
+          </div>
+          <img src="./src/images/arrow-down.svg" alt="" class="catalog__icon">
+        </li>
+        <li class="list__info"> <a href="./pages/contact.html" class="ancor">Contacto</a></li>
+        <li class="list__info">
+          <a href="./pages/login.html">
+
+            <img src="./src/images/user.svg" alt="" class="info__icon">
+          </a>
+        </li>
+        <li class="list__info">
+          <img id="nav-cart" src="./src/images/cart.svg" alt="" class="info__icon info__icon--cart">
+          <div id="cart" class="cart display--none">
+            <div class="cart__background"></div>
+            <div class="cart__card">
+              <h3 class="cart__title">Shopping Cart</h3>
+              <b class="cart__close" id="cart-close">x</b>
+              <hr>
+              <div class="container__items">
+                <div class="cart__item">
+                  <img src="./src/images/item-card.jpg" alt="" class="item__image">
+                  <div class="item__info">
+                    <h4 class="item__title">Asgaard sofa</h4>
+                    <p class="item__price"><span>1</span> X <span>Rs. 250,000,00 </span></p>
+                  </div>
+                  <div class="item__delete-container"> <!-- Nuevo contenedor para el botón de eliminar -->
+                    <img src="./src/images/delete.svg" alt="" class="item__delete">
+                  </div>
                 </div>
                 <img src="./src/images/arrow-down.svg" alt="" class="catalog__icon">
             </li>
-            <li class="list__info"> <a href="./pages/contact.html" class="ancor">Contacto</a></li>
-            <li class="list__info">
-                <img src="./src/images/user.svg" alt="" class="info__icon">
-            </li>
-            <li class="list__info">
-                <img src="./src/images/cart.svg" alt="" class="info__icon">
-            </li>
         </ul>
-    </nav>
-    <section class="home">
-        <h1 class="home__title">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi, blanditiis.</h1>
+      </nav>
+      <section class="home">
+        <h1 id="ejemplo" class="home__title">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi, blanditiis.</h1>
         <button class="home__see-more">Ver más</button>
-    </section> 
-</header>
-<main class="main">
-    <section class="featured">
+      </section>
+    </header>
+    <main class="main">
+      <section class="featured">
         <h2 class="section__title section__title--vertical">DESTACADAS</h2>
         <article class="featured__collage">
-            <img class="collage__image collage__image-1" src="./src/images/img-here.png" alt="" class="collage__item">
-            <img class="collage__image collage__image-2" src="./src/images/img-here-1.png" alt="" class="collage__item">
-            <img class="collage__image collage__image-3" src="./src/images/img-here-2.png" alt="" class="collage__item">
-            <img class="collage__image collage__image-4" src="./src/images/img-here-3.png" alt="" class="collage__item">
-            <img class="collage__image collage__image-5" src="./src/images/img-here-4.png" alt="" class="collage__item">
-            <img class="collage__image collage__image-6" src="./src/images/img-here-5.png" alt="" class="collage__item">
+          <img class="collage__image collage__image-1" src="./src/images/img-here.png" alt="" class="collage__item" />
+          <img class="collage__image collage__image-2" src="./src/images/img-here-1.png" alt="" class="collage__item" />
+          <img class="collage__image collage__image-3" src="./src/images/img-here-2.png" alt="" class="collage__item" />
+          <img class="collage__image collage__image-4" src="./src/images/ramo_secas.svg" alt="" class="collage__item" />
+          <img class="collage__image collage__image-5" src="./src/images/centro_secas.svg" alt="" class="collage__item" />
+          <img class="collage__image collage__image-6" src="./src/images/10ramo_rosas.svg" alt="" class="collage__item" />
         </article>
-    </section>
-    <section class="about">
+      </section>
+      <section class="about">
         <div class="about__title">
-            <hr>
-            <h2 class="section__title"> LA BOUTIQUE DE LAS FLORES</h2>
-            <hr>
+          <hr />
+          <h2 class="section__title">LA BOUTIQUE DE LAS FLORES</h2>
+          <hr />
         </div>
         <p class="section__text">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit hic aut, itaque nostrum laborum dignissimos voluptates necessitatibus natus excepturi. Autem dignissimos doloremque amet corrupti optio distinctio provident quam, harum dolores iusto odio, laudantium accusantium rem aliquam perspiciatis? Doloribus officia alias voluptate? Asperiores perferendis officiis harum tempore a repudiandae quasi at!
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit hic aut, itaque nostrum laborum dignissimos voluptates necessitatibus natus excepturi. Autem
+          dignissimos doloremque amet corrupti optio distinctio provident quam, harum dolores iusto odio, laudantium accusantium rem aliquam perspiciatis? Doloribus officia alias
+          voluptate? Asperiores perferendis officiis harum tempore a repudiandae quasi at!
         </p>
-    </section>
-    <section class="categories">
+        <img src="./src/images/flower.png" alt="" class="about__flower">
+        <img src="./src/images/right-arrow.svg" alt="" class="about__arrow">
+      </section>
+      <section class="categories">
         <h2 class="section__title">CATEGORIAS</h2>
         <article class="categories__container">
-            <div class="container__card">
-                <img src="" alt="" class="card__image">
-                <div class="card__info">
-                    <h3 class="card__title"></h3>
-                    <p class="card__text"></p>
-                </div>
+          <div class="container__card">
+            <img src="./src/images/10ramo_rosas.svg" alt="" class="card__image" />
+            <div class="card__info">
+              <h3 class="card__title">Bouquets Frescos</h3>
+              <p class="card__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima corrupti numquam maiores? Non, facere! Provident at repudiandae odio eos dignissimos.</p>
             </div>
-            <div class="container__card">
-                <img src="" alt="" class="card__image">
-                <div class="card__info">
-                    <h3 class="card__title"></h3>
-                    <p class="card__text"></p>
-                </div>
+          </div>
+          <div class="container__card">
+            <img src="./src/images/10ramo_rosas.svg" alt="" class="card__image" />
+            <div class="card__info">
+              <h3 class="card__title">Bouquets Frescos</h3>
+              <p class="card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas doloremque quia laudantium atque dolorem minima architecto, nihil est totam quisquam.</p>
             </div>
-            <div class="container__card">
-                <img src="" alt="" class="card__image">
-                <div class="card__info">
-                    <h3 class="card__title"></h3>
-                    <p class="card__text"></p>
-                </div>
+          </div>
+          <div class="container__card">
+            <img src="./src/images/10ramo_rosas.svg" alt="" class="card__image" />
+            <div class="card__info">
+              <h3 class="card__title">Bouquets Frescos</h3>
+              <p class="card__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus assumenda dolorum harum odio aspernatur pariatur impedit nobis autem velit. Libero?</p>
             </div>
-            <button class="section__button">
-                <span class="button__text">
-                    Vér Catálogo
-                </span>
-                <i class="button__arrow"></i>
-            </button>
+          </div>
+          <div class="container__card">
+            <img src="./src/images/10ramo_rosas.svg" alt="" class="card__image" />
+            <div class="card__info">
+              <h3 class="card__title">Bouquets Frescos</h3>
+              <p class="card__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus assumenda dolorum harum odio aspernatur pariatur impedit nobis autem velit. Libero?</p>
+            </div>
+          </div>
         </article>
-    </section>
-</main>
-<footer class="footer">
-    <section class="footer__info">
-        <ul class="footer__list">
-            <li class="list__info">Inicio</li>
-            <li class="list__info">Sobre Nosotros</li>
-            <li class="list__info">Catalogo</li>
-            <li class="list__info">Categorias</li>
-        </ul>
-        <ul class="footer__list">
-            <li class="list__info">Contacto</li>
-            <li class="list__info">Inicio de Sesion</li>
-            <li class="list__info">Registro</li>
-            <li class="list__info">Mas Compras</li>
-        </ul>
-        <ul class="footer__list">
-            <li class="list__info">+1234567890</li>
-            <li class="list__info">boutiuqe@gmail.com</li>
-            <li class="list__info">Colombia Bogota DC</li>
-            <li class="list__info">10:00 - 19:00</li>
-        </ul>
-    </section>
-    <span class="footer__copyright">Binary Beasts ©Copyright 2024. All rights reserved. </span>
-</footer>
+        <button class="section__button">
+          Vér Catálogo 
+          <img class="buttton__arrow" src="./src/images/right-arrow.svg" alt="">
+        </button>
+      </section>
+    </main>
+    <footer class="footer">
+      <section class="footer__info">
+          <ul class="footer__list">
+              <a href="index.html"><li class="list__info">Inicio</li></a>
+              <a href="pages/about.html"><li class="list__info">Sobre Nosotros</li></a>
+              <a href="pages/catalog.html"><li class="list__info">Catálogo</li></a>
+              <a href="pages/categories.html"><li class="list__info">Categorías</li></a>
+          </ul>
+          <ul class="footer__list">
+              <a href="pages/contact.html"><li class="list__info">Contacto</li></a>
+              <a href="pages/login.html"><li class="list__info">Inicio de sesión</li></a>
+              <a href="pages/login.html"><li class="list__info">Registro</li></a>
+              <a href=""><li class="list__info">Mis compras</li></a>
+          </ul>
+          <ul class="footer__list">
+              <li class="list__info">+1234567890</li>
+              <li class="list__info">boutique@gmail.com</li>
+              <li class="list__info">Colombia Bogotá DC</li>
+              <li class="list__info">10:00 - 19:00</li>
+          </ul>
+      </section>
+      <span class="footer__copyright">Binary Beasts ©Copyright 2024. All rights reserved. </span>
+  </footer>
+  <script src="./src/js/cart.js"></script>
+  <script src="./src/js/main.js"></script>
 </body>
+
 </html>

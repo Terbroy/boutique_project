@@ -2,13 +2,21 @@
 @import url("./componentes/footer.css");
 @import url("./pages/about.css");
 @import url('https://fonts.googleapis.com/css2?family=Bona+Nova:ital,wght@0,400;0,700;1,400&display=swap');
-@import url("./pages/home.css");
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;1,300&display=swap');
+@import url("./pages/home.css");
+@import url("./pages/contact.css");
+@import url("./componentes/cart.css");
+@import url("pages/catalog.css");
+@import url("pages/product.css");
+
 
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+.display--none{
+    display: none;
 }
 
 :root{
@@ -18,4 +26,6 @@
     --soft-green:#BCCFBC;
     --color-gold: #B19470;
     --color-brown: #76453B;
+    --text-brown: #482b25;
+    --soft-pink:#f5e9d9;
 }

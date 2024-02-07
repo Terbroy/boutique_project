@@ -4,43 +4,85 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../src/styles/style.css">
 </head>
 <body>
     <header>
-        <nav class="nav">
-            <div class="nav__logo">
-                <a href="./index.html" class="logo__icon">
-                    <img src="./src/images/nav-logo.svg" alt="" class="logo__icon">
-                </a> 
-                <div class="logo__info">
-                    <hr>
-                    <p class="logo__text">La Boutique de las Flores</p>
-                    <hr>
-                </div>
+      <nav class="nav nav--light">
+        <div class="nav__logo">
+            <a href="../index.html" class="logo__icon">
+                <img src="../src/images/nav-logo.svg" alt="" class="logo__icon">
+            </a>
+            <div class="logo__info">
+                <hr>
+                <p class="logo__text">La Boutique de las Flores</p>
+                <hr>
             </div>
-            <ul class="nav__list">
-                <li class="list__info"><a class="ancor" href="./pages/about.html">¿Quienes Somos?</a></li>
-                <li class="list__info list__info--catalog">
-                    <p class="info__catalog"><a href="./pages/catalog.html" class="ancor">Catalogo</a></p>
-                    <div class="info__categories">
-                        <ul class="categories__list">
-                            <li class="list__info"> <a href="" class="ancor">Flores secas</a></li>
-                            <li class="list__info"><a href="" class="ancor">Bouquets</a></li>
-                            <li class="list__info"><a href="" class="ancor">Centros</a></li>
-                        </ul>
+        </div>
+        <ul class="nav__list">
+            <li class="list__info"><a class="ancor" href="./about.html">¿Quienes Somos?</a></li>
+            <li class="list__info list__info--catalog">
+                <p class="info__catalog"><a href="./catalog.html" class="ancor">Catalogo</a></p>
+                <div class="info__categories">
+                    <ul class="categories__list">
+                        <li class="list__info"> <a href="" class="ancor">Flores secas</a></li>
+                        <li class="list__info"><a href="" class="ancor">Bouquets</a></li>
+                        <li class="list__info"><a href="" class="ancor">Centros</a></li>
+                    </ul>
+                </div>
+                <img src="../src/images/arrow-down.svg" alt="" class="catalog__icon">
+            </li>
+            <li class="list__info"> <a href="../pages/contact.html" class="ancor">Contacto</a></li>
+            <li class="list__info">
+                <a href="../pages/login.html">
+
+                    <img src="../src/images/user-brown.svg" alt="" class="info__icon">
+                </a>
+            </li>
+            <li class="list__info">
+                <img id="nav-cart" src="../src/images/cart-brown.svg" alt="" class="info__icon info__icon--cart">
+                <div id="cart" class="cart display--none">
+                    <div class="cart__background"></div>
+                    <div class="cart__card">
+                        <h3 class="cart__title">Shopping Cart</h3>
+                        <b class="cart__close" id="cart-close">x</b>
+                        <hr>
+                        <div class="container__items">
+                            <div class="cart__item">
+                                <img src="../src/images/item-card.jpg" alt="" class="item__image">
+                                <div class="item__info">
+                                    <h4 class="item__title">Asgaard sofa</h4>
+                                    <p class="item__price"><span>1</span> X <span>Rs. 250,000,00 </span></p>
+                                </div>
+                                <div class="item__delete-container">
+                                    <!-- Nuevo contenedor para el botón de eliminar -->
+                                    <img src="../src/images/delete.svg" alt="" class="item__delete">
+                                </div>
+                            </div>
+                            <div class="cart__item">
+                                <img src="../src/images/item-card.jpg" alt="" class="item__image">
+                                <div class="item__info">
+                                    <h4 class="item__title">Asgaard sofa</h4>
+                                    <p class="item__price"><span>1</span> X <span>Rs. 250,000,00 </span></p>
+                                </div>
+                                <div class="item__delete-container">
+                                    <!-- Nuevo contenedor para el botón de eliminar -->
+                                    <img src="../src/images/delete.svg" alt="" class="item__delete">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cart__total">
+                            <p class="cart__subtotal">Subtotal</p>
+                            <b>Rs. 520,000.00</b>
+                        </div>
+                        <hr>
+                        <button class="cart__checkout">Checkout</button>
                     </div>
-                    <img src="./src/images/arrow-down.svg" alt="" class="catalog__icon">
-                </li>
-                <li class="list__info"> <a href="./pages/contact.html" class="ancor">Contacto</a></li>
-                <li class="list__info">
-                    <img src="./src/images/user.svg" alt="" class="info__icon">
-                </li>
-                <li class="list__info">
-                    <img src="./src/images/cart.svg" alt="" class="info__icon">
-                </li>
-            </ul>
-        </nav>
-        <div class="location">
+                </div>
+            </li>
+        </ul>
+      </nav>
+      <div class="location">
             <span class="location__text">
                 Inicio 
                 <i class="text__arrow">></i>
@@ -48,42 +90,58 @@
             <span class="location__text">
                 Tienda
                 <i class="text__arrow">></i>
-            </span>
-            <span class="location__text">
+              </span>
+            <span class="location__text location__text--solid">
+              <i class="text__separation">|</i>
                 Producto
-                <i class="text__arrow">></i>
             </span>
-        </div>
+      </div>
     </header>
-    <main>
-        <section class="product">
-            <div class="product__carrousel">
-                <div class="carrousel__container">
-                    <img src="" alt="" class="container__card">
-                    <img src="" alt="" class="container__card">
-                    <img src="" alt="" class="container__card">
-                    <img src="" alt="" class="container__card">
-                </div>
-                <img src="" alt="" class="carrousel__main-image">
-            </div>
-            <div class="product__info">
-                <h1 class="info__title">Product Name</h1>
-                <span class="info__price">$250,000</span>
-                <p class="info__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, corrupti.</p>
-                <div class="info__buttons">
-                    <button class="info__add">Añadir al carrito</button>
-                    <button class="info__count">1</button>
-                </div>
-            </div>
-        </section>
+    <main id="container-product" class="main--product">
+        <hr id="hr-product" class="color: var(--primary-color);">
         <section class="details">
-            <div class="details__description">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium facilis nesciunt est assumenda doloremque iure corrupti, architecto pariatur doloribus facere similique nam aliquid esse iste amet odit vitae porro voluptatum perferendis ut at neque, aliquam sit necessitatibus. Eaque adipisci quae, saepe necessitatibus tempore iste aspernatur rem aperiam hic velit cum temporibus quaerat quia, quibusdam unde! Perspiciatis dolorum, accusantium quidem mollitia magni similique natus facilis? Fuga repellendus maiores repudiandae aliquid laudantium.
+            <div class="details__titles">
+                <h4 class="details__title">Descripcion</h4>
+                <h4 class="details__title">Reseñas <span>[5]</span></h4>
             </div>
-            <div class="details__comments">
+            <article id="details" class="details__description">
+                
+            </article>
+            <article class="details__comments display--none">
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium facilis nesciunt est assumenda doloremque iure corrupti, architecto pariatur doloribus facere similique nam aliquid esse iste amet odit vitae porro voluptatum perferendis ut at neque, aliquam sit necessitatibus. Eaque adipisci quae, saepe necessitatibus tempore iste aspernatur rem aperiam hic velit cum temporibus quaerat quia, quibusdam unde! Perspiciatis dolorum, accusantium quidem mollitia magni similique natus facilis? Fuga repellendus maiores repudiandae aliquid laudantium.
-            </div>
+            </article>
+        </section>
+        <hr style="color: var(--primary-color);">
+        <h3 class="related__title">Productos Relacionados</h3>
+        <section id="related-product" class="related--product">
+            <!-- HERE CAME THE RELATED PRODUCTS -->
         </section>
     </main>
+    <footer class="footer">
+        <section class="footer__info">
+            <ul class="footer__list">
+                <a href="../index.html"><li class="list__info">Inicio</li></a>
+                <a href="about.html"><li class="list__info">Sobre Nosotros</li></a>
+                <a href="catalog.html"><li class="list__info">Catálogo</li></a>
+                <a href="categories.html"><li class="list__info">Categorías</li></a>
+            </ul>
+            <ul class="footer__list">
+                <a href="contact.html"><li class="list__info">Contacto</li></a>
+                <a href="login.html"><li class="list__info">Inicio de sesión</li></a>
+                <a href="login.html"><li class="list__info">Registro</li></a>
+                <a href=""><li class="list__info">Mis compras</li></a>
+            </ul>
+            <ul class="footer__list">
+                <li class="list__info">+1234567890</li>
+                <li class="list__info">boutique@gmail.com</li>
+                <li class="list__info">Colombia Bogotá DC</li>
+                <li class="list__info">10:00 - 19:00</li>
+            </ul>
+        </section>
+        <span class="footer__copyright">Binary Beasts ©Copyright 2024. All rights reserved. </span>
+    </footer>
+    <script src="../src/js/cart.js"></script>
+    <script src="../src/js/product.js"></script>
+    
 </body>
 </html>

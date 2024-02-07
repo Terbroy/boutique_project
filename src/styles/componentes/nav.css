@@ -1,4 +1,6 @@
-.nav{
+@import url(../style.css);
+
+.header__nav, .nav{
     width: 100vw;
     position: fixed;
     display: flex;
@@ -10,6 +12,38 @@
     font-family: 'Bona Nova', serif;
     height: 7rem;
     z-index: 100;
+}
+
+.header__nav.nav--light, .header__nav.nav--light .logo__info, .header__nav.nav--light .info__categories{
+    background-color: #ffff;
+}
+
+.header__nav.nav--light .info__icon, .header__nav.nav--light .catalog__icon, .header__nav.nav--light .ancor{
+    color: var(--color-brown);
+    fill: var(--color-brown);
+}
+
+.nav.nav--light .logo__info, .line{
+    color: var(--color-brown) ;
+}
+
+.header__nav .logo__info, .line{
+    color: var(--color-brown) ;
+}
+
+
+.nav.nav--light, .nav.nav--light .logo__info, .nav.nav--light .info__categories{
+    background-color: #ffff;
+}
+
+.nav.nav--light .info__icon, .nav.nav.nav--light .catalog__icon, .nav.nav--light .ancor{
+    color: var(--color-brown);
+    fill: var(--color-brown);
+}
+
+.ancor{
+    text-decoration: none;
+    color: #ffff;
 }
 
 .nav__logo{
@@ -71,9 +105,14 @@
     width: 15px;
 }
 
+
 .info__catalog, .catalog__icon{
     position: relative;
     z-index: 1;
+}
+
+.header__nav .catalog__icon{
+    top: -.4rem;
 }
 
 .info__categories{

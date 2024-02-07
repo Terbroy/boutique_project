@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="form__products">
+        <label id="product__name__label" for="product__name">Nombre del producto: </label>
+            <input type="text" name="product__name" id="product__name" placeholder="Nombre del producto" required/>
+        <label id="product__description__label" for="product_description">Descripción del producto: </label>
+            <textarea id="product__description" name="product__description" placeholder="Descripción del producto"></textarea>
+        <label id="product__info__label" for="product__info">Información del producto: </label>
+            <textarea id="product__info" name="product__info" placeholder="Información del producto"></textarea>
+        <label id="product__price__label" for="product__price">Precio: </label>
+            <input type="number" name="product__price" id="product__price" placeholder="Precio del producto" required/>
+        <label id="product__stock__label" for="product__name">Cantidad disponible: </label>
+            <input type="number" name="product__stock" id="product__stock" placeholder="Cantidad disponible" required/>
+        <label id="product__images__label" for="images">Seleccione las imágenes: </label>
+            <input type="file" id="product__images" name="product__images">
+        <button id="submit__product" type="submit">Agregar producto</button>
+    </form>
+    
+</body>
+</html>
