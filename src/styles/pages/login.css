@@ -1,4 +1,5 @@
 @import url("../style.css");
+
 :root{
     --primary-color:#43766C;
     --background-color: #F5E9DA;
@@ -9,6 +10,7 @@
     --text-brown: #482b25;
     --soft-pink:#f5e9d9;
 }
+
 .total-login{
     border: none;
     margin: 0;
@@ -100,6 +102,7 @@
     padding: 12px;
     margin-right:auto;
 }
+
 .button-ini2{
     display: flex;
     margin-top: 50px;
