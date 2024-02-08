@@ -53,8 +53,6 @@ function displayProductsInCatalog(){
 
 }
 
-
-
 fetchProductData();
 displayProductsInCatalog();
 

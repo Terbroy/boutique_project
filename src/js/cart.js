@@ -15,12 +15,11 @@ document.addEventListener("click", (event) => {
 
 //Logica para agregar o quitar productos
 const container__items = document.querySelector(".container__items");
-document.addEventListener("click" , e =>{
-  if(e.target.classList.contains("options__cart")){
+document.addEventListener("click", (e) => {
+  if (e.target.classList.contains("options__cart")) {
     addCart();
-
   }
-})
+});
 function addCart() {
   let cart = "";
   cart += `<div class="container__items">
@@ -35,5 +34,5 @@ function addCart() {
         <img src="../src/images/delete.svg" alt="" class="item__delete" />
         </div>
         </div>`;
-  container__items.innerHTML = cart;
+  container__items.innerHTML = cart;
 }
