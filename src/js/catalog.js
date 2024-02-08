@@ -22,6 +22,7 @@ function fetchProducts() {
     return products;
 }
 
+
 function fetchProduct(id){
     let products = fetchProducts();
     let selectedProduct = products.filter(e => e.id == id);
@@ -67,7 +68,7 @@ function displayProductsInCatalog(){
             <div class="img__options">
                 <img class="product__img" src=${product.images}>
                 <div class="product__options">
-                    <button id="btn-${product.id}" class="options__cart">Añadir al carrito</button>
+                    <button  id="btn-${product.id}" class="options__cart">Añadir al carrito</button>
                 </div>
             </div>
             <div class="product__text">
@@ -83,16 +84,15 @@ function displayProductsInCatalog(){
 
     const title = document.getElementById(`product-title-${product.id}`);
     const buttonProduct = document.getElementById(`btn-${product.id}`);
-
-
     title.addEventListener("click",(event)=>{
 
         fetchProduct(product.id);
     } );
     buttonProduct.addEventListener("click",(event)=>{
-        fetchProductsCart(product.id);
+        fetchProduct(product.id);
     } );
     })
+
 
 }
 
