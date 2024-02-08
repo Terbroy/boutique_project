@@ -1,8 +1,7 @@
 const cart = document.getElementById("cart");
-function fetchProduct() {
-  let product = JSON.parse(localStorage.getItem("selected-product"))[0];
-  return product;
-}
+const product = JSON.parse(localStorage.getItem("products"));
+const products = product.products;
+console.log(products);
 
 function toggleCart() {
   cart.classList.toggle("display--none");
@@ -30,32 +29,25 @@ document.addEventListener("click", (event) => {
 
 //Logica para agregar o quitar productos
 const container__items = document.querySelector(".container__items");
-const productSelected= fetchProduct();
 document.addEventListener("click" , e =>{
   if(e.target.classList.contains("options__cart")){
     addCart();
+
   }
 })
 function addCart() {
-  let content = "";
-  let total = 0;
-  const cartProducts = getCart();
-  cartProducts.map(e =>{
-    content += `
-              <div class="cart__item">
-              <img src=${e.images[0]} alt="" class="item__image">
-              <div class="item__info">
-              <h4 class="item__title">${e.name}</h4>
-              <p class="item__price"><span>${e.product_cart}</span> X <span>Rs.  ${e.price * e.product_cart}</span></p>
-              </div>
-              <div class="item__delete-container">
-              <img src="../src/images/delete.svg" alt="" class="item__delete">
-              </div>
-              </div>
-          `;
-    total += e.price * e.product_cart;
-  })
-  totalHtml.textContent = total
-  container__items.innerHTML = content;
+  let cart = "";
+  cart += `<div class="container__items">
+        <div class="cart__item">
+        <img src="..." alt="" class="item__image" />
+        <div class="item__info">
+        <h4 class="item__title">Asgaard sofa</h4>
+        <p class="item__price"><span>1</span> X <span>Rs. 250,000,00 </span></p>
+        </div>
+        <div class="item__delete-container">
+        <!-- Nuevo contenedor para el botón de eliminar -->
+        <img src="../src/images/delete.svg" alt="" class="item__delete" />
+        </div>
+        </div>`;
+  container__items.innerHTML = cart;
 }
-
