@@ -98,5 +98,7 @@ function displayProductsInCatalog(){
 
 
 
+fetchProductData();
+displayProductsInCatalog();
 
 
