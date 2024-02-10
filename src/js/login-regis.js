@@ -10,11 +10,13 @@
 
         // Muestra el formulario correspondiente al botón presionado
      if (tipo === 'inicio') {
-     document.getElementById('formularioInicio').style.display = 'block';
+     document.getElementById('formularioInicio').style.display= 'block';
      } else if (tipo === 'registro') {
        document.getElementById('formularioRegistro').style.display = 'block';
      }
-}
+
+    }
+
 // DESDE ACA EMPIEZA EL ALMACENAMIENTO DE LOS DATOS DE REGITRO Y DE INICIAR SESION
 function guardarDatos() {
     const nombreCompleto = document.getElementById('nombreCompleto').value;
