@@ -41,7 +41,12 @@ function fetchProductsCart(id) {
     const existingProduct = cart.find(e => e.id === product.id);
 
     if (existingProduct) {
-        existingProduct.product_cart++;
+        if(existingProduct.stock === existingProduct.product_cart ){
+            alert("no se pueden agregar mas al carrito")
+            
+        }else{
+            existingProduct.product_cart++;
+        }
     } else {
         product.product_cart = 1;
         cart.push(product);
