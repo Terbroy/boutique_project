@@ -51,6 +51,7 @@
 }
 
 .container__items{
+    overflow-y: scroll;
     display: flex;
     flex-direction: column;
     height: 80%;
