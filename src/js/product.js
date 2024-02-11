@@ -6,14 +6,6 @@ function toggleCart() {
 
 
 function fetchProductPage() {
-const cartHtml = document.getElementById("cart");
-
-function toggleCart() {
-  cartHtml.classList.toggle("display--none");
-}
-
-
-function fetchProductPage() {
     let product = JSON.parse(localStorage.getItem("selected-product"))[0];
     return product;
 }
@@ -42,12 +34,7 @@ function fetchProductsCart(id) {
     const existingProduct = cart.find(e => e.id === product.id);
 
     if (existingProduct) {
-        if(existingProduct.stock === existingProduct.product_cart ){
-            alert("no se pueden agregar mas al carrito")
-            
-        }else{
-            existingProduct.product_cart++;
-        }
+        existingProduct.product_cart++;
     } else {
         product.product_cart = 1;
         cart.push(product);
@@ -65,7 +52,6 @@ function filterProducts(product){
 }
 
 document.addEventListener("DOMContentLoaded", (event) => {
-    let product = fetchProductPage();
     let product = fetchProductPage();
     let filterProduct = filterProducts(product);
     const relatedContainer = document.getElementById("related-product")
@@ -121,36 +107,13 @@ document.addEventListener("DOMContentLoaded", (event) => {
                 <p class="product__price">${product.price}</p>
             </div>
         </div>
-            <div class="img__options">
-                <img class="product__img" src=${product.images}>
-                <div class="product__options">
-                    <button id="btn-${product.id}" class="options__cart">Añadir al carrito</button>
-                </div>
-            </div>
-            <div class="product__text">
-                <a href="../../pages/product.html" id="product-title-${product.id}" class="product__title">
-                    <p class="product__title">${product.name}</p>
-                </a>
-                <p class="product__description">${product.description}</p>
-                <p class="product__price">${product.price}</p>
-            </div>
-        </div>
         `
         relatedContainer.appendChild(relatedProduct);
         const title = document.getElementById(`product-title-${product.id}`);
         const buttonProduct = document.getElementById(`btn-${product.id}`);
 
 
-        const buttonProduct = document.getElementById(`btn-${product.id}`);
-
-
         title.addEventListener("click",(event)=>{
-
-            fetchProduct(product.id);
-        } );
-        buttonProduct.addEventListener("click",(event)=>{
-            toggleCart();
-            fetchProductsCart(product.id);
 
             fetchProduct(product.id);
         } );

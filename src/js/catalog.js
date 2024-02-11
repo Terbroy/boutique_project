@@ -17,6 +17,25 @@ async function fetchProductData() {
     displayProductsInCatalog();
 };
 
+const cartHtml = document.getElementById("cart");
+
+function toggleCart() {
+  cartHtml.classList.toggle("display--none");
+}
+
+document.addEventListener("DOMContentLoaded", e =>{
+    fetchProductData();
+})
+
+async function fetchProductData() {
+    await fetch("http://127.0.0.1:5500/src/JSON/product.json")
+        .then(res => res.json())
+        .then(data=> localStorage.setItem("products", JSON.stringify(data)))
+        .catch(error => console.log(error));
+    
+    displayProductsInCatalog();
+};
+
 function fetchProducts() {
     let products = JSON.parse(localStorage.getItem("products")).products;
     return products;
@@ -42,12 +61,7 @@ function fetchProductsCart(id) {
     const existingProduct = cart.find(e => e.id === product.id);
 
     if (existingProduct) {
-        if(existingProduct.stock === existingProduct.product_cart ){
-            alert("no se pueden agregar mas al carrito")
-            
-        }else{
-            existingProduct.product_cart++;
-        }
+        existingProduct.product_cart++;
     } else {
         product.product_cart = 1;
         cart.push(product);
@@ -81,10 +95,18 @@ function displayProductsInCatalog(){
         </div>
         `
     padreProductos.appendChild(card);
+
     const title = document.getElementById(`product-title-${product.id}`);
+    const buttonProduct = document.getElementById(`btn-${product.id}`);
+
+
     title.addEventListener("click",(event)=>{
 
+
         fetchProduct(product.id);
+    } );
+    buttonProduct.addEventListener("click",(event)=>{
+        fetchProductsCart(product.id);
     } );
     buttonProduct.addEventListener("click",(event)=>{
         fetchProductsCart(product.id);
@@ -95,7 +117,5 @@ function displayProductsInCatalog(){
 
 
 
-fetchProductData();
-displayProductsInCatalog();
 
 
