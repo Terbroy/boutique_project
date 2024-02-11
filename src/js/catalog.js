@@ -79,6 +79,7 @@ function displayProductsInCatalog(){
         `
     padreProductos.appendChild(card);
     const title = document.getElementById(`product-title-${product.id}`);
+    const buttonProduct = document.getElementById(`btn-${product.id}`);
     title.addEventListener("click",(event)=>{
 
 
