@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+ 
   <link rel="stylesheet" href="../src/styles/style.css">
   <title>Login</title>
 </head>
@@ -25,6 +25,7 @@
       <ul class="nav__list">
           <li class="list__info"><a class="ancor" href="./about.html">¿Quienes Somos?</a></li>
           <li class="list_info list_info--catalog">
+          <li class="list_info list_info--catalog">
               <p class="info__catalog"><a href="./catalog.html" class="ancor">Catalogo</a></p>
               <div class="info__categories">
                   <ul class="categories__list">
@@ -43,6 +44,7 @@
               </a>
           </li>
           <li class="list__info">
+              <img id="nav-cart" src="../src/images/cart-brown.svg" alt="" class="info_icon info_icon--cart">
               <img id="nav-cart" src="../src/images/cart-brown.svg" alt="" class="info_icon info_icon--cart">
               <div id="cart" class="cart display--none">
                   <div class="cart__background"></div>
@@ -86,16 +88,15 @@
       </ul>
     </nav>
 </header>
+</header>
 
-<article class="total-login">
-  <section>
 <article class="total-login">
   <section>
 
            <!--botones de inicio y registro-->
       <div class="ini-regis">
           <button type="button" class="button-ini1" onclick="mostrarFormulario('inicio')">Iniciar sesión </button>
-          <button class="button-regis" type="button" onclick="mostrarFormulario('registro')"> Registro </button> 
+          <button class="button-regis"type="button" onclick="mostrarFormulario('registro')"> Registro </button> 
      </div>
             <!--parrafo-->
       <div>
@@ -114,7 +115,7 @@
           <label class="label3" for="recordarUsuario"> Recuérdame </label>
           <a class="olvidPass"> ¿Olvidaste tu contraseña? </a>
           </div>
-          <button class="button-ini2" class="botonIni1" id="btnInicioSesion" type="submit" onclick="iniciarSesion()">Iniciar Sesión</button>
+          <button class="button-ini2" type="submit" onclick="iniciarSesion()">Iniciar Sesión</button>
           </form>
      </div>
            <!--este es el formulario de registro-->
@@ -129,7 +130,7 @@
             <label class="label2" for="contrasena">Contraseña:</label>
             <input class="input2" type="password" id="contrasena" name="contrasena" required placeholder="Ingresa tu contraseña">
             
-            <button class="button-ini2" id="btnRegistro" type="button" onclick="guardarDatos()">Registrarse</button>
+            <button class="button-ini2" type="button" onclick="guardarDatos()">Registrarse</button>
             </form>
      </div>
 
@@ -160,6 +161,7 @@
     <span class="footer__copyright">Binary Beasts ©Copyright 2024. All rights reserved. </span>
 </footer>
 <script src="../src/js/cart.js"></script>
+<script src="../src/js/login-regis.js"></script>
 <script src="../src/js/login-regis.js"></script>
 </body>
 </html>

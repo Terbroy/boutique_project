@@ -12,6 +12,7 @@
 }
 
 .total-login{
+.total-login{
     border: none;
     margin: 0;
     padding: 400px;
@@ -38,7 +39,31 @@
 }
 
 .form--regis{
+}
+
+.form-container {
+    display: none;
+}
+
+.form--login{
     display: flex;
+    margin-top: 50px;
+    width: 650px;
+    padding: 6px;
+    margin: 0 auto;
+    border-radius: 100px;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.form--regis{
+    display: flex;
+    margin-top: 50px;
+    width: 650px;
+    padding: 6px;
+    margin: 0 auto;
+    border-radius: 100px;
+    justify-content: center;
     margin-top: 50px;
     width: 650px;
     padding: 6px;
@@ -51,52 +76,50 @@
 .par{
     display: flex;
     text-align: center;
-    width: 600px;
+    width: 650px;
     margin-top: 7px;
-    margin: 8px auto;;
 }
 
-.label0,
 .label0,
 .label1,
 .label2,
 .label3 {
     margin-bottom: 2px;
-    margin-bottom: 2px;
 }
 
+.input0,
 .input0,
 .input1,
 .input2,
 .imput3 {
+.input2,
+.imput3 {
     display: flex;
-    padding: 17px;
-    width: 600px;
+    padding: 10px;
     margin-bottom: 16px;
     background-color: var(--background-color);
     border-radius: 50px;
     border: none;
 }
 
-/*botones de arriba inicio-registro*/
 .ini-regis{
     display: flex;
+
     margin-top: 50px;
-    padding: 5px;
     width: 350px;
-    margin:30px auto;;
+    margin: 0 auto;
     border-radius: 100px;
     justify-content: center;
+    background-color: var(--background-color);
     background-color: var(--background-color);
 }
 
 .button-regis{
     background-color: var(--background-color);
+    background-color: var(--background-color);
     color: black;
     border: none;
     margin-right: 70px;
-    font-size: 17px;
-
  
 }
 
@@ -106,9 +129,8 @@
     border: none;
     border-radius: 100px;
     width: 170px;
-    padding: 15px;
+    padding: 12px;
     margin-right:auto;
-    font-size: 17px;
 }
 
 .button-ini2{
@@ -121,7 +143,6 @@
     justify-content: center;
     color: white;
     background-color: #43766C;
-    font-size: 17px;
 }
 
 .olvidPass{

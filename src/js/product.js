@@ -6,6 +6,14 @@ function toggleCart() {
 
 
 function fetchProductPage() {
+const cartHtml = document.getElementById("cart");
+
+function toggleCart() {
+  cartHtml.classList.toggle("display--none");
+}
+
+
+function fetchProductPage() {
     let product = JSON.parse(localStorage.getItem("selected-product"))[0];
     return product;
 }
@@ -34,12 +42,7 @@ function fetchProductsCart(id) {
     const existingProduct = cart.find(e => e.id === product.id);
 
     if (existingProduct) {
-        if(existingProduct.stock === existingProduct.product_cart ){
-            alert("no se pueden agregar mas al carrito")
-            
-        }else{
-            existingProduct.product_cart++;
-        }
+        existingProduct.product_cart++;
     } else {
         product.product_cart = 1;
         cart.push(product);
