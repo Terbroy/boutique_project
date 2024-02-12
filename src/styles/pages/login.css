@@ -57,9 +57,11 @@
 }
 
 .label0,
+.label0,
 .label1,
 .label2,
 .label3 {
+    margin-bottom: 2px;
     margin-bottom: 2px;
 }
 
