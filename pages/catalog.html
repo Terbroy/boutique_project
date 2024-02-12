@@ -99,8 +99,8 @@
           <img class="filter__line" src="../src/images/line.svg" />
           <p class="results__shown">Mostrando 12 de 12 resultados</p>
           <form class="form__search" role="search">
-            <input type="search" class="input__search" placeholder="Buscar..." aria-label="Buscar en el sitio" />
-            <button class="search__button"><img class="button__img" src="../src/images/lupa.svg" /></button>
+            <input type="search" class="input__search" id="search__input" placeholder="Buscar..." aria-label="Buscar en el sitio" />
+            <button class="search__button" id="button__search"><img class="button__img" src="../src/images/lupa.svg" /></button>
           </form>
           <select class="order">
             <option value="empty">Ordenar por...</option>
@@ -110,8 +110,11 @@
         </div>
         <h1 class="catalog__title">CATÁLOGO</h1>
         <div class="catalog__products" id="padreProductos">
-          <!-- HERE COME THE PRODUCTS     -->
+          <!-- HERE COME THE PRODUCTS-->
         </div> 
+        <div class="results__search" id="search__results"> 
+            <!--SEARCH RESULT-->
+        </div>
         <div class="nextpage__buttons">
           <button class="button__catalognext" class="one" onclick="location.href='';">1</button>
           <button class="button__catalognext" class="two" onclick="location.href='';">2</button>
