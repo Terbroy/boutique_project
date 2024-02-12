@@ -4,9 +4,12 @@
 .main__about{
     font-family: 'Bona nova', serif;
 }
+.banner__black{
+    background-color: black;
+    z-index: 99;
+}
 .banner__filter{
     filter: blur(3px);
-    /* background-color: black; */
     z-index: 1;
 }
 .banner__img{
@@ -111,5 +114,8 @@
     width: 400px;
     margin-right: 50px;
 }
-
+.serv1__img:hover, .serv2__img:hover, .serv3__img:hover{
+    cursor: pointer;
+    filter: drop-shadow(8px 8px 10px var(--color-brown));
+}
 
