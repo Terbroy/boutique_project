@@ -112,35 +112,13 @@ document.addEventListener("DOMContentLoaded", (event) => {
                 <p class="product__price">${product.price}</p>
             </div>
         </div>
-            <div class="img__options">
-                <img class="product__img" src=${product.images}>
-                <div class="product__options">
-                    <button id="btn-${product.id}" class="options__cart">Añadir al carrito</button>
-                </div>
-            </div>
-            <div class="product__text">
-                <a href="../../pages/product.html" id="product-title-${product.id}" class="product__title">
-                    <p class="product__title">${product.name}</p>
-                </a>
-                <p class="product__description">${product.description}</p>
-                <p class="product__price">${product.price}</p>
-            </div>
-        </div>
         `
         relatedContainer.appendChild(relatedProduct);
         const title = document.getElementById(`product-title-${product.id}`);
-
-
         const buttonProduct = document.getElementById(`btn-${product.id}`);
 
 
         title.addEventListener("click",(event)=>{
-
-            fetchProduct(product.id);
-        } );
-        buttonProduct.addEventListener("click",(event)=>{
-            toggleCart();
-            fetchProductsCart(product.id);
 
             fetchProduct(product.id);
         } );
@@ -154,5 +132,4 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
 
 });
-
 

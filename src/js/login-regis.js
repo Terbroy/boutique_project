@@ -10,11 +10,13 @@
 
         // Muestra el formulario correspondiente al botón presionado
      if (tipo === 'inicio') {
-     document.getElementById('formularioInicio').style.display = 'block';
+     document.getElementById('formularioInicio').style.display= 'block';
      } else if (tipo === 'registro') {
        document.getElementById('formularioRegistro').style.display = 'block';
      }
-}
+     
+    }
+
 // DESDE ACA EMPIEZA EL ALMACENAMIENTO DE LOS DATOS DE REGITRO Y DE INICIAR SESION
 function guardarDatos() {
     const nombreCompleto = document.getElementById('nombreCompleto').value;
@@ -36,12 +38,13 @@ function guardarDatos() {
         contrasena
     };
     localStorage.setItem('usuario', JSON.stringify(usuario));
+    // Convertir el objeto a formato JSON y almacenarlo en el localStorage
     alert('Usuario registrado con éxito');
 
-    // Convertir el objeto a formato JSON y almacenarlo en el localStorage
 
-
+    // Limpiar el formulario después de guardar los datos
     document.getElementById('formularioRegistro').reset();
+
 
 }
 
