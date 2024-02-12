@@ -17,24 +17,10 @@ async function fetchProductData() {
     displayProductsInCatalog();
 };
 
-const cartHtml = document.getElementById("cart");
-
-function toggleCart() {
-  cartHtml.classList.toggle("display--none");
-}
-
 document.addEventListener("DOMContentLoaded", e =>{
     fetchProductData();
 })
 
-async function fetchProductData() {
-    await fetch("http://127.0.0.1:5500/src/JSON/product.json")
-        .then(res => res.json())
-        .then(data=> localStorage.setItem("products", JSON.stringify(data)))
-        .catch(error => console.log(error));
-    
-    displayProductsInCatalog();
-};
 
 function fetchProducts() {
     let products = JSON.parse(localStorage.getItem("products")).products;
@@ -95,7 +81,7 @@ function displayProductsInCatalog(){
                     <p class="product__title">${product.name}</p>
                 </a>
                 <p class="product__description">${product.description}</p>
-                <p class="product__price">${product.price}</p>
+                <p class="product__price">$${product.price.toLocaleString()}</p>
             </div>
         </div>
         `
