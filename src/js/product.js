@@ -6,14 +6,6 @@ function toggleCart() {
 
 
 function fetchProductPage() {
-const cartHtml = document.getElementById("cart");
-
-function toggleCart() {
-  cartHtml.classList.toggle("display--none");
-}
-
-
-function fetchProductPage() {
     let product = JSON.parse(localStorage.getItem("selected-product"))[0];
     return product;
 }
@@ -137,7 +129,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
         `
         relatedContainer.appendChild(relatedProduct);
         const title = document.getElementById(`product-title-${product.id}`);
-        const buttonProduct = document.getElementById(`btn-${product.id}`);
 
 
         const buttonProduct = document.getElementById(`btn-${product.id}`);
@@ -164,5 +155,4 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
 });
 
-}
-}
+
