@@ -209,3 +209,12 @@
 .button__catalognext:hover{
     background-color: var(--light-green) ;
 }
+/*SEARCH SECTION*/
+.results__search{
+    padding: 50px 100px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    align-content: center;
+    row-gap: 50px;
+    column-gap: 60px;
+}
