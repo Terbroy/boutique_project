@@ -1,8 +1,23 @@
 const cart = document.getElementById("cart");
+const totalHtml = document.getElementById("cart_total");
 
 function toggleCart() {
   cart.classList.toggle("display--none");
 }
+function getCart() {
+  let cart = localStorage.getItem("cart-products");
+  if(cart && cart  != "undefined" ){
+    return JSON.parse(cart);
+  }else{
+    localStorage.setItem("cart-products", JSON.stringify([]));
+    return JSON.parse(localStorage.getItem("cart-products"));
+  }
+}
+
+
+document.addEventListener("DOMContentLoaded", e =>{
+  addCart()
+})
 document.addEventListener("click", (event) => {
   const clickedElement = event.target;
   if (clickedElement.id === "nav-cart" || clickedElement.id === "cart-close") {
@@ -14,32 +29,32 @@ document.addEventListener("click", (event) => {
 const btnAddCart = document.getElementsByClassName("options__cart");
 const container__items = document.querySelector(".container__items");
 
-for (let i = 0; i < btnAddCart.length; i++) {
-  contador = 0;
-  btnAddCart[i].addEventListener("click", function () {
-    contador += 1;
-    console.log(contador);
+
+document.addEventListener("click", (e) => {
+  if (e.target.classList.contains("options__cart")) {
     addCart();
-  });
-}
+  }
+});
 
 function addCart() {
-  console.log("Si se activa la funcion");
-  let cart = "";
-  cart += `<div class="container__items">
-        <div class="cart__item">
-        <img src="../src/images/item-card.jpg" alt="" class="item__image" />
-        <div class="item__info">
-        <h4 class="item__title">Asgaard sofa</h4>
-        <p class="item__price"><span>1</span> X <span>Rs. 250,000,00 </span></p>
-        </div>
-        <div class="item__delete-container">
-        <!-- Nuevo contenedor para el botón de eliminar -->
-        <img src="../src/images/delete.svg" alt="" class="item__delete" />
-        </div>
-        </div>`;
-  container__items.innerHTML += cart;
+  let content = "";
+  let total = 0;
+  const cartProducts = getCart();
+  cartProducts.map(e =>{
+    content += `
+              <div class="cart__item">
+              <img src=${e.images[0]} alt="" class="item__image">
+              <div class="item__info">
+              <h4 class="item__title">${e.name}</h4>
+              <p class="item__price"><span>${e.product_cart}</span> X <span>Rs.  ${e.price * e.product_cart}</span></p>
+              </div>
+              <div class="item__delete-container">
+              <img src="../src/images/delete.svg" alt="" class="item__delete">
+              </div>
+              </div>
+          `;
+    total += e.price * e.product_cart;
+  })
+  totalHtml.textContent = total
+  container__items.innerHTML = content;
 }
-btnAddCart.onclick = function () {
-  addCart();
-};

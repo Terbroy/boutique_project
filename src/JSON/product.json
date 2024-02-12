@@ -8,6 +8,7 @@
             "description": "Variedad de flores y arreglos",
             "price": 100000,
             "stock": 6,
+            "product_cart": 0,
             "images": [
                 "https://img.freepik.com/free-photo/home-plant-vase-decoration-arrangement_23-2149090589.jpg?w=360&t=st=1706828228~exp=1706828828~hmac=8db0ae68676f1e0a436ebd8d06e2aeb983b6ee6ab161498bb04983bfb61920bc",
                 "https://img.freepik.com/free-photo/still-life-beautiful-vase-with-dried-flowers_169016-5359.jpg?w=360&t=st=1706828886~exp=1706829486~hmac=bc62f297865022e622c74d918a65f4e8e0ed674fb0179c5bb050021350421a5f",
@@ -22,6 +23,7 @@
             "main_info": "Flores secas",
             "description": "Combinación de flores",
             "price": 80000,
+            "product_cart": 0,
             "stock": 5,
             "images": [
                 "https://img.freepik.com/free-photo/home-plant-vase-decoration-arrangement_23-2149090589.jpg?w=360&t=st=1706828228~exp=1706828828~hmac=8db0ae68676f1e0a436ebd8d06e2aeb983b6ee6ab161498bb04983bfb61920bc",
@@ -34,6 +36,7 @@
             "id": 3,
             "category":"Bouquets",
             "name": "Centro de rosas",
+            "product_cart": 0,
             "main_info": "Centro de mesa de rosas Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, corrupti.",
             "description": "Combinación de rosas",
             "price": 120000,
@@ -48,6 +51,7 @@
         {
             "id": 4,
             "category":"Centros",
+            "product_cart": 0,
             "name": "Centro de flores secas sencillo",
             "main_info": "Centro de flores secas Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, corrupti.",
             "description": "Variedad de flores secas",
@@ -63,6 +67,7 @@
         {
             "id": 5,
             "category":"Centros",
+            "product_cart": 0,
             "name": "Centro de flores varias",
             "main_info": "Centro de varias flores Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, corrupti.",
             "description": "Variedad de flores y arreglos Variedad de flores y arreglos Variedad de flores y arreglos",
@@ -77,6 +82,7 @@
         },{
             "id": 6,
             "category":"Centros",
+            "product_cart": 0,
             "name": "Ramo de rosas",
             "main_info": "Combinación de rosas Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, corrupti.",
             "description": "Varieda de rosas",
@@ -92,6 +98,7 @@
         {
             "id": 7,
             "category":"Centros",
+            "product_cart": 0,
             "name": "Ramo de flores varias",
             "main_info": "Variedad de flores Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, corrupti.",
             "description": "Combinación de flores",
@@ -107,6 +114,7 @@
         {
             "id": 8,
             "category":"Bouquets",
+            "product_cart": 0,
             "name": "Ramos de novia",
             "main_info": "Ramo de flores para bodas huriwehewr Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, corrupti.",
             "description": "Combinación de flores",
@@ -122,6 +130,7 @@
         {
             "id": 9,
             "category":"Bouquets",
+            "product_cart": 0,
             "name": "Centro de flores para eventos",
             "main_info": "Centro de mesa Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, corrupti.",
             "description": "Centros para eventos",
@@ -137,6 +146,7 @@
         {
             "id": 10,
             "category":"Bouquets",
+            "product_cart": 0,
             "name": "Ramos de flores otoñales",
             "main_info": "Ramo de flores Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, corrupti.",
             "description": "Combinación de flores",
@@ -151,6 +161,7 @@
         },{
             "id": 11,
             "category":"Bouquets",
+            "product_cart": 0,
             "name": "Arreglo de flores cabello",
             "main_info": "Arreglo de flores para el cabello Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, corrupti.",
             "description": "Flores como accesorio",
@@ -165,6 +176,7 @@
         },{
             "id": 12,
             "category":"Centros",
+            "product_cart": 0,
             "name": "Ramo de flores primaverales",
             "main_info": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, corrupti. Combinación de flores primaverales",
             "description": "Variedad de flores",
