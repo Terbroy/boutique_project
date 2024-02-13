@@ -18,6 +18,20 @@ function getCart() {
 document.addEventListener("DOMContentLoaded", e =>{
   addCart()
 })
+function getCart() {
+  let cart = localStorage.getItem("cart-products");
+  if(cart && cart  != "undefined" ){
+    return JSON.parse(cart);
+  }else{
+    localStorage.setItem("cart-products", JSON.stringify([]));
+    return JSON.parse(localStorage.getItem("cart-products"));
+  }
+}
+
+
+document.addEventListener("DOMContentLoaded", e =>{
+  addCart()
+})
 document.addEventListener("click", (event) => {
   const clickedElement = event.target;
   if (clickedElement.id === "nav-cart" || clickedElement.id === "cart-close") {
@@ -26,13 +40,17 @@ document.addEventListener("click", (event) => {
 });
 
 //Logica para agregar o quitar productos
-const btnAddCart = document.getElementsByClassName("options__cart");
 const container__items = document.querySelector(".container__items");
 
 
 document.addEventListener("click", (e) => {
   if (e.target.classList.contains("options__cart")) {
+
+document.addEventListener("click", (e) => {
+  if (e.target.classList.contains("options__cart")) {
     addCart();
+  }
+});
   }
 });
 

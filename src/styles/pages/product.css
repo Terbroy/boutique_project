@@ -1,166 +1,129 @@
 @import url("../style.css");
 
-
-.location{
-    padding: 1rem 7rem;
-    color: #ffff;
-    padding-top: 8rem;
-    background-color: var(--primary-color);
+:root{
+    --primary-color:#43766C;
+    --background-color: #F5E9DA;
+    --light-green: #82B59D;
+    --soft-green:#BCCFBC;
+    --color-gold: #B19470;
+    --color-brown: #76453B;
+    --text-brown: #482b25;
+    --soft-pink:#f5e9d9;
 }
 
-.location__text{
-    color: #ffffff87;
-    font-size: .9rem;
-}
-
-.text__arrow, .location__text--solid{
-    padding-right: .5rem;
-    padding-left: 1rem;
-    color: #ffff;
-}
-
-.text__separation{
-    padding-right:1rem ;
-    font-size: 1.3rem;
-}
-
-
-.product{
-    padding: 2rem 5rem;
+.total-login{
+    border: none;
+    margin: 0;
+    padding: 400px;
     display: flex;
-    flex-direction: row;
-    gap: 4rem;
-    background-color: #fff;
-}
-
-.product__carrousel{
-    max-width: 40%;
-    width: 40%;
-    height: 500px;
-    display: grid;
-    width: fit-content;
-    grid-template-columns: 15% auto;
-    grid-template-rows: repeat(4, 1fr);
-    gap: 1rem;
-}
-
-.carrousel__card{
-    width: 100%;
-    height: 100%;
-    object-position: top;
-    object-fit: cover;
-    border-radius: 5px;
-}
-
-.carrousel__card--image{
-    grid-column: 2/3;
-    grid-row: 1/5;
-    object-fit: fill;
-    background-image: url("../../images/10ramo_rosas.svg") ;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position:center;
-}
-
-.product__info{
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-
-    height: 500px;
-    font-family: "Bona Nova";
-}
-
-.info__title{
-    font-size: 3rem;
-    font-weight: 500;
-    color: var(--primary-color);
-}
-
-.info__price{
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.7rem;
-}
-
-.info__text{
-    color: var(--color-brown);
-}
-
-.info__buttons{
-    margin: auto 0;
-    justify-self: flex-end;
-}
-.info__buttons{
-    display: flex;
-    gap: 1rem;
-}
-
-.info__add, .info__count{
-    padding: .5rem 1.5rem;
-    border-radius: 5px;
-}
-
-.info__count{
-    display: flex;
-    gap: .5rem;
-    color: var(--text-brown);
-    background-color: #e6d3bc;
-    border-color: #aa9479;
-}
-
-.minus, .plus{
-    cursor: pointer;
-}
-
-.info__add{
-    color: #fff;
-    background-color: var(--primary-color);
-    border-color: transparent;
-    padding: .5rem 3rem;
-}
-
-.details{
-    padding: 4rem 8rem;
-}
-
-.details__description{
-    text-align: justify;
-}
-
-.details__titles{
-    display: flex;
-    padding-bottom: 3rem;
     justify-content: center;
     align-items: center;
-    gap: 4rem;
-    color: var(--color-gold);
-    font-size: 1.3rem;
+    height: 90vh;
+    background-color: white;
 }
 
-.details__title{
-    font-weight: 500;
+.form-container {
+    display: none;
 }
 
-.details__description{
-    line-height: 1.5rem;
+.form--login{
+    display: flex;
+    margin-top: 50px;
+    width: 650px;
+    padding: 6px;
+    margin: 0 auto;
+    border-radius: 100px;
+    justify-content: center;
+    flex-direction: column;
 }
-.related__title{
-    font-size: 2rem;
-    color: var(--primary-color);
+
+.form--regis{
+    display: flex;
+    margin-top: 50px;
+    width: 650px;
+    padding: 6px;
+    margin: 0 auto;
+    border-radius: 100px;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.par{
+    display: flex;
     text-align: center;
-    padding-top:2rem ;
+    width: 600px;
+    margin-top: 7px;
+    margin: 8px auto;;
 }
 
-.related--product{
-        padding: 2rem 1rem;
-        width: 100%;
-        display: flex;
-        overflow: scroll;
-        gap: 1rem;
-        align-content: center;
-        scrollbar-color: #ffff;
+.label0,
+.label1,
+.label2,
+.label3 {
+    margin-bottom: 2px;
 }
 
-.related--product .product--card{
-    width: 250px;
+.input0,
+.input1,
+.input2,
+.imput3 {
+    display: flex;
+    padding: 17px;
+    width: 600px;
+    margin-bottom: 16px;
+    background-color: var(--background-color);
+    border-radius: 50px;
+    border: none;
+}
+
+/*botones de arriba inicio-registro*/
+.ini-regis{
+    display: flex;
+    margin-top: 50px;
+    padding: 5px;
+    width: 350px;
+    margin:30px auto;;
+    border-radius: 100px;
+    justify-content: center;
+    background-color: var(--background-color);
+}
+
+.button-regis{
+    background-color: var(--background-color);
+    color: black;
+    border: none;
+    margin-right: 70px;
+    font-size: 17px;
+
+ 
+}
+
+.button-ini1{
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 100px;
+    width: 170px;
+    padding: 15px;
+    margin-right:auto;
+    font-size: 17px;
+}
+
+.button-ini2{
+    display: flex;
+    /*margin-top: 50px;*/
+    width: 300px;
+    padding: 15px;
+    margin: 30px auto;
+    border-radius: 100px;
+    justify-content: center;
+    color: white;
+    background-color: #43766C;
+    font-size: 17px;
+}
+
+.olvidPass{
+    color: var(--text-brown);
+    margin-left: 330px;
+
 }
