@@ -16,8 +16,6 @@
     color: var(--soft-pink);
     gap: 20px;
     text-align: center;
-
-
 }
 .catalog__filter__list{
     position: relative;

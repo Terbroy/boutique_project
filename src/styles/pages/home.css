@@ -121,6 +121,24 @@
     position: absolute;
     right: 4rem;
     top: 50%;
+    z-index: 99;
+}
+
+.dot{
+    position: absolute;
+    right: 3.6rem;
+    top: 46.5%;
+    height: 70px;
+    width: 70px;
+    background-color: var(--color-gold);
+    /* background-color: white; */
+    border-radius: 50%;
+    display: none;
+    box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.514);
+}
+.about__arrow:hover + .dot, .dot:hover {
+    cursor: pointer;
+    display: block;
 }
 
 .about__title{
@@ -222,7 +240,12 @@
     padding: 1rem 1.5rem;
     cursor: pointer;
 }
-
+.see__more{
+    align-self: center;
+}
+.section__button:hover{
+    box-shadow: 3px 3px rgba(0, 0, 0, 0.466);
+}
 .buttton__arrow{
     width: 15px;
 }
