@@ -1,6 +1,6 @@
 @import url(../style.css);
 
-.maincategories{
+.main__categories{
     padding-top: 9rem;
     display: flex;
     flex-direction: column;
@@ -13,12 +13,12 @@
     #3E1F47
 }
 
-.sectiontitle.sectiontitle--category{
+.section__title.section__title--category{
     letter-spacing: .6rem;
     text-transform: uppercase;
 }
 
-.categoryinfo{
+.category__info{
     background-color: var(--primary-color);
     display: flex;
     justify-content: center;
@@ -30,43 +30,45 @@
     font-size: 2rem;
 }
 
-.categoryimg{
+.category__img{
     height: 450px;
 }
 
-.categoryimg img{
+.category__img img{
     width: 600px;
     border-radius: 35%  0 0 35%;
     max-height: 100%;
     object-fit: cover;
 }
 
-.categorycollage{
+.category__collage{
     display: grid;
     width: 100%;
     padding:0 3rem;
-    height: 500px;
+    height: 70vh;
     gap: .5rem;
     grid-template-rows:  1fr 1fr;
     grid-template-columns: 35% 20% 20% 20%;
     object-fit: cover;
 }
 
-.collageimage--category{
+.collage__image--category{
     object-fit: cover;
+    max-height: 35vh;
     width: 100%;
-    height: 100%;
+
 }
 
-.collageimage--category-first{
+.collage__image--category-first{
     grid-row: 1/3;
+    max-height: 70vh;
 }
-.collageimage--category-fourth{
+.collage__image--category-fourth{
     grid-column: 3/5;
     grid-row: 1/2;
 }
 
-.categorybutton.homesee-more{
+.category__button.home__see-more{
     border: solid 2px var(--color-brown);
     padding: .8rem 2rem;
     font-size: 1rem;
