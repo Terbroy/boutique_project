@@ -26,8 +26,8 @@
 
 
 .product{
-    padding: 2rem 5rem;
-    display: flex;
+    padding: 1rem 18rem;
+    display:flex;
     flex-direction: row;
     gap: 4rem;
     background-color: #fff;
@@ -41,7 +41,7 @@
     width: fit-content;
     grid-template-columns: 15% auto;
     grid-template-rows: repeat(4, 1fr);
-    gap: 1rem;
+    gap: 2rem;
 }
 
 .carrousel__card{
@@ -84,6 +84,7 @@
 
 .info__text{
     color: var(--color-brown);
+    align-content: center;
 }
 
 .info__buttons{
@@ -120,16 +121,22 @@
 }
 
 .details{
-    padding: 4rem 8rem;
+    padding: 3rem 7rem 7rem;
 }
 
 .details__description{
-    text-align: justify;
+   /*text-align: justify;*/
+   font-size: 25px;
+   margin-bottom: 20px;
+   margin-top: 20px;
+
+
+    
 }
 
 .details__titles{
     display: flex;
-    padding-bottom: 3rem;
+    padding-bottom: 1rem;
     justify-content: center;
     align-items: center;
     gap: 4rem;
@@ -163,4 +170,16 @@
 
 .related--product .product--card{
     width: 250px;
+}
+.btn-MostrarMas{
+    display: flex;
+    /*margin-top: 50px;*/
+    width: 300px;
+    padding: 15px;
+    margin: 30px auto;
+    border-radius: 10px;
+    justify-content: center;
+    color: white;
+    background-color: #43766C;
+    font-size: 17px;
 }
