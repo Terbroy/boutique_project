@@ -1,14 +1,14 @@
 @import url("../style.css");
 
-:root{
-    --primary-color:#43766C;
-    --background-color: #F5E9DA;
-    --light-green: #82B59D;
-    --soft-green:#BCCFBC;
-    --color-gold: #B19470;
-    --color-brown: #76453B;
-    --text-brown: #482b25;
-    --soft-pink:#f5e9d9;
+:root {
+  --primary-color: #43766c;
+  --background-color: #f5e9da;
+  --light-green: #82b59d;
+  --soft-green: #bccfbc;
+  --color-gold: #b19470;
+  --color-brown: #76453b;
+  --text-brown: #482b25;
+  --soft-pink: #f5e9d9;
 }
 
 .total-login{
@@ -20,13 +20,13 @@
     align-items: center;
     height: 90vh;
     background-color: white;
-}
+  }
 
-.form-container {
+  .form-container {
     display: none;
-}
+  }
 
-.form--login{
+  .form--login {
     display: flex;
     margin-top: 50px;
     width: 650px;
@@ -35,7 +35,7 @@
     border-radius: 100px;
     justify-content: center;
     flex-direction: column;
-}
+  }
 
 .form--regis{
     display: flex;
@@ -46,7 +46,7 @@
     border-radius: 100px;
     justify-content: center;
     flex-direction: column;
-}
+  }
 
 .par{
     display: flex;
@@ -56,10 +56,10 @@
     margin: 8px auto;;
 }
 
-.label0,
-.label1,
-.label2,
-.label3 {
+  .label0,
+  .label1,
+  .label2,
+  .label3 {
     margin-bottom: 2px;
 }
 

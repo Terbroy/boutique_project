@@ -57,7 +57,7 @@ function filterProducts(product){
 }
 
 document.addEventListener("DOMContentLoaded", (event) => {
-    let product = fetchProductPage();
+    let product = fetchProduct();
     let filterProduct = filterProducts(product);
     const relatedContainer = document.getElementById("related-product")
     const container = document.getElementById("container-product");
