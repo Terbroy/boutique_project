@@ -57,7 +57,7 @@ function filterProducts(product){
 }
 
 document.addEventListener("DOMContentLoaded", (event) => {
-    let product = fetchProduct();
+    let product = fetchProductPage();
     let filterProduct = filterProducts(product);
     const relatedContainer = document.getElementById("related-product")
     const container = document.getElementById("container-product");
@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     document.title = product.name
     productHTML.classList.add("product")
     description.textContent = product.description;
-    
+    console.log(product);
     productHTML.innerHTML = `
     <div class="product__carrousel">
             <img src=${product.images[0]} alt="" class="carrousel__card">
@@ -99,7 +99,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         relatedProduct.innerHTML=`
         <div id=${product.id} class="product--card">
             <div class="img__options">
-                <img class="product__img" src=${product.images}>
+                <img class="product__img" src=${product.images[0]}>
                 <div class="product__options">
                     <button id="btn-${product.id}" class="options__cart">Añadir al carrito</button>
                 </div>
