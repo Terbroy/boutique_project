@@ -1,4 +1,6 @@
-.main__categories{
+@import url(../style.css);
+
+.maincategories{
     padding-top: 9rem;
     display: flex;
     flex-direction: column;
@@ -11,12 +13,12 @@
     #3E1F47
 }
 
-.section__title.section__title--category{
+.sectiontitle.sectiontitle--category{
     letter-spacing: .6rem;
     text-transform: uppercase;
 }
 
-.category__info{
+.categoryinfo{
     background-color: var(--primary-color);
     display: flex;
     justify-content: center;
@@ -28,18 +30,18 @@
     font-size: 2rem;
 }
 
-.category__img{
+.categoryimg{
     height: 450px;
 }
 
-.category__img img{
+.categoryimg img{
     width: 600px;
     border-radius: 35%  0 0 35%;
     max-height: 100%;
     object-fit: cover;
 }
 
-.category__collage{
+.categorycollage{
     display: grid;
     width: 100%;
     padding:0 3rem;
@@ -50,21 +52,21 @@
     object-fit: cover;
 }
 
-.collage__image--category{
+.collageimage--category{
     object-fit: cover;
     width: 100%;
     height: 100%;
 }
 
-.collage__image--category-first{
+.collageimage--category-first{
     grid-row: 1/3;
 }
-.collage__image--category-fourth{
+.collageimage--category-fourth{
     grid-column: 3/5;
     grid-row: 1/2;
 }
 
-.category__button.home__see-more{
+.categorybutton.homesee-more{
     border: solid 2px var(--color-brown);
     padding: .8rem 2rem;
     font-size: 1rem;
