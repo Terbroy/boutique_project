@@ -95,14 +95,12 @@
           <button type="button" class="button-ini1" onclick="mostrarFormulario('inicio')">Iniciar sesión </button>
           <button class="button-regis" type="button" onclick="mostrarFormulario('registro')"> Registro </button> 
      </div>
-            <!--parrafo-->
-      <div>
-          <P class="par"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet quod, et blanditiis, facilis distinctio provident
-          quas est magnam repellat laudantium sint id</P>
-     </div>
             <!--este es el formulario de iniciar sesion-->
       <div id="formularioInicio" class="form-container">
           <form class="form--login" action="#">
+            <div>
+                <P class="par">"¡Bienvenido de nuevo a nuestra tienda de flores en línea! Por favor, inicia sesión para acceder a tu cuenta y disfrutar de una experiencia floral única."</P>
+           </div>
           <label class="label1"for="correoLogin">Usuario:</label>
           <input class="input1" type="email" id="correoLogin" name="correoLogin" required placeholder="Ingresa tu usuario">
           <label class="label2" for="contraseñaLogin">Contraseña:</label>
@@ -118,6 +116,9 @@
            <!--este es el formulario de registro-->
       <div id="formularioRegistro" class="form-container">
           <form class="form--regis" action="#">
+            <div>
+                <P class="par"> "¡Únete a nuestra comunidad floral! Regístrate hoy para acceder a una amplia selección de flores frescas y hermosos arreglos. Conviértete en parte de nuestra familia y recibe ofertas exclusivas, actualizaciones sobre nuevos lanzamientos y consejos de expertos para cuidar tus flores".</P>
+           </div>
             <label class="label0"for="nombreCompleto">Nombre Completo:</label>
             <input class="input0" type="text" id="nombreCompleto" name="nombreCompleto" required placeholder="Ingresa tu Nombre Completo">
             <label class="label0"for="telefono">Telefono:</label>
