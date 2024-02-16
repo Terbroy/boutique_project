@@ -12,11 +12,13 @@
     z-index: 1;
     filter: blur(100px);
     padding-bottom: 200px;
+    overflow: hidden;
 }
 .banner__img{
     height: 100%;
     width: 100%;
     z-index: 1;
+    overflow: hidden;
 }
 .banner__title{
     z-index: 99;
