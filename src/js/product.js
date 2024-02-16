@@ -117,7 +117,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
         const title = document.getElementById(`product-title-${product.id}`);
         const buttonProduct = document.getElementById(`btn-${product.id}`);
 
-
         title.addEventListener("click",(event)=>{
 
             fetchProduct(product.id);
