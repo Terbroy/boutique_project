@@ -26,22 +26,43 @@
 
 
 .product{
-    padding: 2rem 5rem;
-    display: flex;
+    padding: 1rem 12rem;
+    display:flex;
     flex-direction: row;
     gap: 4rem;
     background-color: #fff;
 }
 
 .product__carrousel{
-    max-width: 40%;
-    width: 40%;
+    width: 100%;
     height: 500px;
     display: grid;
-    width: fit-content;
     grid-template-columns: 15% auto;
     grid-template-rows: repeat(4, 1fr);
-    gap: 1rem;
+    gap: 2rem;
+}
+
+.about__arrow{
+    position: absolute;
+    right: 4rem;
+    top: 50%;
+    z-index: 99;
+}
+
+.dot{
+    position: absolute;
+    right: 3.6rem;
+    top: 46.5%;
+    height: 70px;
+    width: 70px;
+    background-color: white;
+    border-radius: 50%;
+    display: none;
+    box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.514);
+}
+.about__arrow:hover + .dot, .dot:hover {
+    cursor: pointer;
+    display: block;
 }
 
 .carrousel__card{
@@ -84,6 +105,7 @@
 
 .info__text{
     color: var(--color-brown);
+    align-content: center;
 }
 
 .info__buttons{
@@ -120,16 +142,22 @@
 }
 
 .details{
-    padding: 4rem 8rem;
+    padding: 3rem 7rem 7rem;
 }
 
 .details__description{
-    text-align: justify;
+   /*text-align: justify;*/
+   font-size: 25px;
+   margin-bottom: 20px;
+   margin-top: 20px;
+
+
+    
 }
 
 .details__titles{
     display: flex;
-    padding-bottom: 3rem;
+    padding-bottom: 1rem;
     justify-content: center;
     align-items: center;
     gap: 4rem;
@@ -163,4 +191,16 @@
 
 .related--product .product--card{
     width: 250px;
+}
+.btn-MostrarMas{
+    display: flex;
+    /*margin-top: 50px;*/
+    width: 300px;
+    padding: 15px;
+    margin: 30px auto;
+    border-radius: 10px;
+    justify-content: center;
+    color: white;
+    background-color: #43766C;
+    font-size: 17px;
 }
