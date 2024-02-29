@@ -109,4 +109,26 @@
     padding: 0px 180px; 
     font-size: 1.6rem;
     text-align: center;
+    color: black;
+}
+.exit__text a{
+    text-decoration: none;
+    color: var(--color-gold);
+}
+.exit__text a:hover{
+    text-decoration: underline;
+}
+.about__exit__button{
+    margin-top: 15px;
+    padding: 8px 15px;
+    font-family: 'Bona nova', serif;
+    font-size: 1.4rem;
+    border: 2px solid var(--primary-color);
+    border-radius: 20px;
+    background-color: var(--light-green);
+    color: var(--soft-pink);
+}
+.about__exit__button:hover{
+    background-color: var(--soft-green);
+    cursor: pointer;
 }
