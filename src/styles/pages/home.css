@@ -186,8 +186,8 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    gap: 1.5rem;
-    padding-top:2rem ;
+    gap: 5rem;
+    padding-top:2rem;
 }
 
 .container__card{
@@ -224,7 +224,8 @@
 }
 
 .card__text{
-    font-size: .9rem;
+    font-size: 1rem;
+    color: black;
 }
 
 .section__button{
