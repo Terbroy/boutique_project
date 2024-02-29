@@ -126,7 +126,7 @@
 }
 .product--card{
     max-width: 400px;
-    height:450px;
+    height:500px;
     display: flex;
     flex-direction: column;
     text-align: left;
@@ -177,7 +177,6 @@
     color: var(--color-brown);
     text-decoration: none;
 }
-
 .product__title:hover{
     color: var(--light-green);
 }
