@@ -1,167 +1,107 @@
--- phpMyAdmin SQL Dump
--- version 5.2.1
--- https://www.phpmyadmin.net/
---
--- Servidor: 127.0.0.1
--- Tiempo de generación: 14-02-2024 a las 23:32:10
--- Versión del servidor: 10.4.32-MariaDB
--- Versión de PHP: 8.2.12
+-- MySQL Workbench Forward Engineering
 
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-START TRANSACTION;
-SET time_zone = "+00:00";
+SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
+SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
+SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
+
+-- -----------------------------------------------------
+-- Schema mydb
+-- -----------------------------------------------------
+
+-- -----------------------------------------------------
+-- Schema mydb
+-- -----------------------------------------------------
+CREATE SCHEMA IF NOT EXISTS `mydb` DEFAULT CHARACTER SET utf8 ;
+-- -----------------------------------------------------
+-- Schema new_schema1
+-- -----------------------------------------------------
+USE `mydb` ;
+
+-- -----------------------------------------------------
+-- Table `mydb`.`usuarios`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mydb`.`usuarios` (
+  `id_usuario` INT NOT NULL AUTO_INCREMENT,
+  `nombre` VARCHAR(45) NOT NULL,
+  `telefono` VARCHAR(10) NOT NULL,
+  `correo` VARCHAR(50) NOT NULL,
+  `clave` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`id_usuario`))
+ENGINE = InnoDB;
 
 
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
+-- -----------------------------------------------------
+-- Table `mydb`.`categorias`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mydb`.`categorias` (
+  `id_categorias` INT NOT NULL,
+  `nombre` VARCHAR(45) NOT NULL,
+  `descripcion` VARCHAR(150) NOT NULL,
+  PRIMARY KEY (`id_categorias`))
+ENGINE = InnoDB;
 
---
--- Base de datos: `boutique_flores`
---
 
--- --------------------------------------------------------
+-- -----------------------------------------------------
+-- Table `mydb`.`productos`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mydb`.`productos` (
+  `id_productos` INT NOT NULL,
+  `nombre` VARCHAR(45) NOT NULL,
+  `precio` DECIMAL(10,0) NOT NULL,
+  `informacion` VARCHAR(45) NOT NULL,
+  `descripcion` VARCHAR(100) NOT NULL,
+  `categorias_id_categorias` INT NOT NULL,
+  PRIMARY KEY (`id_productos`, `categorias_id_categorias`),
+  INDEX `fk_productos_categorias1_idx` (`categorias_id_categorias` ASC) VISIBLE,
+  CONSTRAINT `fk_productos_categorias1`
+    FOREIGN KEY (`categorias_id_categorias`)
+    REFERENCES `mydb`.`categorias` (`id_categorias`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
 
---
--- Estructura de tabla para la tabla `carrito`
---
 
-CREATE TABLE `carrito` (
-  `id_carrito` int(11) NOT NULL,
-  `total` decimal(10,0) NOT NULL,
-  `cantidad_producto` int(11) NOT NULL,
-  `id_usuario` int(11) NOT NULL,
-  `id_producto` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+-- -----------------------------------------------------
+-- Table `mydb`.`carrito`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mydb`.`carrito` (
+  `id_carrito` VARCHAR(45) NOT NULL,
+  `total` DECIMAL(10,0) NOT NULL DEFAULT 0,
+  `usuarios_id_usuario` INT NOT NULL,
+  `productos_id_productos` INT NOT NULL,
+  PRIMARY KEY (`id_carrito`, `usuarios_id_usuario`, `productos_id_productos`),
+  INDEX `fk_usuarios_has_productos_productos1_idx` (`productos_id_productos` ASC) VISIBLE,
+  INDEX `fk_usuarios_has_productos_usuarios_idx` (`usuarios_id_usuario` ASC) VISIBLE,
+  CONSTRAINT `fk_usuarios_has_productos_usuarios`
+    FOREIGN KEY (`usuarios_id_usuario`)
+    REFERENCES `mydb`.`usuarios` (`id_usuario`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_usuarios_has_productos_productos1`
+    FOREIGN KEY (`productos_id_productos`)
+    REFERENCES `mydb`.`productos` (`id_productos`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
 
--- --------------------------------------------------------
 
---
--- Estructura de tabla para la tabla `categorias`
---
+-- -----------------------------------------------------
+-- Table `mydb`.`imagenes`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mydb`.`imagenes` (
+  `id_imagenes` INT NOT NULL,
+  `url` VARCHAR(100) NOT NULL,
+  `productos_id_productos` INT NOT NULL,
+  PRIMARY KEY (`id_imagenes`, `productos_id_productos`),
+  INDEX `fk_imagenes_productos1_idx` (`productos_id_productos` ASC) VISIBLE,
+  CONSTRAINT `fk_imagenes_productos1`
+    FOREIGN KEY (`productos_id_productos`)
+    REFERENCES `mydb`.`productos` (`id_productos`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
 
-CREATE TABLE `categorias` (
-  `id_categoria` int(11) NOT NULL,
-  `nombre` varchar(50) NOT NULL,
-  `id_producto` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `productos`
---
-
-CREATE TABLE `productos` (
-  `id_producto` int(11) NOT NULL,
-  `nombre` varchar(50) NOT NULL,
-  `precio` decimal(10,0) NOT NULL,
-  `descripcion` varchar(50) NOT NULL,
-  `informacion` varchar(100) NOT NULL,
-  `id_categoria` int(11) NOT NULL,
-  `id_carrito` int(11) NOT NULL,
-  `imagenes` varchar(50) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `reseñas`
---
-
-CREATE TABLE `reseñas` (
-  `id_reseñas` int(11) NOT NULL,
-  `calificacion` decimal(10,0) NOT NULL,
-  `comentario` varchar(100) NOT NULL,
-  `id_usuario` int(11) NOT NULL,
-  `id_producto` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `usuario`
---
-
-CREATE TABLE `usuario` (
-  `id_usuario` int(11) NOT NULL,
-  `nombre` varchar(50) NOT NULL,
-  `telefono` varchar(50) NOT NULL,
-  `correo` varchar(50) NOT NULL,
-  `contraseña` varchar(20) NOT NULL,
-  `id_carrito` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Índices para tablas volcadas
---
-
---
--- Indices de la tabla `carrito`
---
-ALTER TABLE `carrito`
-  ADD PRIMARY KEY (`id_carrito`);
-
---
--- Indices de la tabla `categorias`
---
-ALTER TABLE `categorias`
-  ADD PRIMARY KEY (`id_categoria`);
-
---
--- Indices de la tabla `productos`
---
-ALTER TABLE `productos`
-  ADD PRIMARY KEY (`id_producto`);
-
---
--- Indices de la tabla `reseñas`
---
-ALTER TABLE `reseñas`
-  ADD PRIMARY KEY (`id_reseñas`);
-
---
--- Indices de la tabla `usuario`
---
-ALTER TABLE `usuario`
-  ADD PRIMARY KEY (`id_usuario`);
-
---
--- AUTO_INCREMENT de las tablas volcadas
---
-
---
--- AUTO_INCREMENT de la tabla `carrito`
---
-ALTER TABLE `carrito`
-  MODIFY `id_carrito` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT de la tabla `categorias`
---
-ALTER TABLE `categorias`
-  MODIFY `id_categoria` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT de la tabla `productos`
---
-ALTER TABLE `productos`
-  MODIFY `id_producto` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT de la tabla `reseñas`
---
-ALTER TABLE `reseñas`
-  MODIFY `id_reseñas` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT de la tabla `usuario`
---
-ALTER TABLE `usuario`
-  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT;
-COMMIT;
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+SET SQL_MODE=@OLD_SQL_MODE;
+SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
+SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;

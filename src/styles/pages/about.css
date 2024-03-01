@@ -29,17 +29,12 @@
     text-shadow: 3px 2px black;
 }
 .banner__text{
-    padding: 30px 180px; 
-    font-size: 1.6rem;
+    padding: 60px 180px; 
+    font-size: 1.8rem;
     text-align: center;
 }
 .services{
     padding: 60px 0 80px 0;
-}
-.services__title{
-    padding-left: 30px;
-    color: var(--primary-color);
-    font-size: 1.6rem;
 }
 .services__serv1{
     display: flex;
@@ -48,19 +43,20 @@
 .serv1__textbox{
     background-color: var(--light-green);
     margin-right: 100px;
-    height: 180px;
+    height: fit-content;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 30px;
+    padding: 50px;
     color: white;
 }
-.serv1__title{
-    font-size: 1.4rem;
+.serv1__title, .serv2__title, .serv3__title{
+    font-size: 1.6rem;
     font-weight: bold;
 }
-.serv1__text{
-    font-size: 1.2rem;
+.serv1__text, .serv2__text, .serv3__text{
+    font-size: 1.5rem;
+    padding: 10px;
 }
 .serv1__img{
     border-radius: 50px; 
@@ -72,20 +68,13 @@
     align-items: center;
 }
 .serv2__textbox{
-    background-color: var(--soft-green);
-    height: 200px;
+    background-color: var(--color-gold);
+    height: fit-content;
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: 30px;
     color: white;
-}
-.serv2__title{
-    font-size: 1.4rem;
-    font-weight: bold;
-}
-.serv2__text{
-    font-size: 1.2rem;
 }
 .serv2__img{
     border-radius: 50px; 
@@ -99,19 +88,12 @@
 .serv3__textbox{
     background-color: var(--light-green);
     margin-right: 100px;
-    height: 180px;
+    height: fit-content;
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: 30px;
     color: white;
-}
-.serv3__title{
-    font-size: 1.4rem;
-    font-weight: bold;
-}
-.serv3__text{
-    font-size: 1.2rem;
 }
 .serv3__img{
     border-radius: 50px; 
@@ -122,4 +104,31 @@
     cursor: pointer;
     filter: drop-shadow(8px 8px 10px var(--color-brown));
 }
-
+.exit__text{
+    margin-top: 80px;
+    padding: 0px 180px; 
+    font-size: 1.6rem;
+    text-align: center;
+    color: black;
+}
+.exit__text a{
+    text-decoration: none;
+    color: var(--color-gold);
+}
+.exit__text a:hover{
+    text-decoration: underline;
+}
+.about__exit__button{
+    margin-top: 15px;
+    padding: 8px 15px;
+    font-family: 'Bona nova', serif;
+    font-size: 1.4rem;
+    border: 2px solid var(--primary-color);
+    border-radius: 20px;
+    background-color: var(--light-green);
+    color: var(--soft-pink);
+}
+.about__exit__button:hover{
+    background-color: var(--soft-green);
+    cursor: pointer;
+}
