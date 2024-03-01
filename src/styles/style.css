@@ -18,9 +18,12 @@
     box-sizing: border-box;
 }
 
-.display--none{
-    display: none;
+.display--none {
+    transition: 2s ease-in-out;
+    transform: translateX(100%);
+    z-index: -1;
 }
+
 
 :root{
     --primary-color:#43766C;

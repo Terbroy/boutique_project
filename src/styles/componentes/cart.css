@@ -6,8 +6,7 @@
     right: 0;
     z-index: 3;
     cursor:default;
-    transform: translateX(80%);
-    transition-duration: 3s;
+    transition: 2s ease-in-out;
 }
 
 .cart__background{

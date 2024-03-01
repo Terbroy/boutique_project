@@ -86,7 +86,7 @@
 
 .collage__image:hover {
     transform: scale(0.9);
-    transition-duration: .5s ;
+    transition-duration: .7s ;
 }
 
 .collage__image-6{
@@ -160,9 +160,6 @@
     font-weight: 500;
 }
 
-.cart {
-    transition-duration: 2s;
-}
 
 .section__text{
     grid-column: 1/2;
@@ -210,6 +207,11 @@
     overflow: hidden;
 }
 
+.container__card:hover {
+    cursor: pointer;
+    box-shadow: 8px 8px 10px #76453B;
+}
+
 .card__image{
     height:100% ;
     object-fit: cover;
@@ -253,7 +255,7 @@
     cursor: pointer;
 }
 
-a {
+.to__catalog {
     text-decoration: none;
     color: white;
 }

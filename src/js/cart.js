@@ -76,3 +76,14 @@ function addCart() {
   totalHtml.textContent = total
   container__items.innerHTML = content;
 }
+
+//Redirección imágenes index a catálogo
+
+const imagenesDestacadas = document.getElementsByClassName('collage__image');
+
+for (let i = 0; i < imagenesDestacadas.length; i++) {
+  imagenesDestacadas[i].addEventListener('click', function(){
+    location.href = "/pages/catalog.html"
+  });
+  
+}
