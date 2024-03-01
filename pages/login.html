@@ -92,14 +92,15 @@
 
            <!--botones de inicio y registro-->
       <div class="ini-regis">
-          <button type="button" class="button-ini1" onclick="mostrarFormulario('inicio')">Iniciar sesión </button>
-          <button class="button-regis" type="button" onclick="mostrarFormulario('registro')"> Registro </button> 
+          <button type="button" class="button-ini1 selected-button" id="buttonInicio" onclick="mostrarFormulario('inicio')">Iniciar sesión </button>
+          <button class="button-regis" type="button" id="buttonRegistro" onclick="mostrarFormulario('registro')"> Registro </button> 
      </div>
+     
             <!--este es el formulario de iniciar sesion-->
       <div id="formularioInicio" class="form-container">
           <form class="form--login" action="#">
             <div>
-                <P class="par">"¡Biegitnvenido de nuevo a nuestra tienda de flores en línea! Por favor, inicia sesión para acceder a tu cuenta y disfrutar de una experiencia floral única."</P>
+                <P class="par">"¡Bienvenido de nuevo a nuestra tienda de flores en línea! Por favor, inicia sesión para acceder a tu cuenta y disfrutar de una experiencia floral única."</P>
            </div>
           <label class="label1"for="correoLogin">Usuario:</label>
           <input class="input1" type="email" id="correoLogin" name="correoLogin" required placeholder="Ingresa tu usuario">
@@ -108,11 +109,24 @@
           <div>
           <input class="input3" id="recordarUsuario" type="checkbox" name="recordarUsuario" value="">
           <label class="label3" for="recordarUsuario"> Recuérdame </label>
-          <a class="olvidPass"> ¿Olvidaste tu contraseña? </a>
+          <a class="olvidPass"  id="olvidarPass"> ¿Olvidaste tu contraseña? </a>
           </div>
           <button class="button-ini2" class="botonIni1" id="btnInicioSesion" type="submit" onclick="iniciarSesion()">Iniciar Sesión</button>
+         
+         
+         
+          <div id="modalResetPassword" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Restablecer Contraseña</h2>
+                <p class="pIngresaC">Ingresa tu correo electrónico para restablecer tu contraseña.</p>
+                <input type="email" id="resetEmail"class="imputCorreo" placeholder="Correo electrónico">
+                <button class="imputCorreo" onclick="resetPassword()">Restablecer Contraseña</button>
+            </div>
+            </div>
           </form>
-     </div>
+        </div>
+
            <!--este es el formulario de registro-->
       <div id="formularioRegistro" class="form-container">
           <form class="form--regis" action="#">
