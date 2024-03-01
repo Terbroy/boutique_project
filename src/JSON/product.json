@@ -2,12 +2,12 @@
     "products": [
         {
             "id": 1,
-            "category":"Bouquets",
-            "name": "Centro de mesa flores secas",
-            "main_info": "Estos centros de mesa son perfectos para agregar un toque de elegancia a cualquier espacio, ya sea en una cena íntima en casa o en un evento especial. Su durabilidad los hace ideales para decorar sin preocupaciones, añadiendo un toque de color y frescura que perdura mucho más allá de las flores frescas tradicionales.",
-            "description": "Variedad de flores y arreglos",
-            "price": 100000,
-            "stock": 6,
+            "category":"Flores secas",
+            "name": "Centro de flores secas: El edén",
+            "main_info": "Candiolo en bombonera verde. Cada flor, seleccionada con esmero, conserva su frescura y color por años. Con tonos suaves y formas exquisitas, este arreglo añade refinamiento a tu espacio, donde la belleza florece siempre.",
+            "description": "Elegancia eterna.",
+            "price": 110000,
+            "stock": 100,
             "product_cart": 0,
             "images": [
                 "https://img.freepik.com/free-photo/home-plant-vase-decoration-arrangement_23-2149090589.jpg?w=360&t=st=1706828228~exp=1706828828~hmac=8db0ae68676f1e0a436ebd8d06e2aeb983b6ee6ab161498bb04983bfb61920bc",
@@ -18,13 +18,13 @@
         },
         {
             "id": 2,
-            "category":"Bouquets",
-            "name": "Ramo de flores secas",
-            "main_info": "Es una hermosa composición de flores que han sido cuidadosamente seleccionadas y secadas para preservar su belleza y encanto durante mucho tiempo. Este ramo presenta una variedad de colores, texturas y formas, creando un aspecto natural y rústico que es perfecto para cualquier ocasión.",
-            "description": "Combinación de flores",
-            "price": 80000,
+            "category": "Flores secas",
+            "name": "Verde Eterno: Centro de Flores Secas",
+            "main_info": "Este centro sobre base de mimbre presenta una composición de flores secas y preservadas en tonos verdes y amarillos, ideal para disfrutar de la belleza floral por mucho tiempo o para regalar en cualquier ocasión.",
+            "description": "Centro sobre base de mimbre.",
+            "price": 130000,
             "product_cart": 0,
-            "stock": 5,
+            "stock": 100,
             "images": [
                 "https://img.freepik.com/free-photo/home-plant-vase-decoration-arrangement_23-2149090589.jpg?w=360&t=st=1706828228~exp=1706828828~hmac=8db0ae68676f1e0a436ebd8d06e2aeb983b6ee6ab161498bb04983bfb61920bc",
                 "https://img.freepik.com/premium-photo/dry-flowers-background_863013-155774.jpg?w=740",
@@ -34,13 +34,13 @@
         },
         {
             "id": 3,
-            "category":"Bouquets",
-            "name": "Centro de rosas",
+            "category":"Flores secas",
+            "name": "Encanto Hortensia: Arreglo en Jarrón Blanco",
+            "main_info": "Este arreglo es perfecto para quienes buscan belleza duradera y elegancia en su hogar. Disfruta de la armonía atemporal de la naturaleza con esta pieza única que te cautivará con su encanto duradero.",
+            "description": "Hortensias y elegante jarrón blanco.",
+            "price": 145000,
             "product_cart": 0,
-            "main_info": "Con una exquisita selección de rosas frescas y vibrantes, este centro de mesa añade un toque de elegancia y sofisticación a cualquier evento. Las rosas, cuidadosamente dispuestas en un arreglo artístico, ofrecen una explosión de color y fragancia que cautivará a tus invitados.",
-            "description": "Combinación de rosas",
-            "price": 120000,
-            "stock": 8,
+            "stock": 100,
             "images": [
                 "https://img.freepik.com/premium-photo/dried-flower-icecone-pink-background_118124-74146.jpg?size=626&ext=jpg&ga=GA1.2.1215190443.1703089669&semt=ais_ai_generated",
                 "https://img.freepik.com/premium-photo/cone-dried-flowers-pink-background_118124-72986.jpg?size=626&ext=jpg&ga=GA1.2.1215190443.1703089669&semt=ais_ai_generated",
@@ -50,13 +50,13 @@
         },
         {
             "id": 4,
-            "category":"Centros",
+            "category":"Flores secas",
+            "name": "Centro de Flores Secas en Cerámica Marrón",
+            "main_info": "Preservadas para conservar su frescura y belleza a lo largo del tiempo. Este imponente arreglo no solo refleja la naturaleza en su máximo esplendor, sino que también añade un toque de sofisticación a cualquier espacio.",
+            "description": "Hortensias seleccionadas.",
+            "price": 150000,
             "product_cart": 0,
-            "name": "Centro de flores secas sencillo",
-            "main_info": "Elaborado con una cuidadosa selección de flores secas, nuestro centro de mesa captura la esencia del campo con su combinación de tonos suaves y texturas variadas. Desde las delicadas flores de lavanda hasta las ramas de trigo y los toques de follaje verde, cada elemento se combina armoniosamente para crear una atmósfera acogedora y natural.",
-            "description": "Variedad de flores secas",
-            "price": 60000,
-            "stock": 7,
+            "stock": 100,
             "images": [
                 "https://img.freepik.com/free-photo/elegant-plants-decoration-vase_23-2149334650.jpg?w=360&t=st=1706829097~exp=1706829697~hmac=bc3c870e34f8b83b9bbf59dfc30acbcffce1343197e06ba6f49e7fab8c0d4344",
                 "https://img.freepik.com/free-photo/elegant-plants-decoration-vase_23-2149334650.jpg?w=360&t=st=1706829097~exp=1706829697~hmac=bc3c870e34f8b83b9bbf59dfc30acbcffce1343197e06ba6f49e7fab8c0d4344",
@@ -66,13 +66,13 @@
         },
         {
             "id": 5,
-            "category":"Centros",
+            "category":"Flores secas",
+            "name": "Jardín eterno",
+            "main_info": "Equilibrio entre la belleza atemporal y un toque moderno. Ya sea en tu mesa de comedor o como adorno en la sala de estar, este centro es ideal para quienes desean un toque floral perdurable con estilo en cualquier ocasión.",
+            "description": "Cuidada selección de flores.",
+            "price": 90000,
             "product_cart": 0,
-            "name": "Centro de flores varias",
-            "main_info": "Centro de flores cuidadosamente seleccionadas para hacer tus eventos más coloridos, elegantes y memorables para ti y tus invitdados. Déjanos acompañarte en tus fechas especiales y hacer esos momentos los más especiales.",
-            "description": "Variedad de flores y arreglos",
-            "price": 150000,
-            "stock": 9,
+            "stock": 100,
             "images": [
                 "https://img.freepik.com/premium-photo/dried-flower-icecone-pink-background_118124-74146.jpg?size=626&ext=jpg&ga=GA1.2.1215190443.1703089669&semt=ais_ai_generated",
                 "https://img.freepik.com/premium-photo/cone-dried-flowers-pink-background_118124-72986.jpg?size=626&ext=jpg&ga=GA1.2.1215190443.1703089669&semt=ais_ai_generated",
@@ -81,13 +81,13 @@
             ]
         },{
             "id": 6,
-            "category":"Centros",
+            "category":"Flores secas",
+            "name": "Delicada Esencia: Ramo en Tonos Pasteles",
+            "main_info": "Cada tallo es seleccionado con esmero y dispuesto con delicadeza, reflejando la excelencia de nuestro equipo. Sumérgete en la elegancia de esta creación exclusiva.",
+            "description": "Pureza y brillo.",
+            "price": 95000,
             "product_cart": 0,
-            "name": "Ramo de rosas",
-            "main_info": "Sorprende a esa persona especial con nuestro impresionante ramo de rosas. Este cautivador arreglo floral es una expresión atemporal de amor y admiración, perfecto para cualquier ocasión",
-            "description": "Varieda de rosas",
-            "price": 110000,
-            "stock": 10,
+            "stock": 100,
             "images": [
                 "https://img.freepik.com/premium-photo/dried-flower-icecone-pink-background_118124-74146.jpg?size=626&ext=jpg&ga=GA1.2.1215190443.1703089669&semt=ais_ai_generated",
                 "https://img.freepik.com/premium-photo/cone-dried-flowers-pink-background_118124-72986.jpg?size=626&ext=jpg&ga=GA1.2.1215190443.1703089669&semt=ais_ai_generated",
@@ -97,13 +97,13 @@
         },
         {
             "id": 7,
-            "category":"Centros",
+            "category":"Flores secas",
+            "name": "Ramo Deluxe",
+            "main_info": "Cada ramo se presenta con un elegante envoltorio de papel estraza y rafia natural, y tienes la opción de añadir un mensaje personalizado en una de nuestras tarjetas. Ten en cuenta que el tamaño del ramo es aproximado y puede variar según la selección de flores y el volumen de los verdes de cada temporada.",
+            "description": "Personaliza tu ramo.",
+            "price": 110000,
             "product_cart": 0,
-            "name": "Ramo de flores varias",
-            "main_info": "Celebra la belleza diversa de la naturaleza con nuestro encantador ramo de flores varias. Este vibrante arreglo combina una exquisita variedad de flores frescas, cada una cuidadosamente seleccionada para crear una composición visualmente cautivadora y llena de vida.",
-            "description": "Combinación de flores",
-            "price": 120000,
-            "stock": 4,
+            "stock": 100,
             "images": [
                 "https://img.freepik.com/premium-photo/dried-flower-icecone-pink-background_118124-74146.jpg?size=626&ext=jpg&ga=GA1.2.1215190443.1703089669&semt=ais_ai_generated",
                 "https://img.freepik.com/premium-photo/cone-dried-flowers-pink-background_118124-72986.jpg?size=626&ext=jpg&ga=GA1.2.1215190443.1703089669&semt=ais_ai_generated",
@@ -113,13 +113,13 @@
         },
         {
             "id": 8,
-            "category":"Bouquets",
+            "category":"Centros",
+            "name": "Centro Floral Vibrante",
+            "main_info": "Los vibrantes girasoles se combinan con las tonalidades malvas de las hortensias y el delphinium, entrelazados con verdes exuberantes. Este centro de flores es el regalo perfecto para cualquier ocasión, diseñado para hacer sentir bien a la persona que elijas. Déjate seducir por la flor que brilla siempre bajo el sol.",
+            "description": "Energía radiante del girasol.",
+            "price": 150000,
             "product_cart": 0,
-            "name": "Ramos de novia",
-            "main_info": "Haz que tu día especial sea aún más memorable con nuestro espectacular ramo de novia. Este exquisito arreglo floral está diseñado para complementar tu belleza y añadir un toque de romance y sofisticación a tu look nupcial.",
-            "description": "Combinación de flores",
-            "price": 160000,
-            "stock": 11,
+            "stock": 100,
             "images": [
                 "https://img.freepik.com/free-photo/front-view-bride-with-roses-bouquet_23-2150851157.jpg?size=626&ext=jpg&ga=GA1.2.1215190443.1703089669&semt=ais_ai_generated",
                 "https://img.freepik.com/free-photo/front-view-bride-with-roses-bouquet_23-2150851145.jpg?size=626&ext=jpg&ga=GA1.2.1215190443.1703089669&semt=ais_ai_generated",
@@ -129,64 +129,139 @@
         },
         {
             "id": 9,
-            "category":"Bouquets",
+            "category":"Centros",
+            "name": "Sombrero Floral: Elegancia en tu hogar",
+            "main_info": "Este exquisito arreglo combina hortensias, ranúnculos, escabiosas, agapanthus y alhelí, entrelazados con verdes frescos de eucalipto y mirocladio. Una verdadera obra de arte floral que sorprenderá de manera única y especial.",
+            "description": "Composición elegante.",
+            "price": 160000,
             "product_cart": 0,
-            "name": "Centro de flores veraniego",
-            "main_info": " Captura la esencia vibrante del verano con nuestro encantador centro de flores. Este exuberante arreglo floral está inspirado en los días soleados y las brisas cálidas de la temporada estival, y está diseñado para llenar cualquier espacio con alegría y energía positiva.",
-            "description": "Centros para eventos",
-            "price": 120000,
-            "stock": 12,
+            "stock": 100,
             "images": [
-                "https://img.freepik.com/free-photo/beautiful-table-arrangement-with-roses_23-2150737361.jpg?size=626&ext=jpg&ga=GA1.2.1215190443.1703089669&semt=ais_ai_generated",
-                "https://img.freepik.com/free-photo/beautiful-table-arrangement-with-roses_23-2150737351.jpg?size=626&ext=jpg&ga=GA1.2.1215190443.1703089669&semt=ais_ai_generated",
-                "https://img.freepik.com/free-photo/beautiful-table-arrangement-with-roses_23-2150737359.jpg?size=626&ext=jpg&ga=GA1.2.1215190443.1703089669&semt=ais_ai_generated",
-                "https://img.freepik.com/premium-photo/country-life-garden-floral-decor-peony-flowers-bouquet-countryside-country-cottage-style-generative-ai_360074-69608.jpg?size=626&ext=jpg&ga=GA1.2.1215190443.1703089669&semt=ais_ai_generated"
+                "https://i.pinimg.com/564x/8e/5c/d7/8e5cd700a4b2c5550f2d84f8eeefbc47.jpg",
+                "https://i.pinimg.com/564x/98/31/1c/98311c846fe8e21416baf4a943c06f95.jpg",
+                "https://i.pinimg.com/564x/b6/c3/a5/b6c3a59d90dbf2e747a1ae7c591da6b0.jpg",
+                "https://i.pinimg.com/564x/06/3a/bd/063abd116e5d29c1fb3f360a72ea8982.jpg"
             ]
         },
         {
             "id": 10,
-            "category":"Bouquets",
-            "product_cart": 0,
-            "name": "Ramos de flores otoñales",
+            "category":"Centros",
+            "name": "Centro Primaveral: Explosión de color",
             "main_info": "Celebra la belleza y el encanto de la temporada otoñal con nuestro cautivador centro de flores. Este exquisito arreglo floral está diseñado para capturar los colores y la atmósfera acogedora de esta época del año, añadiendo un toque de elegancia rústica a cualquier espacio.",
-            "description": "Combinación de flores",
-            "price": 15000,
-            "stock": 14,
+            "description": "Derroche de belleza.",
+            "price": 120000,
+            "product_cart": 0,
+            "stock": 100,
             "images": [
-                "https://img.freepik.com/premium-photo/dried-flower-icecone-pink-background_118124-74146.jpg?size=626&ext=jpg&ga=GA1.2.1215190443.1703089669&semt=ais_ai_generated",
-                "https://img.freepik.com/premium-photo/cone-dried-flowers-pink-background_118124-72986.jpg?size=626&ext=jpg&ga=GA1.2.1215190443.1703089669&semt=ais_ai_generated",
-                "https://img.freepik.com/premium-photo/cone-dried-flowers-pink-background_118124-72985.jpg?size=626&ext=jpg&ga=GA1.2.1215190443.1703089669&semt=ais_ai_generated",
-                "https://img.freepik.com/premium-photo/flower-bouquet-with-tag-ribbon-pink-background-variation-1_178416-142.jpg?size=626&ext=jpg&ga=GA1.2.1215190443.1703089669&semt=ais_ai_generated"
+                "https://i.pinimg.com/564x/0b/56/b0/0b56b036d094c15bea4074eceb719410.jpg",
+                "https://i.pinimg.com/564x/0d/6c/75/0d6c755b119947f80e1ebb4e56ae6d4e.jpg",
+                "https://i.pinimg.com/564x/85/1a/c6/851ac6a185b721110c507c1a5ef97047.jpg",
+                "https://i.pinimg.com/564x/07/81/5d/07815d66d4e50700b36859e7a2a1d5b6.jpg"
             ]
         },{
             "id": 11,
-            "category":"Bouquets",
+            "category":"Centros",
+            "name": "Encanto de la Selva: Centro Floral Tropicales",
+            "main_info": "Nuestra cesta de fibras naturales, de tamaño medio, es el complemento perfecto para un arreglo floral de temporada. Esta cesta se presenta con una elegante cinta, añadiendo un toque de sofisticación a tu regalo. Contamos con una amplia variedad de cestas en diferentes medidas y formas para adaptarnos a tus preferencias y necesidades. Confía en nosotros para seleccionar la cesta que mejor se ajuste a tu elección y hacer de tu regalo una verdadera obra de arte floral.",
+            "description": "Flores frescas y vibrantes.",
+            "price": 140000,
             "product_cart": 0,
-            "name": "Arreglo de flores cabello",
-            "main_info": "Añade un toque de belleza etérea a tu look con nuestro halo floral para el cabello. Este delicado accesorio está diseñado para realzar tu peinado con la frescura y la elegancia de las flores naturales, creando un aura de romance y sofisticación.",
-            "description": "Flores como accesorio",
-            "price": 100000,
-            "stock": 3,
+            "stock": 100,
             "images": [
-                "https://img.freepik.com/premium-photo/bouquet-tulips-with-blue-yellow-flower_900958-42031.jpg?size=626&ext=jpg&ga=GA1.2.1215190443.1703089669&semt=ais_ai_generated",
-                "https://img.freepik.com/free-photo/close-up-rose-fence_23-2150866611.jpg?size=626&ext=jpg&ga=GA1.2.1215190443.1703089669&semt=ais_ai_generated",
-                "https://img.freepik.com/free-photo/closeup-beautiful-flower-bouquet_23-2150772304.jpg?size=626&ext=jpg&ga=GA1.2.1215190443.1703089669&semt=ais_ai_generated",
-                "https://img.freepik.com/free-photo/hand-holding-flower-bouquet_23-2150772340.jpg?size=626&ext=jpg&ga=GA1.2.1215190443.1703089669&semt=ais_ai_generated"
+                "https://i.pinimg.com/564x/5d/8e/63/5d8e63904d71f0822d60de8f9b95d083.jpg",
+                "https://i.pinimg.com/564x/62/b9/d8/62b9d82d1bd5edfe6e26fdbf5c723ec5.jpg",
+                "https://i.pinimg.com/564x/e7/39/25/e7392552535861b67e9096dd4535f824.jpg",
+                "https://i.pinimg.com/564x/22/9d/15/229d15dec63661e1383af8b5a58faaee.jpg"
             ]
         },{
             "id": 12,
             "category":"Centros",
+            "name": "Cesta de Flores Elegancia Colombiana",
+            "main_info": "Las flores, meticulosamente seleccionadas y dispuestas en una cesta de mimbre, hacen de este arreglo el regalo ideal para cualquier ocasión especial. Ya sea un cumpleaños o una boda, este centro floral es una impresionante y duradera manera de expresar amor y aprecio. Cada flor es seleccionada cuidadosamente por nuestros expertos floristas, asegurando que cada centro sea único y hermoso.",
+            "description": "Elegancia y frescura.",
+            "price": 135000,
             "product_cart": 0,
-            "name": "Ramo de flores primaverales",
-            "main_info": "Celebra la llegada de la primavera con nuestro encantador ramo de flores primaverales. Este vibrante arreglo floral captura la esencia de la temporada con una explosión de color y frescura que iluminará cualquier espacio con su alegría contagiosa.",
-            "description": "Variedad de flores",
-            "price": 100000,
-            "stock": 5,
+            "stock": 100,
             "images": [
-                "https://img.freepik.com/premium-photo/bouquet-tulips-with-blue-yellow-flower_900958-42031.jpg?size=626&ext=jpg&ga=GA1.2.1215190443.1703089669&semt=ais_ai_generated",
-                "https://img.freepik.com/free-photo/close-up-rose-fence_23-2150866611.jpg?size=626&ext=jpg&ga=GA1.2.1215190443.1703089669&semt=ais_ai_generated",
-                "https://img.freepik.com/free-photo/closeup-beautiful-flower-bouquet_23-2150772304.jpg?size=626&ext=jpg&ga=GA1.2.1215190443.1703089669&semt=ais_ai_generated",
-                "https://img.freepik.com/free-photo/hand-holding-flower-bouquet_23-2150772340.jpg?size=626&ext=jpg&ga=GA1.2.1215190443.1703089669&semt=ais_ai_generated"
+                "https://i.pinimg.com/564x/41/13/f5/4113f5094d08abc8657916e3d486ef76.jpg",
+                "https://i.pinimg.com/564x/2d/24/d1/2d24d10332c665d7729d70e1e4269c72.jpg",
+                "https://i.pinimg.com/564x/d9/a3/ca/d9a3caf9030c1f2543f70b6a49392508.jpg",
+                "https://i.pinimg.com/564x/91/d9/bc/91d9bca2335efa2ccf6da0448339e406.jpg"
+            ]
+        },{
+            "id": 13,
+            "category":"Bouquets frescos",
+            "name": "Pureza floral",
+            "main_info": "La flor mostrada es representativa; según la temporada, la variedad puede variar. Elegimos semanalmente la más alta calidad disponible en el mercado para ofrecerte lo mejor.",
+            "description": "Pureza en cada pétalo.",
+            "price": 135000,
+            "product_cart": 0,
+            "stock": 100,
+            "images": [
+                "https://i.pinimg.com/564x/e9/62/c0/e962c00d8478a4479fc9ed6c62dbc80b.jpg",
+                "https://i.pinimg.com/564x/4d/c2/97/4dc297059a954d5971a69bf7e9fcaadf.jpg",
+                "https://i.pinimg.com/564x/64/a1/07/64a107fb7a18787d256342312fd05e25.jpg",
+                "https://i.pinimg.com/564x/e1/6f/5b/e16f5b2d57832165ef91ac1c0c38b6d6.jpg"
+            ]
+        },{
+            "id": 14,
+            "category":"Bouquets frescos",
+            "name": "Resplandor apasionado",
+            "main_info": "Sumérgete en el ardor de la pasión con nuestro bouquet de rosas rojas. Cada rosa, radiante y exuberante, refleja la intensidad del amor y la admiración. Una declaración de afecto que perdura en la memoria, como el fuego que arde eternamente en el corazón.",
+            "description": "Rojo intenso.",
+            "price": 120000,
+            "product_cart": 0,
+            "stock": 100,
+            "images": [
+                "https://i.pinimg.com/564x/f4/6a/26/f46a26f43f942625fc839c71dd736cd2.jpg",
+                "https://i.pinimg.com/564x/ab/53/07/ab5307a60c9a2b12c82ecb6fe07f2554.jpg",
+                "https://i.pinimg.com/564x/7d/5c/67/7d5c670173b861d5e0cf29937a007e1a.jpg",
+                "https://i.pinimg.com/564x/a4/4c/bb/a44cbb367d8114ca656fdec6876f7928.jpg"
+            ]
+        },{
+            "id": 15,
+            "category":"Bouquets frescos",
+            "name": "La Esencia de la Elegancia: Bouquet en Tonos Pasteles",
+            "main_info": "Déjate cautivar por nuestra obra maestra floral: un bouquet en tonos pasteles, donde cada flor brilla con su propia luz. Con una armonía sublime, la delicadeza de cada tallo seleccionado y dispuesto con esmero resalta la belleza única de cada flor. Perfecta para aquellos momentos que merecen lo más especial.",
+            "description": "Sofisticación y encanto.",
+            "price": 140000,
+            "product_cart": 0,
+            "stock": 100,
+            "images": [
+                "https://i.pinimg.com/564x/00/da/0f/00da0f17702c2f3f578cd0a3ac8d950b.jpg",
+                "https://i.pinimg.com/564x/2a/86/3a/2a863a5ae80fe7d3c3e8fc56f992e36c.jpg",
+                "https://i.pinimg.com/564x/d1/0a/3f/d10a3f1710af565747a3da9c0e71bbe3.jpg",
+                "https://i.pinimg.com/564x/29/0e/5d/290e5d2a287b4cf91c3943db67dd8780.jpg"
+            ]
+        },{
+            "id": 16,
+            "category":"Bouquets frescos",
+            "name": "Brillo Primaveral",
+            "main_info": "Cada una aporta su chispa única, creando un ramo vibrante y divertido. Si buscas color y vitalidad, ¡este bouquet es perfecto para ti!",
+            "description": "Mezcla de flores multicolores.",
+            "price": 100000,
+            "product_cart": 0,
+            "stock": 100,
+            "images": [
+                "https://i.pinimg.com/564x/db/52/75/db527547d4dd7b4c4e0d2ae946e98026.jpg",
+                "https://i.pinimg.com/564x/4f/c7/9b/4fc79bb3fe8e9a7ae416bf8a6ef6ca01.jpg",
+                "https://i.pinimg.com/564x/ae/54/c8/ae54c8f4ebb1f838f447f647bda4df5c.jpg",
+                "https://i.pinimg.com/564x/a6/01/54/a601542a7cd6caa7714aef50eb6c991d.jpg"
+            ]
+        },{
+            "id": 17,
+            "category":"Bouquets frescos",
+            "name": "Florencia en cristal",
+            "main_info": "Sumérgete en la belleza de nuestro jarrón de cristal mediano, el regalo ideal para cualquier ocasión. Lleno de flores frescas de temporada y verdes naturales, esta presentación combina la elegancia del cristal con la exuberancia de las flores, creando un detalle inolvidable y lleno de buen gusto. Además, añade un toque personal con el mensaje de la tarjeta incluida, al finalizar tu compra. Un regalo que será recordado con cariño y admiración.",
+            "description": "Elegancia y exuberancia.",
+            "price": 130000,
+            "product_cart": 0,
+            "stock": 100,
+            "images": [
+                "https://i.pinimg.com/564x/8a/27/ba/8a27ba818d0eeadd96f901c5b6544540.jpg",
+                "https://i.pinimg.com/564x/26/95/78/2695786c3565b079195cbde34042efac.jpg",
+                "https://i.pinimg.com/564x/c6/15/bd/c615bd2212c61c307e1de6f902ff14bf.jpg",
+                "https://i.pinimg.com/564x/cd/7a/35/cd7a358b44ab8767c2e131799c38be69.jpg"
             ]
         }
     ]
