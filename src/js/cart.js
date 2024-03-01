@@ -21,6 +21,7 @@ document.addEventListener("DOMContentLoaded", e =>{
 function getCart() {
   let cart = localStorage.getItem("cart-products");
   if(cart && cart  != "undefined" ){
+    axios.post(`https//:url.com/${id}`, cart);
     return JSON.parse(cart);
   }else{
     localStorage.setItem("cart-products", JSON.stringify([]));
