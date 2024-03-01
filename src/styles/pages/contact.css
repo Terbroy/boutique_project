@@ -16,13 +16,14 @@
     font-size: 2.5rem;
     font-weight: 400;
     margin-bottom: 1rem;
+    font-weight: bold;
 }
 
 .Contact-us p {
-    color: var(--color-gold);
+    color: var(--color-brown);
     width: 60%;
     text-align: center;
-    font-size: large;
+    font-size: 22px;
     margin: 0 auto;
 }
 
@@ -33,8 +34,8 @@
     height: 500px;
     justify-content: center;
     align-items: center;
-    margin: 0 auto;
-    margin-bottom: 4rem;
+    margin: 25px auto;
+    margin-bottom: 90px;
     background: var(--soft-pink);
     border-radius: 30px;
 }
@@ -70,14 +71,19 @@
     font-size: .8rem;
 }
 
-.form-input2{
+.form-input2 {
     width: 99.5%;
     margin: 0 3.5%;
     margin-bottom: 1.2rem;
 }
+
+.form-input2 textarea::placeholder {
+    color: var(--color-brown)!important;
+}
+
 .form-input input {
     font-size: 1rem;
-    background-color: var(--soft-pink);
+    background-color: var(--soft-pink--);
     border-style: none;
     border: none;
     color: var(--color-brown);
@@ -102,8 +108,8 @@
 .message-box:focus{
     outline: none;
 }
-.message_box:placeholder{
-    color: var(--color-brown);
+textarea .message_box:placeholder{
+    color: var(--color-brown)!important;
 }
 .container-btn{
     width: 100%;
