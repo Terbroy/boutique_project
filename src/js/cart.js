@@ -75,6 +75,8 @@ function addCart() {
   })
   totalHtml.textContent = total
   container__items.innerHTML = content;
+  // Llamar a btnAddCart después de un par de segundos
+  setTimeout(cargarCarrito, 1000);
 }
 
 //Redirección imágenes index a catálogo
@@ -87,3 +89,23 @@ for (let i = 0; i < imagenesDestacadas.length; i++) {
   });
   
 }
+
+//Funciones carrito
+function cargarCarrito() {
+  const botonCerrar = document.getElementsByClassName("item__delete");
+  console.log(botonCerrar.length);
+
+  for (let j = 0; j < botonCerrar.length; j++) {
+  let boton = botonCerrar[j];
+  boton.addEventListener("click", eliminarProducto);  
+  }
+  
+}
+
+function eliminarProducto (e) {
+  let quitarElemento = e.target.parentNode.parentNode
+  quitarElemento.remove();
+  console.log(e.target.parentNode.parentNode);
+}
+
+
