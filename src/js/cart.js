@@ -4,16 +4,6 @@ const totalHtml = document.getElementById("cart_total");
 function toggleCart() {
   cart.classList.toggle("display--none");
 }
-function getCart() {
-  let cart = localStorage.getItem("cart-products");
-  if(cart && cart  != "undefined" ){
-    return JSON.parse(cart);
-  }else{
-    localStorage.setItem("cart-products", JSON.stringify([]));
-    return JSON.parse(localStorage.getItem("cart-products"));
-  }
-}
-
 
 document.addEventListener("DOMContentLoaded", e =>{
   addCart()
@@ -28,10 +18,6 @@ function getCart() {
   }
 }
 
-
-document.addEventListener("DOMContentLoaded", e =>{
-  addCart()
-})
 document.addEventListener("click", (event) => {
   const clickedElement = event.target;
   if (clickedElement.id === "nav-cart" || clickedElement.id === "cart-close") {
