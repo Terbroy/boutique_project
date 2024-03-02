@@ -141,7 +141,7 @@
 
 .modal {
   text-align: center;
-  color: var(--soft-pink);
+  color: rgb(245, 134, 171);
   font-size: 20px;
   display: none;
   position: fixed;
@@ -166,7 +166,7 @@
 .close {
   color: var(--text-brown);
   float: right;
-  font-size: 35px;
+  font-size: 30px;
   font-weight: bold;
 }
 
@@ -177,17 +177,37 @@
   cursor: pointer;
 }
 
-.imputCorreo{
+.imputCorreo {
   padding: 15px;
   background-color: var(--soft-pink);
   border: none;
-  border-radius: 50px;
-  margin-top: 20px;
+  border-radius: 30px;
+  margin-top: 10px;
   font-size: 13px;
+  color: var(--text-brown);
+}
+
+.imputRes:hover{
+  background-color: #82b59d;
+}
+
+.imputRes{
+  padding: 15px;
+  background-color: var(--soft-pink);
+  border: none;
+  border-radius: 30px;
+  margin-top: 10px;
+  font-size: 13px;
+  color: var(--text-brown);
 }
 
 .pIngresaC{
   margin-top: 30px;
   color: white;
   font-size: 20px;
+}
+
+alert{
+  background-color: #43766C;
+
 }
