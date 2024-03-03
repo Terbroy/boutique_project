@@ -18,11 +18,12 @@
 }
 
 .cart__card{
-    padding: 2rem;
+    padding: 1rem;
     position: relative;
     z-index: 2;
     background-color: var(--background-color);
     width: 30vw;
+    min-width: 380px;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -94,6 +95,7 @@
 .item__delete{
     vertical-align: middle;
     width: 1.5rem;
+    cursor: pointer;
 }
 
 .cart__total{

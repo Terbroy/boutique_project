@@ -1,4 +1,4 @@
-const cartHtml = document.getElementById("cart");
+const cartHtml = document.getElementById("container-cart");
 
 function toggleCart() {
   cartHtml.classList.toggle("display--none");
