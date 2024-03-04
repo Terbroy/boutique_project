@@ -9,11 +9,11 @@ document.addEventListener("DOMContentLoaded", e =>{
 })
 
 async function fetchProductData() {
-    await fetch("http://127.0.0.1:5501/src/JSON/product.json")
+    await fetch("http://127.0.0.1:5500/src/JSON/product.json")
         .then(res => res.json())
         .then(data=> localStorage.setItem("products", JSON.stringify(data)))
         .catch(error => console.log(error));
-    
+    filterProduct('all');
     displayProductsInCatalog();
 };
 
@@ -57,6 +57,28 @@ function fetchProductsCart(id) {
     toggleCart();
 }
 
+//FILTER
+function filterProduct(value) {
+    let buttons = document.querySelectorAll(".list__filter");
+    buttons.forEach((button) => {
+      if (value.toUpperCase() == button.innerText.toUpperCase()) {
+        button.classList.add("active");
+      } else {
+        button.classList.remove("active");
+      }
+    });
+
+    let elements = document.querySelectorAll(".product--cart");
+  
+    elements.forEach((element) => {
+        element.classList.add("hide")
+        if (value == "Todos") {
+          element.classList.remove("hide");
+        } else if(element.classList.contains(value)){
+            element.classList.remove("hide");
+          }
+ });
+}
 function displayProductsInCatalog(){
     const padreProductos = document.getElementById("padreProductos");
     const products = fetchProducts();
@@ -64,7 +86,7 @@ function displayProductsInCatalog(){
         let card = document.createElement("div")
         card.classList.add("product--cart")
         card.innerHTML = `
-        <div id=${product.id} class="product--card">
+        <div id=${product.id} class="product--card" class="${product.category}">
             <div class="img__options">
                 <img class="product__img" src=${product.images}>
                 <div class="product__options">
@@ -94,5 +116,22 @@ function displayProductsInCatalog(){
         fetchProductsCart(product.id);
     } );
     })
-
+    filterProduct("Todos");
 }
+
+//SEARCH
+document.getElementById("button__search").addEventListener("click", () => {
+ 
+    let searchInput = document.getElementById("search__input").value;
+    let elements = document.querySelectorAll(".product__title");
+    let cards = document.querySelectorAll(".product--cart");
+
+    elements.forEach((element, index) => {
+      if (element.innerText.includes(searchInput.toUpperCase())) {
+
+        cards[index].classList.remove("hide");
+      } else {
+        cards[index].classList.add("hide");
+      }
+    });
+  });
