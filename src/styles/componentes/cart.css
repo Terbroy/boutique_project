@@ -6,7 +6,7 @@
     right: 0;
     z-index: 3;
     cursor:default;
-    transition: 2s ease-in-out;
+    transition: .5s ease-in-out;
 }
 
 .cart__background{
