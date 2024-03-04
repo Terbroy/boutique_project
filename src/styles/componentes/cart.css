@@ -6,7 +6,7 @@
     right: 0;
     z-index: 3;
     cursor:default;
-    transition: 2s ease-in-out;
+    transition: .3s ease-in-out;
 }
 
 .cart__background{
@@ -15,6 +15,7 @@
     background-color: #000000c9;
     position: fixed;
     left: 0;
+    
 }
 
 .cart__card{

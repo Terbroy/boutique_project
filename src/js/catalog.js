@@ -1,97 +1,88 @@
+/**ESTO DEBERIA IR EN EN CART.JS */
+
 const cartHtml = document.getElementById("container-cart");
 
 function toggleCart() {
   cartHtml.classList.toggle("display--none");
 }
 
+/******************************** */
 document.addEventListener("DOMContentLoaded", e =>{
-    fetchProductData();
+    displayProductsInCatalog();
 })
 
 async function fetchProductData() {
-    await fetch("http://127.0.0.1:5501/src/JSON/product.json")
-        .then(res => res.json())
-        .then(data=> localStorage.setItem("products", JSON.stringify(data)))
-        .catch(error => console.log(error));
-    
-    displayProductsInCatalog();
-};
-
-function fetchProducts() {
-    let products = JSON.parse(localStorage.getItem("products")).products;
-    return products;
+    try {
+        const response = await axios.get("https://binary-best-boutique.up.railway.app/api/v1/productos");
+        return response.data;
+    } catch (error) {
+        console.log("Error fetching data:", error);
+        return null;
+    }
 }
 
-
-function fetchProduct(id){
-    let products = fetchProducts();
-    let selectedProduct = products.filter(e => e.id == id);
-    localStorage.setItem("selected-product", JSON.stringify(selectedProduct));
-    return selectedProduct;
+async function fetchProduct(id){
+    try {
+        const response = await axios.get(`https://binary-best-boutique.up.railway.app/api/v1/productos/${id}`);
+        return response.data;
+    } catch (error) {
+        console.log("Error fetching data:", error);
+        return null;
+    }
 }
 
 function getCart() {
     const cart = localStorage.getItem("cart-products");
     return cart ? JSON.parse(cart) : [];
 }
-
-function fetchProductsCart(id) {
-    const product = fetchProduct(id)[0];
+function fetchProductsCart(product) {
     let cart = getCart();
-
-    const existingProduct = cart.find(e => e.id === product.id);
-
+    const existingProduct = cart.find(e => e.id_productos === product.id_productos);
     if (existingProduct) {
-        if(existingProduct.stock === existingProduct.product_cart ){
-            alert("no se pueden agregar mas al carrito")
-            
-        }else{
             existingProduct.product_cart++;
-        }
     } else {
         product.product_cart = 1;
         cart.push(product);
     }
-
     localStorage.setItem("cart-products", JSON.stringify(cart));
     toggleCart();
+
 }
 
-function displayProductsInCatalog(){
+async function displayProductsInCatalog(){
     const padreProductos = document.getElementById("padreProductos");
-    const products = fetchProducts();
+    const products = await fetchProductData();
     products.map(product => {
         let card = document.createElement("div")
         card.classList.add("product--cart")
         card.innerHTML = `
-        <div id=${product.id} class="product--card">
+        <div id=${product.id_productos} class="product--card">
             <div class="img__options">
-                <img class="product__img" src=${product.images}>
+                <img class="product__img" src=${product.imagenes[0].url}>
                 <div class="product__options">
-                    <button  id="btn-${product.id}" class="options__cart">Añadir al carrito</button>
+                    <button  id="btn-${product.id_productos}" class="options__cart">Añadir al carrito</button>
                 </div>
             </div>
             <div class="product__text">
-                <a href="../../pages/product.html" id="product-title-${product.id}" class="product__title">
-                    <p class="product__title">${product.name}</p>
+                <a href="../../pages/product.html" id="product-title-${product.id_productos}" class="product__title">
+                    <p class="product__title">${product.nombre}</p>
                 </a>
-                <p class="product__description">${product.description}</p>
-                <p class="product__price">$${product.price.toLocaleString()}</p>
+                <p class="product__description">${product.descripcion}</p>
+                <p class="product__price">$${product.precio}</p>
             </div>
         </div>
         `
     padreProductos.appendChild(card);
 
-    const title = document.getElementById(`product-title-${product.id}`);
-    const buttonProduct = document.getElementById(`btn-${product.id}`);
+    const title = document.getElementById(`product-title-${product.id_productos}`);
+    const buttonProduct = document.getElementById(`btn-${product.id_productos}`);
 
 
     title.addEventListener("click",(event)=>{
-
-        fetchProduct(product.id);
+        fetchProduct(product.id_productos);
     } );
     buttonProduct.addEventListener("click",(event)=>{
-        fetchProductsCart(product.id);
+        fetchProductsCart(product);
     } );
     })
 

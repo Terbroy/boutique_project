@@ -1,7 +1,10 @@
 const containerCart = document.getElementById("container-cart");
 const totalHtml = document.getElementById("cart_total");
-const cart = JSON.parse(localStorage.getItem("cart-products"));
 
+function getCart() {
+  const cart = localStorage.getItem("cart-products");
+  return cart ? JSON.parse(cart) : [];
+}
 
 function toggleCart() {
   containerCart.classList.toggle("display--none");
@@ -30,53 +33,28 @@ document.addEventListener("click", (e) => {
 function addCart() {
   let content = "";
   let total = 0;
+  const cart = getCart();
   for (let i = 0; i < cart.length; i++) {
     content += `
               <div class="cart__item">
-              <img src=${cart[i].images} class="item__image">
+              <img src=${cart[i].imagenes[0].url} class="item__image">
               <div class="item__info">
-              <h4 class="item__title">${cart[i].name}</h4>
-              <p class="item__price"><span>${cart[i].product_cart}</span> X <span>Rs.  ${cart[i].price * cart[i].product_cart}</span></p>
+              <h4 class="item__title">${cart[i].nombre}</h4>
+              <p class="item__price"><span>${cart[i].product_cart}</span> X <span>Rs.  ${cart[i].precio * cart[i].product_cart}</span></p>
               </div>
               <div class="item__delete-container">
               <img src="../src/images/delete.svg" class="item__delete">
               </div>
               </div>
           `;
-    
+          total += cart[i].precio * cart[i].product_cart;
   }
-  console.log(cart);
-  total += cart[0].price * cart[0].product_cart;
   totalHtml.textContent = total;
   container__items.innerHTML = content;
   // Llamar a btnAddCart después de un par de segundos
-  setTimeout(cargarCarrito, 500);
+  setTimeout(cargarCarrito, 200);
 }
-function addCart() {
-  let content = "";
-  let total = 0;
-  cart.map((e) => {
-    console.log(cart);
 
-    content += `
-              <div class="cart__item">
-              <img src=${e.images[0]} class="item__image">
-              <div class="item__info">
-              <h4 class="item__title">${e.name}</h4>
-              <p class="item__price"><span>${e.product_cart}</span> X <span>Rs.  ${e.price * e.product_cart}</span></p>
-              </div>
-              <div class="item__delete-container">
-              <img src="../src/images/delete.svg" class="item__delete">
-              </div>
-              </div>
-          `;
-    total += e.price * e.product_cart;
-  });
-  totalHtml.textContent = total;
-  container__items.innerHTML = content;
-  // Llamar a btnAddCart después de un par de segundos
-  setTimeout(cargarCarrito, 500);
-}
 
 //Redirección imágenes index a catálogo
 
@@ -103,9 +81,9 @@ function cargarCarrito() {
 }
 
 function eliminarProducto(e) {
+  const cart = getCart();
   cart.splice(e, 1);
   localStorage.setItem("cart-products", JSON.stringify(cart));
   addCart();
-  console.log(cart);
 
 }

@@ -10,7 +10,8 @@ function fetchProductPage() {
 }
 
 function fetchProducts() {
-  let products = JSON.parse(localStorage.getItem("products")).products;
+  
+  // let products = JSON.parse(localStorage.getItem("products")).products;
   return products;
 }
 
