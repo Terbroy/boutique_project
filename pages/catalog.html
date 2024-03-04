@@ -83,14 +83,20 @@
           </form>
           <select class="order">
             <option value="empty">Ordenar por...</option>
-            <option class="order_option" value="pricedesc">Precio de menor a mayor</option>
-            <option class="order_option" value="priceasc">Precio de mayor a menor</option>
+            <option class="order_option" id= "priceasc" value="priceasc" 
+            oninput="asc__filter(this.value)"
+            onchange="asc__filter(this.value)">Precio de menor a mayor</option>
+          
+            <option class="order_option" id="pricedesc" value="pricedesc">Precio de mayor a menor</option>
           </select>
         </div>
         <h1 class="catalog__title">CATÁLOGO</h1>
         <div class="catalog__products" id="padreProductos">
           <!-- HERE COME THE PRODUCTS-->
         </div> 
+        <div class="fitler__asc" id="asc__filter">
+
+        </div>
         <div class="results__search" id="search__results"> 
             <!--SEARCH RESULT-->
         </div>

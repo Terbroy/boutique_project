@@ -74,22 +74,22 @@
 .form__search{
     padding: 10px;
     display: flex;
-    gap: 5px;
+    gap: 0;
     align-items: center;
 }
 .input__search{
     padding: 10px;
-    border-radius: 10px;
+    border-radius: 10px 0 0 10px;
     border-color: transparent;
     font-family: 'Bona nova', serif;
     font-size: 0.8rem;
 }
 .search__button{
     background-color: var(--soft-pink);
-    border-radius: 20px;
+    border-radius: 0 10px 10px 0;
     padding: 6px;
-    height: 26px;
-    width: 26px;
+    height: 39px;
+    width: 30px;
     display: flex;
     align-items: center;
     border-color: transparent;
@@ -208,6 +208,14 @@
 }
 /*SEARCH SECTION*/
 .results__search{
+    padding: 50px 100px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    align-content: center;
+    row-gap: 50px;
+    column-gap: 60px;
+}
+.filter__asc{
     padding: 50px 100px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
