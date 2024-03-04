@@ -21,16 +21,6 @@ async function fetchProductData() {
     }
 }
 
-async function fetchProduct(id){
-    try {
-        const response = await axios.get(`https://binary-best-boutique.up.railway.app/api/v1/productos/${id}`);
-        return response.data;
-    } catch (error) {
-        console.log("Error fetching data:", error);
-        return null;
-    }
-}
-
 function getCart() {
     const cart = localStorage.getItem("cart-products");
     return cart ? JSON.parse(cart) : [];
@@ -64,7 +54,7 @@ async function displayProductsInCatalog(){
                 </div>
             </div>
             <div class="product__text">
-                <a href="../../pages/product.html" id="product-title-${product.id_productos}" class="product__title">
+                <a href="../../pages/product.html?id=${product.id_productos}" id="product-title-${product.id_productos}" class="product__title">
                     <p class="product__title">${product.nombre}</p>
                 </a>
                 <p class="product__description">${product.descripcion}</p>
@@ -77,10 +67,6 @@ async function displayProductsInCatalog(){
     const title = document.getElementById(`product-title-${product.id_productos}`);
     const buttonProduct = document.getElementById(`btn-${product.id_productos}`);
 
-
-    title.addEventListener("click",(event)=>{
-        fetchProduct(product.id_productos);
-    } );
     buttonProduct.addEventListener("click",(event)=>{
         fetchProductsCart(product);
     } );
