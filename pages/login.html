@@ -87,10 +87,19 @@
           <div>
           <input class="input3" id="recordarUsuario" type="checkbox" name="recordarUsuario" value="">
           <label class="label3" for="recordarUsuario"> Recuérdame </label>
-          <a class="olvidPass"  id="olvidarPass"> ¿Olvidaste tu contraseña? </a>
+          <label class="olvidPass"  id="olvidarPass"> ¿Olvidaste tu contraseña? </label>
           </div>
-          <button class="button-ini2" class="botonIni1" id="btnInicioSesion" type="submit" onclick="iniciarSesion()">Iniciar Sesión</button>
+          <button class="button-ini2" class="botonIni1" id="btnInicioSesion" type="submit" onclick="return iniciarSesion()">Iniciar Sesión</button>
          
+          <div id="modalLogin" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Inicio de sesión exitoso</h2>
+                <button class="imputRes" onclick="redirectCatalog()">Entrar</button>
+            </div>
+            </div>
+          </form>
+        </div>
          
          
           <div id="modalResetPassword" class="modal">
@@ -99,7 +108,7 @@
                 <h2>Restablecer Contraseña</h2>
                 <p class="pIngresaC">Ingresa tu correo electrónico para restablecer tu contraseña.</p>
                 <input type="email" id="resetEmail"class="imputCorreo" placeholder="Correo electrónico">
-                <button class="imputCorreo" onclick="resetPassword()">Restablecer Contraseña</button>
+                <button class="imputRes" onclick="resetPassword()">Restablecer Contraseña</button>
             </div>
             </div>
           </form>
@@ -120,9 +129,20 @@
             <label class="label2" for="contrasena">Contraseña:</label>
             <input class="input2" type="password" id="contrasena" name="contrasena" required placeholder="Ingresa tu contraseña">
             
-            <button class="button-ini2" id="btnRegistro" type="button" onclick="guardarDatos()">Registrarse</button>
+            <button class="button-ini2" id="btnRegistro" type="submit" onclick="return guardarDatos()">Registrarse</button>
             </form>
      </div>
+
+     <div id="modalRegister" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Registro Exitoso</h2>
+            <p class="pIngresaC">Por favor ingresa tu usuario y contraseña para iniciar sesión.</p>
+            <button class="imputRes" onclick="redirectLogin()">Iniciar Sesión</button>
+        </div>
+        </div>
+      </form>
+    </div>
 
   </section>
 </article>
