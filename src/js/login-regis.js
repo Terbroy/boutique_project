@@ -49,13 +49,9 @@ function guardarDatos() {
     };
     localStorage.setItem('usuario', JSON.stringify(usuario));
     // Convertir el objeto a formato JSON y almacenarlo en el localStorage
-    alert('Usuario registrado con éxito');
-
-
-    // Limpiar el formulario después de guardar los datos
-    document.getElementById('formularioRegistro').reset();
-
-
+    const modalResetPassword = document.getElementById('modalRegister');
+    modalResetPassword.style.display = 'block';
+    return false;
 }
 
 function iniciarSesion() {
@@ -67,7 +63,9 @@ function iniciarSesion() {
 
     // Verificar si el usuario existe y las credenciales coinciden
     if (usuarioRegistrado && usuarioRegistrado.correo === correoLogin && usuarioRegistrado.contrasena === contrasenaLogin) {
-        alert('Inicio de sesión exitoso');
+        const modalResetPassword = document.getElementById('modalLogin');
+        modalResetPassword.style.display = 'block'; 
+        return false;
     } else {
         alert('Correo o contraseña incorrectos');
     }
@@ -124,4 +122,30 @@ function resetPassword() {
     var modalResetPassword = document.getElementById('modalResetPassword');
     modalResetPassword.style.display = 'none';
     alert('Se ha enviado un correo electrónico de restablecimiento de contraseña.');
+}
+
+function redirectLogin() {
+    // Aquí puedes agregar la lógica para enviar un correo electrónico de restablecimiento de contraseña
+    // Por simplicidad, este ejemplo solo oculta el modal
+    setTimeout(()=> {
+        const loginURL = `${location.origin}/pages/login.html`;
+        window.location.assign(loginURL);
+        // Limpiar el formulario después de guardar los datos
+        document.getElementById('formularioRegistro').reset();
+    },1);
+
+    const modalResetPassword = document.getElementById('modalRegister');
+    modalResetPassword.style.display = 'none';
+}
+
+function redirectCatalog() {
+    // Aquí puedes agregar la lógica para enviar un correo electrónico de restablecimiento de contraseña
+    // Por simplicidad, este ejemplo solo oculta el modal
+    setTimeout(()=> {
+        const catalogURL = `${location.origin}/pages/catalog.html`;
+        window.location.assign(catalogURL);
+    },1)
+
+    const modalResetPassword = document.getElementById('modalLogin');
+    modalResetPassword.style.display = 'none';
 }
