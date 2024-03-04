@@ -1,19 +1,13 @@
 let urlParams = new URLSearchParams(window.location.search);
-var productoId = urlParams.get("id");
+var productoId = urlParams.get('id');
+
+let urlParams = new URLSearchParams(window.location.search);
+var productoId = urlParams.get('id');
 
 const cartHtml = document.getElementById("container-cart");
 
-
-
-async function fetchProduct() {
-  try {
-    const response = await axios.get(`https://binary-best-boutique.up.railway.app/api/v1/productos/${productoId}`);
-    console.log(response);
-    return response.data;
-  } catch (error) {
-    console.log("Error fetching data:", error);
-    return null;
-  }
+function toggleCart() {
+  cartHtml.classList.toggle("display--none");
 }
 
 async function fetchProductPage() {
@@ -25,6 +19,20 @@ async function fetchProductPage() {
     console.log("Error fetching data:", error);
     return null;
   }
+}
+
+function fetchProducts() {
+  
+  // let products = JSON.parse(localStorage.getItem("products")).products;
+  return products;
+}
+
+function fetchProduct(id) {
+  let products = fetchProducts();
+  let selectedProduct = products.filter((e) => e.id == id);
+  let selected = selectedProduct[0];
+  localStorage.setItem("selected-product", JSON.stringify(selected));
+  return selected;
 }
 
 
@@ -53,12 +61,27 @@ function fetchProductsCart(product) {
     cart.push(product);
   }
   localStorage.setItem("cart-products", JSON.stringify(cart));
+  toggleCart();
+
 }
 
+// function fetchProductsCart(product) {
+//   let cart = getCart();
+//   const existingProduct = cart.find(e => e.id_productos === product.id_productos);
+//   if (existingProduct) {
+//           existingProduct.product_cart++;
+//   } else {
+//       product.product_cart = 1;
+//       cart.push(product);
+//   }
+//   localStorage.setItem("cart-products", JSON.stringify(cart));
+//   toggleCart();
 
-async function filterProducts(product) {
-  let products = await fetchProducts();
-  let filter = products.filter((e) => e.categoria === product.categoria);
+// }
+
+function filterProducts(product) {
+  let products = JSON.parse(localStorage.getItem("products")).products;
+  let filter = products.filter((e) => e.category === product.category);
   return filter;
 }
 
@@ -79,7 +102,7 @@ document.addEventListener("DOMContentLoaded", async (event) => {
 
   document.title = product.nombre;
   productHTML.classList.add("product");
-  description.textContent = product.descripcion;
+  description.textContent = product.description;
   productHTML.innerHTML = `
     <div class="product__carrousel">
             <img src=${product.imagenes[0].url} alt="" class="carrousel__card">
@@ -87,8 +110,16 @@ document.addEventListener("DOMContentLoaded", async (event) => {
             <img src=${product.imagenes[2].url} alt="" class="carrousel__card">
             <img src=${product.imagenes[3].url} alt="" class="carrousel__card">
             <img src=${product.imagenes[0].url} alt="" class="carrousel__card carrousel__card--image">
+            <img src=${product.imagenes[0].url} alt="" class="carrousel__card">
+            <img src=${product.imagenes[1].url} alt="" class="carrousel__card">
+            <img src=${product.imagenes[2].url} alt="" class="carrousel__card">
+            <img src=${product.imagenes[3].url} alt="" class="carrousel__card">
+            <img src=${product.imagenes[0].url} alt="" class="carrousel__card carrousel__card--image">
             </div>
             <div class="product__info">
+            <h1 class="info__title">${product.nombre}</h1>
+            <span class="info__price">$ ${product.precio}</span>
+            <p class="info__text">${product.informacion}</p>
             <h1 class="info__title">${product.nombre}</h1>
             <span class="info__price">$ ${product.precio}</span>
             <p class="info__text">${product.informacion}</p>
