@@ -132,3 +132,41 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
 });
 
+// aca va la logica de la calificacion del producto
+const stars = document.querySelectorAll('.star');
+const output = document.getElementById('rating-output');
+const avgOutput = document.getElementById('avg-rating');
+
+let userRating = 0;
+let totalRatings = [];
+
+// Event listener para cada estrella
+stars.forEach(star => {
+    star.addEventListener('click', function() {
+        userRating = parseInt(this.getAttribute('data-value'));
+        output.textContent = `Has calificado con ${userRating} estrellas`;
+        highlightStars(userRating);
+        totalRatings.push(userRating);
+        calculateAverageRating(totalRatings);
+    });
+});
+
+// Función para resaltar estrellas seleccionadas
+function highlightStars(num) {
+    stars.forEach((star, index) => {
+        if (index < num) {
+            star.style.color = 'gold';
+        } else {
+            star.style.color = '#aa9479';
+        }
+    });
+}
+
+// Calcular calificación promedio y mostrar como barras de estrellas
+function calculateAverageRating(ratings) {
+    const total = ratings.reduce((acc, curr) => acc + curr, 0);
+    const avg = total / ratings.length;
+    const roundedAvg = Math.round(avg);
+    const remainingStars = 5 - roundedAvg;
+    avgOutput.innerHTML = `Calificación promedio: <span class="avg-star">${'★'.repeat(roundedAvg)}</span>${'☆'.repeat(remainingStars)}`;
+}

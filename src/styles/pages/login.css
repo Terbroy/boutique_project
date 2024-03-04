@@ -163,7 +163,7 @@
   width:600px;
 }
 
-.close {
+/*.close {
   color: var(--text-brown);
   float: right;
   font-size: 30px;
@@ -175,7 +175,7 @@
   color: rgb(10, 6, 6);
   text-decoration: none;
   cursor: pointer;
-}
+}*/
 
 .imputCorreo {
   padding: 20px;

@@ -88,7 +88,6 @@ document.addEventListener('DOMContentLoaded', function() {
         if (recordarCheckbox.checked) {
             localStorage.setItem('usuarioRecordado', correoInput.value);
         } else {
-            // Si el checkbox no está marcado, asegúrate de borrar el usuario almacenado previamente
             localStorage.removeItem('usuarioRecordado');
         }
     });
