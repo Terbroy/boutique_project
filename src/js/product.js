@@ -1,12 +1,20 @@
+let urlParams = new URLSearchParams(window.location.search);
+var productoId = urlParams.get('id');
+
 const cartHtml = document.getElementById("container-cart");
 
 function toggleCart() {
   cartHtml.classList.toggle("display--none");
 }
 
-function fetchProductPage() {
-  let product = JSON.parse(localStorage.getItem("selected-product"))[0];
-  return product;
+async function fetchProductPage() {
+  try {
+    const response = await axios.get(`https://binary-best-boutique.up.railway.app/api/v1/productos/${productoId}`);
+    return response.data;
+  } catch (error) {
+      console.log("Error fetching data:", error);
+      return null;
+  }
 }
 
 function fetchProducts() {
@@ -51,6 +59,20 @@ function fetchProductsCart(id) {
 
 }
 
+// function fetchProductsCart(product) {
+//   let cart = getCart();
+//   const existingProduct = cart.find(e => e.id_productos === product.id_productos);
+//   if (existingProduct) {
+//           existingProduct.product_cart++;
+//   } else {
+//       product.product_cart = 1;
+//       cart.push(product);
+//   }
+//   localStorage.setItem("cart-products", JSON.stringify(cart));
+//   toggleCart();
+
+// }
+
 function filterProducts(product) {
   let products = JSON.parse(localStorage.getItem("products")).products;
   let filter = products.filter((e) => e.category === product.category);
@@ -70,9 +92,8 @@ function addProduct() {
 
 }
 setTimeout(addProduct, 1000);
-
-document.addEventListener("DOMContentLoaded", (event) => {
-  let product = fetchProductPage();
+document.addEventListener("DOMContentLoaded", async (event) => {
+  let product = await fetchProductPage();
   let filterProduct = filterProducts(product);
   const relatedContainer = document.getElementById("related-product");
   const container = document.getElementById("container-product");
@@ -83,19 +104,18 @@ document.addEventListener("DOMContentLoaded", (event) => {
   document.title = product.name;
   productHTML.classList.add("product");
   description.textContent = product.description;
-  console.log(product);
   productHTML.innerHTML = `
     <div class="product__carrousel">
-            <img src=${product.images[0]} alt="" class="carrousel__card">
-            <img src=${product.images[1]} alt="" class="carrousel__card">
-            <img src=${product.images[2]} alt="" class="carrousel__card">
-            <img src=${product.images[3]} alt="" class="carrousel__card">
-            <img src=${product.images[0]} alt="" class="carrousel__card carrousel__card--image">
+            <img src=${product.imagenes[0].url} alt="" class="carrousel__card">
+            <img src=${product.imagenes[1].url} alt="" class="carrousel__card">
+            <img src=${product.imagenes[2].url} alt="" class="carrousel__card">
+            <img src=${product.imagenes[3].url} alt="" class="carrousel__card">
+            <img src=${product.imagenes[0].url} alt="" class="carrousel__card carrousel__card--image">
             </div>
             <div class="product__info">
-            <h1 class="info__title">${product.name}</h1>
-            <span class="info__price">$ ${product.price}</span>
-            <p class="info__text">${product.main_info}</p>
+            <h1 class="info__title">${product.nombre}</h1>
+            <span class="info__price">$ ${product.precio}</span>
+            <p class="info__text">${product.informacion}</p>
             <div class="info__buttons">
             <button class="info__count">
             <span class="plus">-</span>
