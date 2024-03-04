@@ -125,6 +125,7 @@
 .info__add, .info__count{
     padding: .5rem 1.5rem;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .info__count{

@@ -55,7 +55,6 @@ function addCart() {
   setTimeout(cargarCarrito, 200);
 }
 
-
 //Redirección imágenes index a catálogo
 
 const imagenesDestacadas = document.getElementsByClassName("collage__image");
