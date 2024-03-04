@@ -52,31 +52,31 @@ function addCart() {
   // Llamar a btnAddCart después de un par de segundos
   setTimeout(cargarCarrito, 500);
 }
-function addCart() {
-  let content = "";
-  let total = 0;
-  cart.map((e) => {
-    console.log(cart);
+// function addCart() {
+//   let content = "";
+//   let total = 0;
+//   cart.map((e) => {
+//     console.log(cart);
 
-    content += `
-              <div class="cart__item">
-              <img src=${e.images[0]} class="item__image">
-              <div class="item__info">
-              <h4 class="item__title">${e.name}</h4>
-              <p class="item__price"><span>${e.product_cart}</span> X <span>Rs.  ${e.price * e.product_cart}</span></p>
-              </div>
-              <div class="item__delete-container">
-              <img src="../src/images/delete.svg" class="item__delete">
-              </div>
-              </div>
-          `;
-    total += e.price * e.product_cart;
-  });
-  totalHtml.textContent = total;
-  container__items.innerHTML = content;
-  // Llamar a btnAddCart después de un par de segundos
-  setTimeout(cargarCarrito, 500);
-}
+//     content += `
+//               <div class="cart__item">
+//               <img src=${e.images[0]} class="item__image">
+//               <div class="item__info">
+//               <h4 class="item__title">${e.name}</h4>
+//               <p class="item__price"><span>${e.product_cart}</span> X <span>Rs.  ${e.price * e.product_cart}</span></p>
+//               </div>
+//               <div class="item__delete-container">
+//               <img src="../src/images/delete.svg" class="item__delete">
+//               </div>
+//               </div>
+//           `;
+//     total += e.price * e.product_cart;
+//   });
+//   totalHtml.textContent = total;
+//   container__items.innerHTML = content;
+//   // Llamar a btnAddCart después de un par de segundos
+//   setTimeout(cargarCarrito, 500);
+// }
 
 //Redirección imágenes index a catálogo
 

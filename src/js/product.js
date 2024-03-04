@@ -31,17 +31,18 @@ function fetchProductsCart(id) {
   const product = fetchProduct(id)[0];
   let cart = getCart();
 
-  const existingProduct = cart.find((e) => e.id === product.id);
+  const existingProduct = cart.find(e => e.id === product.id);
 
   if (existingProduct) {
-    if (existingProduct.stock === existingProduct.product_cart) {
-      alert("no se pueden agregar mas al carrito");
-    } else {
-      existingProduct.product_cart++;
-    }
+      if(existingProduct.stock === existingProduct.product_cart ){
+          alert("no se pueden agregar mas al carrito")
+          
+      }else{
+          existingProduct.product_cart++;
+      }
   } else {
-    product.product_cart = 1;
-    cart.push(product);
+      product.product_cart = 1;
+      cart.push(product);
   }
 
   localStorage.setItem("cart-products", JSON.stringify(cart));
@@ -65,7 +66,7 @@ function addProduct() {
     console.log(ensayo);
     console.log(producto);
   });
-  
+
 }
 setTimeout(addProduct, 1000);
 
