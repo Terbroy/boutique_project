@@ -65,6 +65,7 @@
     font-family: 'Bona nova', 'serif';
     border: 0;
     font-size: 1rem;
+    text-align: left;
 }
 .list__filter:hover{
     cursor: pointer;

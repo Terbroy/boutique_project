@@ -76,6 +76,8 @@ async function displayProductsInCatalog(){
     })
     filterProduct("Todos");
 }
+
+//CATEGORY - FILTER
 function filterProduct(value) {
   let buttons = document.querySelectorAll(".list__filter");
   buttons.forEach((button) => {
