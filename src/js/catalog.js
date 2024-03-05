@@ -97,17 +97,38 @@ function filterProduct(value) {
     }
   });
 }
-//SEARCH
-    document.getElementById("button__search").addEventListener("click", () => {
-    let searchInput = document.getElementById("search__input").value.toLowerCase();
-    let elements = document.querySelectorAll(".product__title");
-    let cards = document.querySelectorAll(".product--cart");
-  
-    elements.forEach((element, index) => {
-      if (element.innerText.toLowerCase().includes(searchInput)) {
-        cards[index].classList.remove("hide");
-      } else {
-        cards[index].classList.add("hide");
-      }
-    });
+
+function searchProduct(value){
+  let buttonSearch = document.querySelector("#button__search");
+  let searchInput = document.getElementById("search__input").value.toLowerCase();
+  const products = document.querySelectorAll(".product--cart");
+  buttonSearch.forEach((searchButton)=>{
+    if (value == button.innerText) {
+      button.classList.add("active");
+    } else {
+      button.classList.remove("active");
+    }
   });
+
+  products.forEach((product) => {
+    if (product.innerText.toLowerCase().includes(searchInput)) {
+      product.classList.remove("hide");
+    } else {
+      product.classList.add("hide");
+    }
+  });
+
+}
+//SEARCH
+  //   document.getElementById("button__search").addEventListener("click", () => {
+  //   let searchInput = document.getElementById("search__input").value.toLowerCase();
+  //   const products = document.querySelectorAll(".product--cart");
+  
+  //   products.forEach((product) => {
+  //     if (product.innerText.toLowerCase().includes(searchInput)) {
+  //       product.classList.remove("hide");
+  //     } else {
+  //       product.classList.add("hide");
+  //     }
+  //   });
+  // });

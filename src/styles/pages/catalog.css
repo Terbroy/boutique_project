@@ -14,7 +14,6 @@
     background-color: var(--primary-color);
     height: 80px;
     font-size: 1rem;
-    color: var(--soft-pink);
     gap: 20px;
     text-align: center;
 }
@@ -22,6 +21,7 @@
     position: relative;
     display: flex;
     gap: .5rem;
+    margin-left: 3%;
 }
 .filter__img{
     width: 20px;
@@ -40,6 +40,7 @@
     gap: 5px;   
     cursor: pointer;
     z-index: 1;
+    color: var(--soft-pink);
 }
 .filter__options{
     display: none;
@@ -49,6 +50,7 @@
     left: -1rem;
     position: absolute;
     list-style: none;
+    color: var(--soft-pink);
 }
 .filter__text:hover+.filter__options, .filter__options:hover {
     display: block;
@@ -65,7 +67,7 @@
     font-family: 'Bona nova', 'serif';
     border: 0;
     font-size: 1rem;
-    text-align: left;
+    text-align: center;
 }
 .list__filter:hover{
     cursor: pointer;
@@ -74,16 +76,14 @@
 .filter__line{
     height: 40px ;
     align-items: center;
-}
-.filter__line{
-    height: 40px ;
-    align-items: center;
+    margin-left: 2%;
 }
 .form__search{
     padding: 10px;
     display: flex;
     gap: 0;
     align-items: center;
+    margin-left: 3%;
 }
 .input__search{
     padding: 10px;
