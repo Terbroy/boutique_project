@@ -7,7 +7,7 @@ function toggleCart() {
   cartHtml.classList.toggle("display--none");
 }
 
-async function fetchProductPage() {
+async function fetchProduct() {
   try {
     const response = await axios.get(`https://binary-best-boutique.up.railway.app/api/v1/productos/${productoId}`);
     return response.data;
@@ -17,18 +17,14 @@ async function fetchProductPage() {
   }
 }
 
-function fetchProducts() {
-  
-  // let products = JSON.parse(localStorage.getItem("products")).products;
-  return products;
+async function fetchProducts() {
+  try {
+    const response = await axios.get("https://binary-best-boutique.up.railway.app/api/v1/productos");
+    return response.data;
+} catch (error) {
+    console.log("Error fetching data:", error);
+    return null;
 }
-
-function fetchProduct(id) {
-  let products = fetchProducts();
-  let selectedProduct = products.filter((e) => e.id == id);
-  let selected = selectedProduct[0];
-  localStorage.setItem("selected-product", JSON.stringify(selected));
-  return selected;
 }
 
 function getCart() {
@@ -36,42 +32,19 @@ function getCart() {
   return cart ? JSON.parse(cart) : [];
 }
 
-function fetchProductsCart(id) {
-  const product = fetchProduct(id)[0];
+function fetchProductsCart(product) {
   let cart = getCart();
-
-  const existingProduct = cart.find(e => e.id === product.id);
-
+  const existingProduct = cart.find(e => e.id_productos === product.id_productos);
   if (existingProduct) {
-      if(existingProduct.stock === existingProduct.product_cart ){
-          alert("no se pueden agregar mas al carrito")
-          
-      }else{
-          existingProduct.product_cart++;
-      }
+      existingProduct.product_cart++;
   } else {
       product.product_cart = 1;
       cart.push(product);
   }
-
   localStorage.setItem("cart-products", JSON.stringify(cart));
   toggleCart();
-
 }
 
-// function fetchProductsCart(product) {
-//   let cart = getCart();
-//   const existingProduct = cart.find(e => e.id_productos === product.id_productos);
-//   if (existingProduct) {
-//           existingProduct.product_cart++;
-//   } else {
-//       product.product_cart = 1;
-//       cart.push(product);
-//   }
-//   localStorage.setItem("cart-products", JSON.stringify(cart));
-//   toggleCart();
-
-// }
 
 function filterProducts(product) {
   let products = JSON.parse(localStorage.getItem("products")).products;
@@ -82,7 +55,7 @@ function filterProducts(product) {
 function addProduct() {
   const btnAdd = document.querySelector(".info__add");
   btnAdd.addEventListener("click", function () {
-    let producto = fetchProductPage();
+    let producto = fetchProduct();
     let ensayo = getCart();
     ensayo = ensayo.concat(producto);
     localStorage.setItem("cart-products", JSON.stringify(ensayo));
@@ -93,7 +66,7 @@ function addProduct() {
 }
 setTimeout(addProduct, 1000);
 document.addEventListener("DOMContentLoaded", async (event) => {
-  let product = await fetchProductPage();
+  let product = await fetchProduct();
   let filterProduct = filterProducts(product);
   const relatedContainer = document.getElementById("related-product");
   const container = document.getElementById("container-product");
@@ -156,7 +129,7 @@ document.addEventListener("DOMContentLoaded", async (event) => {
     });
     buttonProduct.addEventListener("click", () => {
       toggleCart();
-      fetchProductsCart(product.id);
+      fetchProductsCart(product);
     });
   });
   container.insertBefore(productHTML, child);
