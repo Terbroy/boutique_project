@@ -30,19 +30,20 @@ function getCart() {
   return cart ? JSON.parse(cart) : [];
 }
 
-function fetchProductsCart(product) {
+function fetchProductsCart(product, count) {
   let cart = getCart();
   const existingProduct = cart.find(e => e.id_productos === product.id_productos);
   if (existingProduct) {
-    console.log(existingProduct.product_cart);
-      existingProduct.product_cart++;
+      existingProduct.product_cart = count ? count : existingProduct.product_cart++;
   } else {
-    product.product_cart = 1;
-    console.log(product.product_cart);
+    product.product_cart = count ? count : 1;
       cart.push(product);
   }
   localStorage.setItem("cart-products", JSON.stringify(cart));
+  toggleCart();
 }
+
+
 
 
 async function filterProducts(product) {
@@ -53,7 +54,11 @@ async function filterProducts(product) {
 
 async function addProduct() {
     let producto = await fetchProduct();
-    fetchProductsCart(producto);
+    const btnValue = document.getElementById("product-cant-cart");
+    let valor = Number(btnValue.textContent);
+    fetchProductsCart(producto, valor);
+
+
 }
 
 
@@ -83,9 +88,9 @@ document.addEventListener("DOMContentLoaded", async (event) => {
             <p class="info__text">${product.informacion}</p>
             <div class="info__buttons">
             <button class="info__count">
-            <span class="plus">-</span>
-            1
-            <span class="minus">+</span>
+            <span class="plus" onclick=restar()>-</span>
+            <span id="product-cant-cart"> 1 </span>
+            <span class="minus" onclick=sumar()>+</span>
             </button>
             <button class="info__add" onclick=addProduct()>Añadir al carrito</button>
             </div>
@@ -165,3 +170,26 @@ function calculateAverageRating(ratings) {
     const remainingStars = 5 - roundedAvg;
     avgOutput.innerHTML = `Calificación promedio: <span class="avg-star">${'★'.repeat(roundedAvg)}</span>${'☆'.repeat(remainingStars)}`;
 }
+
+
+
+
+function sumar() {
+  const btnValue = document.getElementById("product-cant-cart");
+  let valor = Number(btnValue.textContent);
+  if(valor >= 1){
+    valor++;
+  }
+  btnValue.textContent = valor;
+  
+}
+
+function restar() {
+  const btnValue = document.getElementById("product-cant-cart");
+  let valor = Number(btnValue.textContent);
+  if(valor > 1){
+    valor--;
+  }
+  btnValue.textContent = valor;
+}
+
