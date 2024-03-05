@@ -227,3 +227,6 @@
 .product__category--cat{
     display: none;
 }
+.product__info--cat{
+    display: none;
+}

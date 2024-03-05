@@ -61,6 +61,7 @@ async function displayProductsInCatalog(){
                 </a>
                 <p class="product__description">${product.descripcion}</p>
                 <p class="product__category--cat">${product.categorias}</p>
+                <p class="product__info--cat">${product.informacion}</p>
                 <p class="product__price">$${product.precio}</p>
             </div>
         </div>
@@ -110,7 +111,8 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     products.forEach((product) => {
       const productText = product.innerText.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-      if (productText.includes(searchValue)) {
+      const infoCat = product.querySelector(".product__info--cat").innerText.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+      if (productText.includes(searchValue) || infoCat.includes(searchValue)) {
         product.classList.remove("hide");
       } else {
         product.classList.add("hide");
