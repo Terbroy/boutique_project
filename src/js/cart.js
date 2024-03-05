@@ -1,6 +1,8 @@
 const containerCart = document.getElementById("container-cart");
 const totalHtml = document.getElementById("cart_total");
 
+document.addEventListener("DOMContentLoaded",e => addCart());
+
 function getCart() {
   const cart = localStorage.getItem("cart-products");
   return cart ? JSON.parse(cart) : [];
@@ -8,11 +10,8 @@ function getCart() {
 
 function toggleCart() {
   containerCart.classList.toggle("display--none");
-}
-
-document.addEventListener("DOMContentLoaded", (e) => {
   addCart();
-});
+}
 
 document.addEventListener("click", (event) => {
   const clickedElement = event.target;
@@ -35,21 +34,22 @@ function addCart() {
   let total = 0;
   const cart = getCart();
   for (let i = 0; i < cart.length; i++) {
-    console.log(cart[i]?.imagenes[0]?.url);
-    console.log(cart[i]?.imagenes[0]);
-    content += `
-              <div class="cart__item">
-              <img src=${cart[i]?.imagenes[0]?.url} class="item__image">
-              <div class="item__info">
-              <h4 class="item__title">${cart[i].nombre}</h4>
-              <p class="item__price"><span>${cart[i].product_cart}</span> X <span>Rs.  ${cart[i].precio * cart[i].product_cart}</span></p>
-              </div>
-              <div class="item__delete-container">
-              <img src="../src/images/delete.svg" class="item__delete">
-              </div>
-              </div>
-          `;
-          total += cart[i].precio * cart[i].product_cart;
+    if(cart[i].imagenes){
+      let imagenes = cart[i].imagenes
+      content += `
+                <div class="cart__item">
+                <img src=${imagenes[0].url} class="item__image">
+                <div class="item__info">
+                <h4 class="item__title">${cart[i].nombre}</h4>
+                <p class="item__price"><span>${cart[i].product_cart}</span> X <span>Rs.  ${cart[i].precio * cart[i].product_cart}</span></p>
+                </div>
+                <div class="item__delete-container">
+                <img src="../src/images/delete.svg" class="item__delete">
+                </div>
+                </div>
+            `;
+            total += cart[i].precio * cart[i].product_cart;
+    }
   }
   totalHtml.textContent = total;
   container__items.innerHTML = content;

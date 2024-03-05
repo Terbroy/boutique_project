@@ -3,9 +3,7 @@ var productoId = urlParams.get('id');
 
 const cartHtml = document.getElementById("container-cart");
 
-function toggleCart() {
-  cartHtml.classList.toggle("display--none");
-}
+
 
 async function fetchProduct() {
   try {
@@ -42,13 +40,11 @@ function fetchProductsCart(product) {
       cart.push(product);
   }
   localStorage.setItem("cart-products", JSON.stringify(cart));
-  toggleCart();
 }
 
 
 async function filterProducts(product) {
   let products = await fetchProducts();
-  console.log(product);
   let filter = products.filter((e) => e.categoria === product.categoria);
   return filter;
 }
