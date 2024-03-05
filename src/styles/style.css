@@ -19,11 +19,20 @@
 }
 
 .display--none {
-    transition: .3s ease-in-out;
+    transition: .5s ease-in-out;
     transform: translateX(100%);
     z-index: -1;
 }
 
+.product-cant-cart{
+    height: 1.5rem;
+    width: 2rem;
+    border-radius: .6rem;
+    text-align: center;
+    font-weight: lighter;
+    background: transparent;
+    border: none;
+}
 
 :root{
     --primary-color:#43766C;
