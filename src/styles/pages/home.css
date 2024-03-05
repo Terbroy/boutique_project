@@ -258,6 +258,8 @@
 .to__catalog {
     text-decoration: none;
     color: white;
+    align-self: center;
+    text-align: center;
 }
 
 .see__more{
