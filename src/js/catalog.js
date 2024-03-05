@@ -77,4 +77,3 @@ async function displayProductsInCatalog(){
 
 
 
-
