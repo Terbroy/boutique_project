@@ -8,10 +8,11 @@ const cartHtml = document.getElementById("container-cart");
 async function fetchProduct() {
   try {
     const response = await axios.get(`https://binary-best-boutique.up.railway.app/api/v1/productos/${productoId}`);
+    console.log(response);
     return response.data;
   } catch (error) {
-      console.log("Error fetching data:", error);
-      return null;
+    console.log("Error fetching data:", error);
+    return null;
   }
 }
 
@@ -143,6 +144,36 @@ document.addEventListener("DOMContentLoaded", async (event) => {
   container.insertBefore(productHTML, child);
   setTimeout(agregarEventos, 500);
 });
+
+function agregarEventos() {
+  //Capturamos el input desde el HTML
+  let valor = document.getElementsByClassName("product-cant-cart")[0].value;
+  let cantidad = Number(valor);
+
+  //Capturamos el botón mas desde el HTML y le agregamos un evento listener
+  const botonMas = document.getElementsByClassName("plus")[0];
+  botonMas.addEventListener("click", function () {
+    sumar(cantidad);
+  });
+
+  //Capturamos el botón menos desde el HTML y le agregamos un evento listener
+  const botonMenos = document.getElementsByClassName("minus")[0];
+  botonMenos.addEventListener("click", function () {
+    restar(cantidad);
+  });
+}
+
+function sumar(cantidad) {
+  cantidad++;
+  document.getElementsByClassName("product-cant-cart")[0].value = cantidad;
+  agregarEventos();
+}
+
+function restar(cantidad) {
+    cantidad--;
+    document.getElementsByClassName("product-cant-cart")[0].value = cantidad;
+    agregarEventos();
+}
 
 // aca va la logica de la calificacion del producto
 const stars = document.querySelectorAll('.star');
