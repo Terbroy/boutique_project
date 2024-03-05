@@ -34,9 +34,11 @@ function fetchProductsCart(product) {
   let cart = getCart();
   const existingProduct = cart.find(e => e.id_productos === product.id_productos);
   if (existingProduct) {
+    console.log(existingProduct.product_cart);
       existingProduct.product_cart++;
   } else {
-      product.product_cart = 1;
+    product.product_cart = 1;
+    console.log(product.product_cart);
       cart.push(product);
   }
   localStorage.setItem("cart-products", JSON.stringify(cart));
@@ -51,10 +53,10 @@ async function filterProducts(product) {
 
 async function addProduct() {
     let producto = await fetchProduct();
-    console.log("click");
     fetchProductsCart(producto);
 }
-setTimeout(addProduct, 1000);
+
+
 document.addEventListener("DOMContentLoaded", async (event) => {
   let product = await fetchProduct();
   let filterProduct = await filterProducts(product);
