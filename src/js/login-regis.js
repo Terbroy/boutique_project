@@ -1,21 +1,31 @@
 
     // Muestra el formulario de inicio de sesión al cargar la página
     document.getElementById('formularioInicio').style.display = 'block';
+    document.getElementById('formularioRegistro').style.display = 'none';
 
-     function mostrarFormulario(tipo) {
-            
-        // Oculta ambos formularios
-     document.getElementById('formularioInicio').style.display = 'none';
-     document.getElementById('formularioRegistro').style.display = 'none';
+function mostrarFormulario(tipo) {
+    // Oculta ambos formularios
+    const botonInicio = document.getElementById('buttonInicio');
+    const botonRegis = document.getElementById('buttonRegistro');
+    const formInicio = document.getElementById('formularioInicio');
+    const formRegis = document.getElementById('formularioRegistro');
 
-        // Muestra el formulario correspondiente al botón presionado
-     if (tipo === 'inicio') {
-     document.getElementById('formularioInicio').style.display= 'block';
-     } else if (tipo === 'registro') {
-       document.getElementById('formularioRegistro').style.display = 'block';
-     }
-     
+    formInicio.style.display = 'none';
+    botonInicio.classList.remove("selected-button")
+ 
+    formRegis.style.display = 'none';
+    botonRegis.classList.remove("selected-button")
+
+    // Muestra el formulario correspondiente al botón presionado
+    if (tipo === 'inicio') {
+    formInicio.style.display= 'block';
+    botonInicio.classList.add("selected-button")
+    } else if (tipo === 'registro') {
+    formRegis.style.display = 'block';
+    botonRegis.classList.add("selected-button")
     }
+    
+}
 
 // DESDE ACA EMPIEZA EL ALMACENAMIENTO DE LOS DATOS DE REGITRO Y DE INICIAR SESION
 function guardarDatos() {
@@ -39,13 +49,9 @@ function guardarDatos() {
     };
     localStorage.setItem('usuario', JSON.stringify(usuario));
     // Convertir el objeto a formato JSON y almacenarlo en el localStorage
-    alert('Usuario registrado con éxito');
-
-
-    // Limpiar el formulario después de guardar los datos
-    document.getElementById('formularioRegistro').reset();
-
-
+    const modalResetPassword = document.getElementById('modalRegister');
+    modalResetPassword.style.display = 'block';
+    return false;
 }
 
 function iniciarSesion() {
@@ -57,8 +63,89 @@ function iniciarSesion() {
 
     // Verificar si el usuario existe y las credenciales coinciden
     if (usuarioRegistrado && usuarioRegistrado.correo === correoLogin && usuarioRegistrado.contrasena === contrasenaLogin) {
-        alert('Inicio de sesión exitoso');
+        const modalResetPassword = document.getElementById('modalLogin');
+        modalResetPassword.style.display = 'block'; 
+        return false;
     } else {
         alert('Correo o contraseña incorrectos');
     }
+}
+document.addEventListener('DOMContentLoaded', function() {
+    var correoInput = document.getElementById('correoLogin');
+    var recordarCheckbox = document.getElementById('recordarUsuario');
+
+    // Verificar si hay un usuario recordado
+    var usuarioRecordado = localStorage.getItem('usuarioRecordado');
+
+    if (usuarioRecordado) {
+        correoInput.value = usuarioRecordado;
+        recordarCheckbox.checked = true;
+    }
+
+    // Manejar el evento de envío del formulario
+    document.getElementById('btnInicioSesion').addEventListener('click', function(event) {
+        // Si el checkbox de recordar usuario está marcado, almacenar el usuario en localStorage
+        if (recordarCheckbox.checked) {
+            localStorage.setItem('usuarioRecordado', correoInput.value);
+        } else {
+            // Si el checkbox no está marcado, asegúrate de borrar el usuario almacenado previamente
+            localStorage.removeItem('usuarioRecordado');
+        }
+    });
+});
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const olvidarPassLink = document.getElementById('olvidarPass');
+    const modalResetPassword = document.getElementById('modalResetPassword');
+
+    olvidarPassLink.addEventListener('click', function() {
+        modalResetPassword.style.display = 'block';
+    });
+
+    // Cierra el modal cuando se hace clic en el botón "X" o fuera del modal
+    const closeBtn = document.querySelector('.close');
+    window.onclick = function(event) {
+        if (event.target == modalResetPassword) {
+            modalResetPassword.style.display = 'none';
+        }
+    }
+
+    closeBtn.onclick = function() {
+        modalResetPassword.style.display = 'none';
+    };
+});
+
+function resetPassword() {
+    // Aquí puedes agregar la lógica para enviar un correo electrónico de restablecimiento de contraseña
+    // Por simplicidad, este ejemplo solo oculta el modal
+    var modalResetPassword = document.getElementById('modalResetPassword');
+    modalResetPassword.style.display = 'none';
+    alert('Se ha enviado un correo electrónico de restablecimiento de contraseña.');
+}
+
+function redirectLogin() {
+    // Aquí puedes agregar la lógica para enviar un correo electrónico de restablecimiento de contraseña
+    // Por simplicidad, este ejemplo solo oculta el modal
+    setTimeout(()=> {
+        const loginURL = `${location.origin}/pages/login.html`;
+        window.location.assign(loginURL);
+        // Limpiar el formulario después de guardar los datos
+        document.getElementById('formularioRegistro').reset();
+    },1);
+
+    const modalResetPassword = document.getElementById('modalRegister');
+    modalResetPassword.style.display = 'none';
+}
+
+function redirectCatalog() {
+    // Aquí puedes agregar la lógica para enviar un correo electrónico de restablecimiento de contraseña
+    // Por simplicidad, este ejemplo solo oculta el modal
+    setTimeout(()=> {
+        const catalogURL = `${location.origin}/pages/catalog.html`;
+        window.location.assign(catalogURL);
+    },1)
+
+    const modalResetPassword = document.getElementById('modalLogin');
+    modalResetPassword.style.display = 'none';
 }
