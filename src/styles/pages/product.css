@@ -175,6 +175,7 @@
 
 .details__description{
     line-height: 1.5rem;
+    color: #43766C;
 }
 .related__title{
     font-size: 2rem;
@@ -207,4 +208,38 @@
     color: white;
     background-color: #43766C;
     font-size: 17px;
+}
+/* aca van los estilos de la calificacion*/
+.calificacionStar{
+    text-align: center;
+}
+.stars {
+    font-size: 70px;
+}
+
+.star {
+    cursor: pointer;
+    color: #aa9479;
+}
+
+#rating-output {
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.avg-star {
+    color: gold;
+    font-size: 70px;
+}
+
+.califProm,
+.calif{
+    margin-top: 40px;
+    font-style:oblique;
+    font-size: 20px;
+    color: rgb(199, 86, 86);
+}
+
+.califInferior{
+    font-size: 20px;
 }

@@ -156,14 +156,14 @@
 
 .modal-content {
   background-color:var(--primary-color);
-  margin: 15% auto;
+  margin: 14% auto;
   padding: 58px;
   border: 10px solid var(--color-gold);
   border-radius: 50px;
-  width:500px;
+  width:600px;
 }
 
-.close {
+/*.close {
   color: var(--text-brown);
   float: right;
   font-size: 30px;
@@ -175,15 +175,15 @@
   color: rgb(10, 6, 6);
   text-decoration: none;
   cursor: pointer;
-}
+}*/
 
 .imputCorreo {
-  padding: 15px;
+  padding: 20px;
   background-color: var(--soft-pink);
   border: none;
-  border-radius: 30px;
+  border-radius: 20px;
   margin-top: 10px;
-  font-size: 13px;
+  font-size: 17px;
   color: var(--text-brown);
 }
 
@@ -192,13 +192,14 @@
 }
 
 .imputRes{
-  padding: 15px;
-  background-color: var(--soft-pink);
+  padding: 10px;
+  background-color: var(--soft-green);
   border: none;
   border-radius: 30px;
   margin-top: 10px;
-  font-size: 13px;
+  font-size: 15px;
   color: var(--text-brown);
+  color: var(--primary-color);
 }
 
 .pIngresaC{

@@ -49,17 +49,10 @@ async function filterProducts(product) {
   return filter;
 }
 
-function addProduct() {
-  const btnAdd = document.querySelector(".info__add");
-  btnAdd.addEventListener("click", function () {
-    let producto = fetchProduct();
-    let ensayo = getCart();
-    ensayo = ensayo.concat(producto);
-    localStorage.setItem("cart-products", JSON.stringify(ensayo));
-    console.log(ensayo);
-    console.log(producto);
-  });
-
+async function addProduct() {
+    let producto = await fetchProduct();
+    console.log("click");
+    fetchProductsCart(producto);
 }
 setTimeout(addProduct, 1000);
 document.addEventListener("DOMContentLoaded", async (event) => {
@@ -92,7 +85,7 @@ document.addEventListener("DOMContentLoaded", async (event) => {
             1
             <span class="minus">+</span>
             </button>
-            <button class="info__add">Añadir al carrito</button>
+            <button class="info__add" onclick=addProduct()>Añadir al carrito</button>
             </div>
             </div>
             `;
@@ -109,7 +102,7 @@ document.addEventListener("DOMContentLoaded", async (event) => {
                 </div>
             </div>
             <div class="product__text">
-                <a href="../../pages/product.html" id="product-title-${product.id_productos}" class="product__title">
+                <a href="../../pages/product.html?id=${product.id_productos}" id="product-title-${product.id_productos}" class="product__title">
                     <p class="product__title">${product.nombre}</p>
                 </a>
                 <p class="product__description">${product.descripcion}</p>
@@ -131,3 +124,42 @@ document.addEventListener("DOMContentLoaded", async (event) => {
   });
   container.insertBefore(productHTML, child);
 });
+
+// aca va la logica de la calificacion del producto
+const stars = document.querySelectorAll('.star');
+const output = document.getElementById('rating-output');
+const avgOutput = document.getElementById('avg-rating');
+
+let userRating = 0;
+let totalRatings = [];
+
+// Event listener para cada estrella
+stars.forEach(star => {
+    star.addEventListener('click', function() {
+        userRating = parseInt(this.getAttribute('data-value'));
+        output.textContent = `Has calificado con ${userRating} estrellas`;
+        highlightStars(userRating);
+        totalRatings.push(userRating);
+        calculateAverageRating(totalRatings);
+    });
+});
+
+// Función para resaltar estrellas seleccionadas
+function highlightStars(num) {
+    stars.forEach((star, index) => {
+        if (index < num) {
+            star.style.color = 'gold';
+        } else {
+            star.style.color = '#aa9479';
+        }
+    });
+}
+
+// Calcular calificación promedio y mostrar como barras de estrellas
+function calculateAverageRating(ratings) {
+    const total = ratings.reduce((acc, curr) => acc + curr, 0);
+    const avg = total / ratings.length;
+    const roundedAvg = Math.round(avg);
+    const remainingStars = 5 - roundedAvg;
+    avgOutput.innerHTML = `Calificación promedio: <span class="avg-star">${'★'.repeat(roundedAvg)}</span>${'☆'.repeat(remainingStars)}`;
+}
