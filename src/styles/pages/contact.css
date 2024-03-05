@@ -31,7 +31,7 @@
     display: flex;
     width: 75vw;
     max-width: 1160px;
-    height: 500px;
+    height: 460px;
     justify-content: center;
     align-items: center;
     margin: 25px auto;
@@ -118,6 +118,7 @@ textarea .message_box:placeholder{
 }
 .form__button{
     padding: 13px 60px;
+    margin: 20px;
     font-size: 15px;
     border-radius: 22px!important;
     color: white;

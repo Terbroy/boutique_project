@@ -81,6 +81,7 @@ function cargarCarrito() {
   }
 }
 
+
 function eliminarProducto(e) {
   const cart = getCart();
   cart.splice(e, 1);
