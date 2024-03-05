@@ -9,9 +9,10 @@ function toggleCart() {
 /******************************** */
 document.addEventListener("DOMContentLoaded", e =>{
     displayProductsInCatalog();
-    const button = document.querySelector('#button__search');
+
   button.addEventListener('click', () => {
     button.classList.add('active')});
+
 });
 
 async function fetchProductData() {
@@ -120,3 +121,29 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
   });
 });
+
+//PRICE-ORDER
+  const button = document.querySelector('#button__search');
+  const select = document.querySelector('.order');
+  select.addEventListener('change', () => {
+      const sortBy = select.value;
+      const products = Array.from(document.querySelectorAll('.product--cart'));
+      if (sortBy === 'priceasc') {
+          products.sort((a, b) => {
+              const priceA = parseFloat(a.querySelector('.product__price').textContent.replace('$', ''));
+              const priceB = parseFloat(b.querySelector('.product__price').textContent.replace('$', ''));
+              return priceA - priceB;
+          });
+      } else if (sortBy === 'pricedesc') {
+          products.sort((a, b) => {
+              const priceA = parseFloat(a.querySelector('.product__price').textContent.replace('$', ''));
+              const priceB = parseFloat(b.querySelector('.product__price').textContent.replace('$', ''));
+              return priceB - priceA;
+          });
+      }
+      const padreProductos = document.getElementById("padreProductos");
+      padreProductos.innerHTML = '';
+      products.forEach(product => {
+          padreProductos.appendChild(product);
+      });
+  });
