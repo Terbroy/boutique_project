@@ -58,7 +58,7 @@ async function displayProductsInCatalog(){
                     <p class="product__title">${product.nombre}</p>
                 </a>
                 <p class="product__description">${product.descripcion}</p>
-                <p class="product__price">$${product.precio}</p>
+                <p class="product__price">$${product.precio.toLocaleString()}</p>
             </div>
         </div>
         `
