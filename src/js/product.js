@@ -3,8 +3,17 @@ var productoId = urlParams.get('id');
 
 const cartHtml = document.getElementById("container-cart");
 
-function toggleCart() {
-  cartHtml.classList.toggle("display--none");
+
+
+async function fetchProduct() {
+  try {
+    const response = await axios.get(`https://binary-best-boutique.up.railway.app/api/v1/productos/${productoId}`);
+    console.log(response);
+    return response.data;
+  } catch (error) {
+    console.log("Error fetching data:", error);
+    return null;
+  }
 }
 
 async function fetchProductPage() {
@@ -176,6 +185,74 @@ document.addEventListener("DOMContentLoaded", async (event) => {
   setTimeout(agregarEventos, 500);
 });
 
+function agregarEventos() {
+  //Capturamos el input desde el HTML
+  let valor = document.getElementsByClassName("product-cant-cart")[0].value;
+  let cantidad = Number(valor);
+
+  //Capturamos el botón mas desde el HTML y le agregamos un evento listener
+  const botonMas = document.getElementsByClassName("plus")[0];
+  botonMas.addEventListener("click", function () {
+    sumar(cantidad);
+  });
+
+  //Capturamos el botón menos desde el HTML y le agregamos un evento listener
+  const botonMenos = document.getElementsByClassName("minus")[0];
+  botonMenos.addEventListener("click", function () {
+    restar(cantidad);
+  });
+}
+
+function sumar(cantidad) {
+  cantidad++;
+  document.getElementsByClassName("product-cant-cart")[0].value = cantidad;
+  agregarEventos();
+}
+
+function restar(cantidad) {
+    cantidad--;
+    document.getElementsByClassName("product-cant-cart")[0].value = cantidad;
+    agregarEventos();
+}
+
+// aca va la logica de la calificacion del producto
+const stars = document.querySelectorAll('.star');
+const output = document.getElementById('rating-output');
+const avgOutput = document.getElementById('avg-rating');
+
+let userRating = 0;
+let totalRatings = [];
+
+// Event listener para cada estrella
+stars.forEach(star => {
+    star.addEventListener('click', function() {
+        userRating = parseInt(this.getAttribute('data-value'));
+        output.textContent = `Has calificado con ${userRating} estrellas`;
+        highlightStars(userRating);
+        totalRatings.push(userRating);
+        calculateAverageRating(totalRatings);
+    });
+});
+
+// Función para resaltar estrellas seleccionadas
+function highlightStars(num) {
+    stars.forEach((star, index) => {
+        if (index < num) {
+            star.style.color = 'gold';
+        } else {
+            star.style.color = '#aa9479';
+        }
+    });
+}
+
+// Calcular calificación promedio y mostrar como barras de estrellas
+function calculateAverageRating(ratings) {
+    const total = ratings.reduce((acc, curr) => acc + curr, 0);
+    const avg = total / ratings.length;
+    const roundedAvg = Math.round(avg);
+    const remainingStars = 5 - roundedAvg;
+    avgOutput.innerHTML = `Calificación promedio: <span class="avg-star">${'★'.repeat(roundedAvg)}</span>${'☆'.repeat(remainingStars)}`
+};
 function agregarEventos() {
   //Capturamos el input desde el HTML
   let valor = document.getElementsByClassName("product-cant-cart")[0].value;
