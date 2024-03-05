@@ -59,6 +59,17 @@
     flex-direction: column;
     gap: .5rem;
 }
+.list__filter{
+    background-color: transparent;
+    color: var(--soft-pink);
+    font-family: 'Bona nova', 'serif';
+    border: 0;
+    font-size: 1rem;
+}
+.list__filter:hover{
+    cursor: pointer;
+    color: white;
+}
 .filter__line{
     height: 40px ;
     align-items: center;
@@ -84,7 +95,7 @@
     background-color: var(--soft-pink);
     border-radius: 0 10px 10px 0;
     padding: 6px;
-    height: 39px;
+    height: 38px;
     width: 30px;
     display: flex;
     align-items: center;
@@ -205,5 +216,8 @@
     column-gap: 60px;
 }
 .hide{
+    display: none;
+}
+.product__category{
     display: none;
 }

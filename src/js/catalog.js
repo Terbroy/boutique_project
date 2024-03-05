@@ -9,7 +9,10 @@ function toggleCart() {
 /******************************** */
 document.addEventListener("DOMContentLoaded", e =>{
     displayProductsInCatalog();
-})
+    const button = document.querySelector('#button__search');
+  button.addEventListener('click', () => {
+    button.classList.add('active')});
+});
 
 async function fetchProductData() {
     try {
@@ -38,29 +41,6 @@ function fetchProductsCart(product) {
     toggleCart();
 
 }
-
-//FILTER
-function filterProduct(value) {
-    let buttons = document.querySelectorAll(".list__filter");
-    buttons.forEach((button) => {
-      if (value.toUpperCase() == button.innerText.toUpperCase()) {
-        button.classList.add("active");
-      } else {
-        button.classList.remove("active");
-      }
-    });
-
-    let elements = document.querySelectorAll(".product--cart");
-  
-    elements.forEach((element) => {
-        element.classList.add("hide")
-        if (value == "Todos") {
-          element.classList.remove("hide");
-        } else if(element.classList.contains(value)){
-            element.classList.remove("hide");
-          }
- });
-}
 async function displayProductsInCatalog(){
     const padreProductos = document.getElementById("padreProductos");
     const products = await fetchProductData();
@@ -80,6 +60,7 @@ async function displayProductsInCatalog(){
                     <p class="product__title">${product.nombre}</p>
                 </a>
                 <p class="product__description">${product.descripcion}</p>
+                <p class="product__category">${product.categorias}</p>
                 <p class="product__price">$${product.precio}</p>
             </div>
         </div>
@@ -95,17 +76,33 @@ async function displayProductsInCatalog(){
     })
     filterProduct("Todos");
 }
+function filterProduct(value) {
+  let buttons = document.querySelectorAll(".list__filter");
+  buttons.forEach((button) => {
+    if (value == button.innerText) {
+      button.classList.add("active");
+    } else {
+      button.classList.remove("active");
+    }
+  });
 
+  const products = document.querySelectorAll(".product--cart");
+  products.forEach((product) => {
+    if (value === "Todos" || product.querySelector(".product__category").innerText.includes(value)) {
+      product.classList.remove("hide");
+    } else {
+      product.classList.add("hide");
+    }
+  });
+}
 //SEARCH
-document.getElementById("button__search").addEventListener("click", () => {
- 
-    let searchInput = document.getElementById("search__input").value;
+    document.getElementById("button__search").addEventListener("click", () => {
+    let searchInput = document.getElementById("search__input").value.toLowerCase();
     let elements = document.querySelectorAll(".product__title");
     let cards = document.querySelectorAll(".product--cart");
-
+  
     elements.forEach((element, index) => {
-      if (element.innerText.includes(searchInput.toUpperCase())) {
-
+      if (element.innerText.toLowerCase().includes(searchInput)) {
         cards[index].classList.remove("hide");
       } else {
         cards[index].classList.add("hide");
