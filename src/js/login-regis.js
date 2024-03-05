@@ -67,7 +67,11 @@ function iniciarSesion() {
         modalResetPassword.style.display = 'block'; 
         return false;
     } else {
-        alert('Correo o contraseña incorrectos');
+
+        // esta funcion es de correo o contraseña incorrecta
+        const modalPaswordincorrect = document.getElementById('passwordInvalid');
+        modalPaswordincorrect.style.display = 'block'; 
+        return false;
     }
 }
 document.addEventListener('DOMContentLoaded', function() {
@@ -146,5 +150,11 @@ function redirectCatalog() {
     },1)
 
     const modalResetPassword = document.getElementById('modalLogin');
+    modalResetPassword.style.display = 'none';
+}
+//esta funcion es la de correo o contraseña incorrecta
+function closeModal() {
+
+     const modalResetPassword = document.getElementById('passwordInvalid');
     modalResetPassword.style.display = 'none';
 }

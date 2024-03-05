@@ -115,7 +115,7 @@
             <div class="modal-content">
                 <!--<span class="close">&times;</span>-->
                 <h2>Inicio de sesión exitoso</h2>
-                <button class="imputRes" onclick="redirectCatalog()"> 🌺Catalogo</button>
+                <button class="imputRes" onclick="redirectCatalog()">Catalogo</button>
             </div>
             </div>
           </form>
@@ -131,6 +131,14 @@
                 <button class="imputRes" onclick="resetPassword()">Restablecer Contraseña</button>
             </div>
             </div>
+<!--este es el modal de correo o contraseña incorrecta-->
+            <div id="passwordInvalid" class="modal">
+                <div class="modal-content">
+                    <!--<span class="close">&times;</span>-->
+                    <h2>Correo o Contraseña Incorrecto</h2>
+                    <button class="imputRes" onclick="closeModal()">Verificar</button>
+                </div>
+                </div>                
           </form>
         </div>
 
@@ -158,7 +166,7 @@
             <!--<span class="close">&times;</span>-->
             <h2>Registro Exitoso</h2>
             <p class="pIngresaC">Ahora por favor</p>
-            <button class="imputRes" onclick="redirectLogin()">🌺Inicia Sesion</button>
+            <button class="imputRes" onclick="redirectLogin()">Inicia Sesion</button>
         </div>
         </div>
       </form>
