@@ -1,87 +1,95 @@
-const cartHtml = document.getElementById("cart");
+let urlParams = new URLSearchParams(window.location.search);
+var productoId = urlParams.get('id');
+
+const cartHtml = document.getElementById("container-cart");
 
 function toggleCart() {
   cartHtml.classList.toggle("display--none");
 }
 
-
-function fetchProductPage() {
-    let product = JSON.parse(localStorage.getItem("selected-product"))[0];
-    return product;
+async function fetchProduct() {
+  try {
+    const response = await axios.get(`https://binary-best-boutique.up.railway.app/api/v1/productos/${productoId}`);
+    return response.data;
+  } catch (error) {
+      console.log("Error fetching data:", error);
+      return null;
+  }
 }
 
-function fetchProducts() {
-    let products = JSON.parse(localStorage.getItem("products")).products;
-    return products;
+async function fetchProducts() {
+  try {
+    const response = await axios.get("https://binary-best-boutique.up.railway.app/api/v1/productos");
+    return response.data;
+} catch (error) {
+    console.log("Error fetching data:", error);
+    return null;
 }
-
-function fetchProduct(id){
-    let products = fetchProducts();
-    let selectedProduct = products.filter(e => e.id == id);
-    localStorage.setItem("selected-product", JSON.stringify(selectedProduct));
-    return selectedProduct
 }
 
 function getCart() {
-    const cart = localStorage.getItem("cart-products");
-    return cart ? JSON.parse(cart) : [];
+  const cart = localStorage.getItem("cart-products");
+  return cart ? JSON.parse(cart) : [];
 }
 
-function fetchProductsCart(id) {
-    const product = fetchProduct(id)[0];
-    let cart = getCart();
-
-    const existingProduct = cart.find(e => e.id === product.id);
-
-    if (existingProduct) {
-        if(existingProduct.stock === existingProduct.product_cart ){
-            alert("no se pueden agregar mas al carrito")
-            
-        }else{
-            existingProduct.product_cart++;
-        }
-    } else {
-        product.product_cart = 1;
-        cart.push(product);
-    }
-
-    localStorage.setItem("cart-products", JSON.stringify(cart));
-    toggleCart();
+function fetchProductsCart(product) {
+  let cart = getCart();
+  const existingProduct = cart.find(e => e.id_productos === product.id_productos);
+  if (existingProduct) {
+      existingProduct.product_cart++;
+  } else {
+      product.product_cart = 1;
+      cart.push(product);
+  }
+  localStorage.setItem("cart-products", JSON.stringify(cart));
+  toggleCart();
 }
 
 
-function filterProducts(product){
-    let products = JSON.parse(localStorage.getItem("products")).products;
-    let filter = products.filter(e=> e.category === product.category)
-    return filter
+async function filterProducts(product) {
+  let products = await fetchProducts();
+  console.log(product);
+  let filter = products.filter((e) => e.categoria === product.categoria);
+  return filter;
 }
 
-document.addEventListener("DOMContentLoaded", (event) => {
-    let product = fetchProductPage();
-    let filterProduct = filterProducts(product);
-    const relatedContainer = document.getElementById("related-product")
-    const container = document.getElementById("container-product");
-    let productHTML = document.createElement("section");
-    const description = document.getElementById("details");
-    const child = document.getElementById("hr-product");
-    
-    
-    document.title = product.name
-    productHTML.classList.add("product")
-    description.textContent = product.description;
-    console.log(product);
-    productHTML.innerHTML = `
+function addProduct() {
+  const btnAdd = document.querySelector(".info__add");
+  btnAdd.addEventListener("click", function () {
+    let producto = fetchProduct();
+    let ensayo = getCart();
+    ensayo = ensayo.concat(producto);
+    localStorage.setItem("cart-products", JSON.stringify(ensayo));
+    console.log(ensayo);
+    console.log(producto);
+  });
+
+}
+setTimeout(addProduct, 1000);
+document.addEventListener("DOMContentLoaded", async (event) => {
+  let product = await fetchProduct();
+  let filterProduct = await filterProducts(product);
+  const relatedContainer = document.getElementById("related-product");
+  const container = document.getElementById("container-product");
+  let productHTML = document.createElement("section");
+  const description = document.getElementById("details");
+  const child = document.getElementById("hr-product");
+
+  document.title = product.nombre;
+  productHTML.classList.add("product");
+  description.textContent = product.descripcion;
+  productHTML.innerHTML = `
     <div class="product__carrousel">
-            <img src=${product.images[0]} alt="" class="carrousel__card">
-            <img src=${product.images[1]} alt="" class="carrousel__card">
-            <img src=${product.images[2]} alt="" class="carrousel__card">
-            <img src=${product.images[3]} alt="" class="carrousel__card">
-            <img src=${product.images[0]} alt="" class="carrousel__card carrousel__card--image">
+            <img src=${product.imagenes[0].url} alt="" class="carrousel__card">
+            <img src=${product.imagenes[1].url} alt="" class="carrousel__card">
+            <img src=${product.imagenes[2].url} alt="" class="carrousel__card">
+            <img src=${product.imagenes[3].url} alt="" class="carrousel__card">
+            <img src=${product.imagenes[0].url} alt="" class="carrousel__card carrousel__card--image">
             </div>
             <div class="product__info">
-            <h1 class="info__title">${product.name}</h1>
-            <span class="info__price">$ ${product.price}</span>
-            <p class="info__text">${product.main_info}</p>
+            <h1 class="info__title">${product.nombre}</h1>
+            <span class="info__price">$ ${product.precio}</span>
+            <p class="info__text">${product.informacion}</p>
             <div class="info__buttons">
             <button class="info__count">
             <span class="plus">-</span>
@@ -91,82 +99,39 @@ document.addEventListener("DOMContentLoaded", (event) => {
             <button class="info__add">Añadir al carrito</button>
             </div>
             </div>
-            `
-    filterProduct.map(product => {
-        let relatedProduct = document.createElement("div");
-        relatedProduct.classList.add("product--card")
+            `;
+  filterProduct.map((product) => {
+    let relatedProduct = document.createElement("div");
+    relatedProduct.classList.add("product--card");
 
-        relatedProduct.innerHTML=`
-        <div id=${product.id} class="product--card">
+    relatedProduct.innerHTML = `
+        <div id=${product.id_productos} class="product--card">
             <div class="img__options">
-                <img class="product__img" src=${product.images[0]}>
+                <img class="product__img" src=${product.imagenes[0].url}>
                 <div class="product__options">
-                    <button id="btn-${product.id}" class="options__cart">Añadir al carrito</button>
+                    <button id="btn-${product.id_productos}" class="options__cart">Añadir al carrito</button>
                 </div>
             </div>
             <div class="product__text">
-                <a href="../../pages/product.html" id="product-title-${product.id}" class="product__title">
-                    <p class="product__title">${product.name}</p>
+                <a href="../../pages/product.html" id="product-title-${product.id_productos}" class="product__title">
+                    <p class="product__title">${product.nombre}</p>
                 </a>
-                <p class="product__description">${product.description}</p>
-                <p class="product__price">${product.price}</p>
+                <p class="product__description">${product.descripcion}</p>
+                <p class="product__price">${product.precio}</p>
             </div>
         </div>
-        `
-        relatedContainer.appendChild(relatedProduct);
-        const title = document.getElementById(`product-title-${product.id}`);
-        const buttonProduct = document.getElementById(`btn-${product.id}`);
+        `;
+    relatedContainer.appendChild(relatedProduct);
+    const title = document.getElementById(`product-title-${product.id_productos}`);
+    const buttonProduct = document.getElementById(`btn-${product.id_productos}`);
 
-        title.addEventListener("click",(event)=>{
-
-            fetchProduct(product.id);
-        } );
-        buttonProduct.addEventListener("click",(event)=>{
-            toggleCart();
-            fetchProductsCart(product.id);
-        } );
-    })
-
-    container.insertBefore(productHTML, child);
-
-
-});
-
-// aca va la logica de la calificacion del producto
-const stars = document.querySelectorAll('.star');
-const output = document.getElementById('rating-output');
-const avgOutput = document.getElementById('avg-rating');
-
-let userRating = 0;
-let totalRatings = [];
-
-// Event listener para cada estrella
-stars.forEach(star => {
-    star.addEventListener('click', function() {
-        userRating = parseInt(this.getAttribute('data-value'));
-        output.textContent = `Has calificado con ${userRating} estrellas`;
-        highlightStars(userRating);
-        totalRatings.push(userRating);
-        calculateAverageRating(totalRatings);
+    title.addEventListener("click", () => {
+      fetchProduct(product.id_productos);
     });
-});
-
-// Función para resaltar estrellas seleccionadas
-function highlightStars(num) {
-    stars.forEach((star, index) => {
-        if (index < num) {
-            star.style.color = 'gold';
-        } else {
-            star.style.color = '#aa9479';
-        }
+    buttonProduct.addEventListener("click", () => {
+      toggleCart();
+      fetchProductsCart(product);
     });
-}
-
-// Calcular calificación promedio y mostrar como barras de estrellas
-function calculateAverageRating(ratings) {
-    const total = ratings.reduce((acc, curr) => acc + curr, 0);
-    const avg = total / ratings.length;
-    const roundedAvg = Math.round(avg);
-    const remainingStars = 5 - roundedAvg;
-    avgOutput.innerHTML = `Calificación promedio: <span class="avg-star">${'★'.repeat(roundedAvg)}</span>${'☆'.repeat(remainingStars)}`;
-}
+  });
+  container.insertBefore(productHTML, child);
+});
