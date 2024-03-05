@@ -98,17 +98,11 @@ function filterProduct(value) {
   });
 }
 
-function searchProduct(value){
-  let buttonSearch = document.querySelector("#button__search");
+
+//SEARCH
+document.getElementById("button__search").addEventListener("click", () => {
   let searchInput = document.getElementById("search__input").value.toLowerCase();
   const products = document.querySelectorAll(".product--cart");
-  buttonSearch.forEach((searchButton)=>{
-    if (value == button.innerText) {
-      button.classList.add("active");
-    } else {
-      button.classList.remove("active");
-    }
-  });
 
   products.forEach((product) => {
     if (product.innerText.toLowerCase().includes(searchInput)) {
@@ -117,18 +111,4 @@ function searchProduct(value){
       product.classList.add("hide");
     }
   });
-
-}
-//SEARCH
-  //   document.getElementById("button__search").addEventListener("click", () => {
-  //   let searchInput = document.getElementById("search__input").value.toLowerCase();
-  //   const products = document.querySelectorAll(".product--cart");
-  
-  //   products.forEach((product) => {
-  //     if (product.innerText.toLowerCase().includes(searchInput)) {
-  //       product.classList.remove("hide");
-  //     } else {
-  //       product.classList.add("hide");
-  //     }
-  //   });
-  // });
+});

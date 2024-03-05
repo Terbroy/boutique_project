@@ -198,6 +198,9 @@
 .product__text{
     padding: 10px;
     color: var(--color-brown);
+    display: grid;
+    flex-direction: column;
+    gap: 3px;
 }
 /*SEARCH SECTION*/
 .results__search{
