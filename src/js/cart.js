@@ -35,9 +35,11 @@ function addCart() {
   let total = 0;
   const cart = getCart();
   for (let i = 0; i < cart.length; i++) {
+    console.log(cart[i]?.imagenes[0]?.url);
+    console.log(cart[i]?.imagenes[0]);
     content += `
               <div class="cart__item">
-              <img src=${cart[i].imagenes[0].url} class="item__image">
+              <img src=${cart[i]?.imagenes[0]?.url} class="item__image">
               <div class="item__info">
               <h4 class="item__title">${cart[i].nombre}</h4>
               <p class="item__price"><span>${cart[i].product_cart}</span> X <span>Rs.  ${cart[i].precio * cart[i].product_cart}</span></p>

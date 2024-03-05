@@ -46,9 +46,10 @@ function fetchProductsCart(product) {
 }
 
 
-function filterProducts(product) {
-  let products = JSON.parse(localStorage.getItem("products")).products;
-  let filter = products.filter((e) => e.category === product.category);
+async function filterProducts(product) {
+  let products = await fetchProducts();
+  console.log(product);
+  let filter = products.filter((e) => e.categoria === product.categoria);
   return filter;
 }
 
@@ -67,16 +68,16 @@ function addProduct() {
 setTimeout(addProduct, 1000);
 document.addEventListener("DOMContentLoaded", async (event) => {
   let product = await fetchProduct();
-  let filterProduct = filterProducts(product);
+  let filterProduct = await filterProducts(product);
   const relatedContainer = document.getElementById("related-product");
   const container = document.getElementById("container-product");
   let productHTML = document.createElement("section");
   const description = document.getElementById("details");
   const child = document.getElementById("hr-product");
 
-  document.title = product.name;
+  document.title = product.nombre;
   productHTML.classList.add("product");
-  description.textContent = product.description;
+  description.textContent = product.descripcion;
   productHTML.innerHTML = `
     <div class="product__carrousel">
             <img src=${product.imagenes[0].url} alt="" class="carrousel__card">
@@ -104,28 +105,28 @@ document.addEventListener("DOMContentLoaded", async (event) => {
     relatedProduct.classList.add("product--card");
 
     relatedProduct.innerHTML = `
-        <div id=${product.id} class="product--card">
+        <div id=${product.id_productos} class="product--card">
             <div class="img__options">
-                <img class="product__img" src=${product.images[0]}>
+                <img class="product__img" src=${product.imagenes[0].url}>
                 <div class="product__options">
-                    <button id="btn-${product.id}" class="options__cart">Añadir al carrito</button>
+                    <button id="btn-${product.id_productos}" class="options__cart">Añadir al carrito</button>
                 </div>
             </div>
             <div class="product__text">
-                <a href="../../pages/product.html" id="product-title-${product.id}" class="product__title">
-                    <p class="product__title">${product.name}</p>
+                <a href="../../pages/product.html" id="product-title-${product.id_productos}" class="product__title">
+                    <p class="product__title">${product.nombre}</p>
                 </a>
-                <p class="product__description">${product.description}</p>
-                <p class="product__price">${product.price}</p>
+                <p class="product__description">${product.descripcion}</p>
+                <p class="product__price">${product.precio}</p>
             </div>
         </div>
         `;
     relatedContainer.appendChild(relatedProduct);
-    const title = document.getElementById(`product-title-${product.id}`);
-    const buttonProduct = document.getElementById(`btn-${product.id}`);
+    const title = document.getElementById(`product-title-${product.id_productos}`);
+    const buttonProduct = document.getElementById(`btn-${product.id_productos}`);
 
     title.addEventListener("click", () => {
-      fetchProduct(product.id);
+      fetchProduct(product.id_productos);
     });
     buttonProduct.addEventListener("click", () => {
       toggleCart();
