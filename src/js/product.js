@@ -1,5 +1,6 @@
 let urlParams = new URLSearchParams(window.location.search);
-var productoId = urlParams.get('id');
+var productoId = urlParams.get("id");
+console.log(urlParams);
 
 const cartHtml = document.getElementById("container-cart");
 
@@ -10,15 +11,15 @@ function toggleCart() {
 async function fetchProductPage() {
   try {
     const response = await axios.get(`https://binary-best-boutique.up.railway.app/api/v1/productos/${productoId}`);
+    console.log(response);
     return response.data;
   } catch (error) {
-      console.log("Error fetching data:", error);
-      return null;
+    console.log("Error fetching data:", error);
+    return null;
   }
 }
 
 function fetchProducts() {
-  
   // let products = JSON.parse(localStorage.getItem("products")).products;
   return products;
 }
@@ -40,23 +41,21 @@ function fetchProductsCart(id) {
   const product = fetchProduct(id)[0];
   let cart = getCart();
 
-  const existingProduct = cart.find(e => e.id === product.id);
+  const existingProduct = cart.find((e) => e.id === product.id);
 
   if (existingProduct) {
-      if(existingProduct.stock === existingProduct.product_cart ){
-          alert("no se pueden agregar mas al carrito")
-          
-      }else{
-          existingProduct.product_cart++;
-      }
+    if (existingProduct.stock === existingProduct.product_cart) {
+      alert("no se pueden agregar mas al carrito");
+    } else {
+      existingProduct.product_cart++;
+    }
   } else {
-      product.product_cart = 1;
-      cart.push(product);
+    product.product_cart = 1;
+    cart.push(product);
   }
 
   localStorage.setItem("cart-products", JSON.stringify(cart));
   toggleCart();
-
 }
 
 // function fetchProductsCart(product) {
@@ -89,7 +88,6 @@ function addProduct() {
     console.log(ensayo);
     console.log(producto);
   });
-
 }
 setTimeout(addProduct, 1000);
 document.addEventListener("DOMContentLoaded", async (event) => {
@@ -117,11 +115,11 @@ document.addEventListener("DOMContentLoaded", async (event) => {
             <span class="info__price">$ ${product.precio}</span>
             <p class="info__text">${product.informacion}</p>
             <div class="info__buttons">
-            <button class="info__count">
-            <span class="plus">-</span>
-            1
-            <span class="minus">+</span>
-            </button>
+            <div class="info__count">
+                <button class="minus">-</button>
+                <input class="product-cant-cart" type="text" value="1" disabled>
+                <button class="plus">+</button>
+            </div>
             <button class="info__add">Añadir al carrito</button>
             </div>
             </div>
@@ -160,4 +158,35 @@ document.addEventListener("DOMContentLoaded", async (event) => {
     });
   });
   container.insertBefore(productHTML, child);
+  setTimeout(agregarEventos, 500);
 });
+
+function agregarEventos() {
+  //Capturamos el input desde el HTML
+  let valor = document.getElementsByClassName("product-cant-cart")[0].value;
+  let cantidad = Number(valor);
+
+  //Capturamos el botón mas desde el HTML y le agregamos un evento listener
+  const botonMas = document.getElementsByClassName("plus")[0];
+  botonMas.addEventListener("click", function () {
+    sumar(cantidad);
+  });
+
+  //Capturamos el botón menos desde el HTML y le agregamos un evento listener
+  const botonMenos = document.getElementsByClassName("minus")[0];
+  botonMenos.addEventListener("click", function () {
+    restar(cantidad);
+  });
+}
+
+function sumar(cantidad) {
+  cantidad++;
+  document.getElementsByClassName("product-cant-cart")[0].value = cantidad;
+  agregarEventos();
+}
+
+function restar(cantidad) {
+    cantidad--;
+    document.getElementsByClassName("product-cant-cart")[0].value = cantidad;
+    agregarEventos();
+}

@@ -134,10 +134,16 @@
     color: var(--text-brown);
     background-color: #e6d3bc;
     border-color: #aa9479;
+    align-items: center;
 }
 
 .minus, .plus{
     cursor: pointer;
+    width: 2rem;
+    height: 2rem;
+    background: none!important;
+    border: none;
+    
 }
 
 .info__add{

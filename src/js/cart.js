@@ -1,9 +1,20 @@
 const containerCart = document.getElementById("container-cart");
 const totalHtml = document.getElementById("cart_total");
+// let urlParams = new URLSearchParams(window.location.search);
+// var productoId = urlParams.get('id');
+for (let i = 1; i < 18; i++) {
+  getCart(i);
+}
 
-function getCart() {
-  const cart = localStorage.getItem("cart-products");
-  return cart ? JSON.parse(cart) : [];
+async function getCart(id) {
+  try {
+    const response = await axios.get(`https://binary-best-boutique.up.railway.app/api/v1/productos/${id}`);
+    console.log(response.data);
+    return response.data;
+  } catch (error) {
+    console.log("Error fetching data:", error);
+    return null;
+  }
 }
 
 function toggleCart() {
@@ -47,7 +58,7 @@ function addCart() {
               </div>
               </div>
           `;
-          total += cart[i].precio * cart[i].product_cart;
+    total += cart[i].precio * cart[i].product_cart;
   }
   totalHtml.textContent = total;
   container__items.innerHTML = content;
@@ -65,7 +76,6 @@ for (let i = 0; i < imagenesDestacadas.length; i++) {
   });
 }
 
-
 //Funciones carrito
 
 function cargarCarrito() {
@@ -73,7 +83,7 @@ function cargarCarrito() {
 
   for (let j = 0; j < botonCerrar.length; j++) {
     let boton = botonCerrar[j];
-    boton.addEventListener("click", function() {
+    boton.addEventListener("click", function () {
       eliminarProducto(j);
     });
   }
@@ -84,5 +94,4 @@ function eliminarProducto(e) {
   cart.splice(e, 1);
   localStorage.setItem("cart-products", JSON.stringify(cart));
   addCart();
-
 }
