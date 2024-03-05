@@ -125,10 +125,11 @@
     font-size: 1.4rem;
     border: 2px solid var(--primary-color);
     border-radius: 20px;
-    background-color: var(--light-green);
-    color: var(--soft-pink);
+    background-color: transparent;
+    color: var(--primary-color);
 }
 .about__exit__button:hover{
-    background-color: var(--soft-green);
+    /* background-color: var(--soft-green); */
     cursor: pointer;
+    box-shadow: 3px 3px rgba(0, 0, 0, 0.466);
 }

@@ -187,7 +187,7 @@
     text-decoration: none;
 }
 .product__title:hover{
-    color: var(--light-green);
+    color: var(--color-gold);
 }
 .product__title a{
     text-decoration: none;
