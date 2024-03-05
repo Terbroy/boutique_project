@@ -60,7 +60,7 @@ async function displayProductsInCatalog(){
                     <p class="product__title">${product.nombre}</p>
                 </a>
                 <p class="product__description">${product.descripcion}</p>
-                <p class="product__category">${product.categorias}</p>
+                <p class="product__category--cat">${product.categorias}</p>
                 <p class="product__price">$${product.precio}</p>
             </div>
         </div>
@@ -90,7 +90,7 @@ function filterProduct(value) {
 
   const products = document.querySelectorAll(".product--cart");
   products.forEach((product) => {
-    if (value === "Todos" || product.querySelector(".product__category").innerText.includes(value)) {
+    if (value === "Todos" || product.querySelector(".product__category--cat").innerText.includes(value)) {
       product.classList.remove("hide");
     } else {
       product.classList.add("hide");
@@ -98,17 +98,23 @@ function filterProduct(value) {
   });
 }
 
-
 //SEARCH
-document.getElementById("button__search").addEventListener("click", () => {
-  let searchInput = document.getElementById("search__input").value.toLowerCase();
-  const products = document.querySelectorAll(".product--cart");
+document.addEventListener("DOMContentLoaded", async () => {
+  const searchInput = document.getElementById("search__input");
+  const button = document.getElementById("button__search");
 
-  products.forEach((product) => {
-    if (product.innerText.toLowerCase().includes(searchInput)) {
-      product.classList.remove("hide");
-    } else {
-      product.classList.add("hide");
-    }
+  button.addEventListener("click", () => {
+    event.preventDefault();
+    const searchValue = searchInput.value.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+    const products = document.querySelectorAll(".product--cart");
+
+    products.forEach((product) => {
+      const productText = product.innerText.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+      if (productText.includes(searchValue)) {
+        product.classList.remove("hide");
+      } else {
+        product.classList.add("hide");
+      }
+    });
   });
 });

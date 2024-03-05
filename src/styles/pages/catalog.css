@@ -89,8 +89,10 @@
     padding: 10px;
     border-radius: 10px 0 0 10px;
     border-color: transparent;
+    border: 0;
     font-family: 'Bona nova', serif;
     font-size: 0.8rem;
+    height: 38px;
 }
 .search__button{
     background-color: var(--soft-pink);
@@ -222,6 +224,6 @@
 .hide{
     display: none;
 }
-.product__category{
+.product__category--cat{
     display: none;
 }
