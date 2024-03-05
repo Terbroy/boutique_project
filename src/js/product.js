@@ -62,16 +62,10 @@ async function filterProducts(product) {
   return filter;
 }
 
-function addProduct() {
-  const btnAdd = document.querySelector(".info__add");
-  btnAdd.addEventListener("click", function () {
-    let producto = fetchProduct();
-    let ensayo = getCart();
-    ensayo = ensayo.concat(producto);
-    localStorage.setItem("cart-products", JSON.stringify(ensayo));
-    console.log(ensayo);
-    console.log(producto);
-  });
+async function addProduct() {
+    let producto = await fetchProduct();
+    console.log("click");
+    fetchProductsCart(producto);
 }
 setTimeout(addProduct, 1000);
 document.addEventListener("DOMContentLoaded", async (event) => {
@@ -121,7 +115,7 @@ document.addEventListener("DOMContentLoaded", async (event) => {
                 </div>
             </div>
             <div class="product__text">
-                <a href="../../pages/product.html" id="product-title-${product.id_productos}" class="product__title">
+                <a href="../../pages/product.html?id=${product.id_productos}" id="product-title-${product.id_productos}" class="product__title">
                     <p class="product__title">${product.nombre}</p>
                 </a>
                 <p class="product__description">${product.descripcion}</p>
