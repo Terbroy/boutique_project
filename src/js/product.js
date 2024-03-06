@@ -182,8 +182,11 @@ function sumar() {
 }
 
 function restar(cantidad) {
-    cantidad--;
-    document.getElementsByClassName("product-cant-cart")[0].value = cantidad;
-    agregarEventos();
+  const btnValue = document.getElementById("product-cant-cart");
+  let valor = Number(btnValue.textContent);
+  if(valor > 1){
+    valor--;
+  }
+  btnValue.textContent = valor;
 }
 
