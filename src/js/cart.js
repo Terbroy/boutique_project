@@ -1,6 +1,10 @@
 const containerCart = document.getElementById("container-cart");
 const totalHtml = document.getElementById("cart_total");
 
+document.addEventListener("DOMContentLoaded", e => {
+  addCart();
+})
+
 async function getCart() {
   try {
     const response = await axios.get(`https://binary-best-boutique.up.railway.app/api/v1/productos/`);
@@ -38,24 +42,26 @@ function addCart() {
   let total = 0;
   const cart = getCart();
   for (let i = 0; i < cart.length; i++) {
-    content += `
-              <div class="cart__item">
-              <img src=${cart[i].imagenes[0].url} class="item__image">
-              <div class="item__info">
-              <h4 class="item__title">${cart[i].nombre}</h4>
-              <p class="item__price"><span>${cart[i].product_cart}</span> X <span>Rs.  ${cart[i].precio * cart[i].product_cart}</span></p>
-              </div>
-              <div class="item__delete-container">
-              <img src="../src/images/delete.svg" class="item__delete">
-              </div>
-              </div>
-          `;
-    total += cart[i].precio * cart[i].product_cart;
+    if(cart[i].imagenes){
+
+      content += `
+                <div class="cart__item">
+                <img src=${cart[i].imagenes[0].url} class="item__image">
+                <div class="item__info">
+                <h4 class="item__title">${cart[i].nombre}</h4>
+                <p class="item__price"><span>${cart[i].product_cart}</span> X <span>Rs.  ${(cart[i].precio * cart[i].product_cart).toLocaleString()}</span></p>
+                </div>
+                <div class="item__delete-container">
+                <img src="../src/images/delete.svg" class="item__delete">
+                </div>
+                </div>
+            `;
+      total += cart[i].precio * cart[i].product_cart;
+    }
   }
-  totalHtml.textContent = total;
+  totalHtml.textContent = total.toLocaleString();
   container__items.innerHTML = content;
   // Llamar a btnAddCart después de un par de segundos
-  setTimeout(cargarCarrito, 200);
 }
 
 //Redirección imágenes index a catálogo
@@ -72,7 +78,8 @@ for (let i = 0; i < imagenesDestacadas.length; i++) {
 
 function cargarCarrito() {
   let botonCerrar = document.getElementsByClassName("item__delete");
-
+  console.log("hola");
+  console.log(botonCerrar);
   for (let j = 0; j < botonCerrar.length; j++) {
     let boton = botonCerrar[j];
     boton.addEventListener("click", function () {

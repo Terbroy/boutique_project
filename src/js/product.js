@@ -34,7 +34,7 @@ function fetchProductsCart(product, count) {
   let cart = getCart();
   const existingProduct = cart.find(e => e.id_productos === product.id_productos);
   if (existingProduct) {
-      existingProduct.product_cart = count ? count : existingProduct.product_cart++;
+      count ? existingProduct.product_cart = count : existingProduct.product_cart++;
   } else {
     product.product_cart = count ? count : 1;
       cart.push(product);
@@ -57,8 +57,6 @@ async function addProduct() {
     const btnValue = document.getElementById("product-cant-cart");
     let valor = Number(btnValue.textContent);
     fetchProductsCart(producto, valor);
-
-
 }
 
 
@@ -84,7 +82,7 @@ document.addEventListener("DOMContentLoaded", async (event) => {
             </div>
             <div class="product__info">
             <h1 class="info__title">${product.nombre}</h1>
-            <span class="info__price">$ ${product.precio}</span>
+            <span class="info__price">$ ${product.precio.toLocaleString()}</span>
             <p class="info__text">${product.informacion}</p>
             <div class="info__buttons">
             <button class="info__count">
@@ -113,7 +111,7 @@ document.addEventListener("DOMContentLoaded", async (event) => {
                     <p class="product__title">${product.nombre}</p>
                 </a>
                 <p class="product__description">${product.descripcion}</p>
-                <p class="product__price">${product.precio}</p>
+                <p class="product__price">${product.precio.toLocaleString()}</p>
             </div>
         </div>
         `;
@@ -125,7 +123,6 @@ document.addEventListener("DOMContentLoaded", async (event) => {
       fetchProduct(product.id_productos);
     });
     buttonProduct.addEventListener("click", () => {
-      toggleCart();
       fetchProductsCart(product);
     });
   });
@@ -190,15 +187,3 @@ function restar(cantidad) {
     agregarEventos();
 }
 
-
-
-
-function sumar() {
-  const btnValue = document.getElementById("product-cant-cart");
-  let valor = Number(btnValue.textContent);
-  if(valor >= 1){
-    valor++;
-  }
-  btnValue.textContent = valor;
-  
-}
