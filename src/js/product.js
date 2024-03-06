@@ -40,19 +40,22 @@ function getCart() {
   return cart ? JSON.parse(cart) : [];
 }
 
-function fetchProductsCart(product) {
+function fetchProductsCart(product, count) {
   let cart = getCart();
 
   const existingProduct = cart.find((e) => e.id === product.id);
 
   if (existingProduct) {
-      existingProduct.product_cart++;
+      existingProduct.product_cart = count ? count : existingProduct.product_cart++;
   } else {
-    product.product_cart = 1;
-    cart.push(product);
+    product.product_cart = count ? count : 1;
+      cart.push(product);
   }
   localStorage.setItem("cart-products", JSON.stringify(cart));
+  toggleCart();
 }
+
+
 
 
 async function filterProducts(product) {
@@ -61,18 +64,16 @@ async function filterProducts(product) {
   return filter;
 }
 
-function addProduct() {
-  const btnAdd = document.querySelector(".info__add");
-  btnAdd.addEventListener("click", function () {
-    let producto = fetchProduct();
-    let ensayo = getCart();
-    ensayo = ensayo.concat(producto);
-    localStorage.setItem("cart-products", JSON.stringify(ensayo));
-    console.log(ensayo);
-    console.log(producto);
-  });
+async function addProduct() {
+    let producto = await fetchProduct();
+    const btnValue = document.getElementById("product-cant-cart");
+    let valor = Number(btnValue.textContent);
+    fetchProductsCart(producto, valor);
+
+
 }
-setTimeout(addProduct, 1000);
+
+
 document.addEventListener("DOMContentLoaded", async (event) => {
   let product = await fetchProductPage();
   let filterProduct = filterProducts(product);
@@ -98,12 +99,12 @@ document.addEventListener("DOMContentLoaded", async (event) => {
             <span class="info__price">$ ${product.precio}</span>
             <p class="info__text">${product.informacion}</p>
             <div class="info__buttons">
-            <div class="info__count">
-                <button class="minus">-</button>
-                <input class="product-cant-cart" type="text" value="1" disabled>
-                <button class="plus">+</button>
-            </div>
-            <button class="info__add">Añadir al carrito</button>
+            <button class="info__count">
+            <span class="plus" onclick=restar()>-</span>
+            <span id="product-cant-cart"> 1 </span>
+            <span class="minus" onclick=sumar()>+</span>
+            </button>
+            <button class="info__add" onclick=addProduct()>Añadir al carrito</button>
             </div>
             </div>
             `;
@@ -120,7 +121,7 @@ document.addEventListener("DOMContentLoaded", async (event) => {
                 </div>
             </div>
             <div class="product__text">
-                <a href="../../pages/product.html" id="product-title-${product.id_productos}" class="product__title">
+                <a href="../../pages/product.html?id=${product.id_productos}" id="product-title-${product.id_productos}" class="product__title">
                     <p class="product__title">${product.nombre}</p>
                 </a>
                 <p class="product__description">${product.descripcion}</p>
@@ -211,3 +212,26 @@ function restar(cantidad) {
     document.getElementsByClassName("product-cant-cart")[0].value = cantidad;
     agregarEventos();
 }
+
+
+
+
+function sumar() {
+  const btnValue = document.getElementById("product-cant-cart");
+  let valor = Number(btnValue.textContent);
+  if(valor >= 1){
+    valor++;
+  }
+  btnValue.textContent = valor;
+  
+}
+
+function restar() {
+  const btnValue = document.getElementById("product-cant-cart");
+  let valor = Number(btnValue.textContent);
+  if(valor > 1){
+    valor--;
+  }
+  btnValue.textContent = valor;
+}
+

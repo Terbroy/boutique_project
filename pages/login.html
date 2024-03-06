@@ -12,57 +12,57 @@
 <body>
   <header>
     <nav class="nav nav--light">
-        <div class="nav__logo">
-          <a href="../index.html" class="logo__icon">
-            <img src="../src/images/nav-logo.svg" alt="" class="logo__icon" />
-          </a>
-          <div class="logo__info">
-            <hr />
-            <p class="logo__text">La Boutique de las Flores</p>
-            <hr />
-          </div>
+      <div class="nav__logo">
+        <a href="../index.html" class="logo__icon">
+          <img src="../src/images/nav-logo.svg" alt="" class="logo__icon" />
+        </a>
+        <div class="logo__info">
+          <hr />
+          <p class="logo__text">La Boutique de las Flores</p>
+          <hr />
         </div>
-        <ul class="nav__list">
-          <li class="list__info"><a class="ancor" href="./about.html">¿Quienes Somos?</a></li>
-          <li class="list__info list__info--catalog">
-            <p class="info__catalog"><a href="./catalog.html" class="ancor">Catalogo</a></p>
-            <div class="info__categories">
-              <ul class="categories__list">
-                <li class="list__info"> <a href="./flores-secas.html" class="ancor">Flores secas</a></li>
-                            <li class="list__info"><a href="./bouquets-frescos.html" class="ancor">Bouquets</a></li>
-                            <li class="list__info"><a href="./centros.html" class="ancor">Centros</a></li>
-              </ul>
-            </div>
-            <img src="../src/images/arrow-down.svg" alt="" class="catalog__icon" />
-          </li>
-          <li class="list__info"><a href="../pages/contact.html" class="ancor">Contacto</a></li>
-          <li class="list__info">
-            <a href="../pages/login.html">
-              <img src="../src/images/user-brown.svg" alt="" class="info__icon" />
-            </a>
-          </li>
-          <li class="list__info">
-            <img id="nav-cart" src="../src/images/cart-brown.svg" alt="" class="info__icon info__icon--cart" />
-            <div id="cart" class="cart display--none">
-              <div class="cart__background"></div>
-              <div class="cart__card">
-                <h3 class="cart__title">Shopping Cart</h3>
-                <b class="cart__close" id="cart-close">x</b>
-                <hr />
-                <div class="container__items">
-                
-                </div>
-                <div class="cart__total">
-                  <p class="cart__subtotal">Subtotal</p>
-                  <b id="cart_total" >Rs. 520,000.00</b>
-                </div>
-                <hr />
-                <button class="cart__checkout">Checkout</button>
+      </div>
+      <ul class="nav__list">
+        <li class="list__info"><a class="ancor" href="./about.html">¿Quiénes Somos?</a></li>
+        <li class="list__info list__info--catalog">
+          <p class="info__catalog"><a href="./catalog.html" class="ancor">Catálogo</a></p>
+          <div class="info__categories">
+            <ul class="categories__list">
+              <li class="list__info"> <a href="./flores-secas.html" class="ancor">Flores secas</a></li>
+                          <li class="list__info"><a href="./bouquets-frescos.html" class="ancor">Bouquets</a></li>
+                          <li class="list__info"><a href="./centros.html" class="ancor">Centros</a></li>
+            </ul>
+          </div>
+          <img src="../src/images/arrow-down.svg" alt="" class="catalog__icon" />
+        </li>
+        <li class="list__info"><a href="../pages/contact.html" class="ancor">Contacto</a></li>
+        <li class="list__info">
+          <a href="../pages/login.html">
+            <img src="../src/images/user-brown.svg" alt="" class="info__icon" />
+          </a>
+        </li>
+        <li class="list__info">
+          <img id="nav-cart" src="../src/images/cart-brown.svg" alt="" class="info__icon info__icon--cart" />
+          <div id="container-cart" class="cart display--none">
+            <div class="cart__background"></div>
+            <div class="cart__card">
+              <h3 class="cart__title">Shopping Cart</h3>
+              <b class="cart__close" id="cart-close">x</b>
+              <hr />
+              <div class="container__items">
+              
               </div>
+              <div class="cart__total">
+                <p class="cart__subtotal">Subtotal</p>
+                <b id="cart_total" >Rs. 520,000.00</b>
+              </div>
+              <hr />
+              <button class="cart__checkout">Checkout</button>
             </div>
-          </li>
-        </ul>
-      </nav>
+          </div>
+        </li>
+      </ul>
+    </nav>
 </header>
 
 <article class="total-login">
@@ -95,7 +95,7 @@
             <div class="modal-content">
                 <!--<span class="close">&times;</span>-->
                 <h2>Inicio de sesión exitoso</h2>
-                <button class="imputRes" onclick="redirectCatalog()"> 🌺Catalogo</button>
+                <button class="imputRes" onclick="redirectCatalog()">Catalogo</button>
             </div>
             </div>
           </form>
@@ -111,6 +111,14 @@
                 <button class="imputRes" onclick="resetPassword()">Restablecer Contraseña</button>
             </div>
             </div>
+<!--este es el modal de correo o contraseña incorrecta-->
+            <div id="passwordInvalid" class="modal">
+                <div class="modal-content">
+                    <!--<span class="close">&times;</span>-->
+                    <h2>Correo o Contraseña Incorrecto</h2>
+                    <button class="imputRes" onclick="closeModal()">Verificar</button>
+                </div>
+                </div>                
           </form>
         </div>
 
@@ -138,7 +146,7 @@
             <!--<span class="close">&times;</span>-->
             <h2>Registro Exitoso</h2>
             <p class="pIngresaC">Ahora por favor</p>
-            <button class="imputRes" onclick="redirectLogin()">🌺Inicia Sesion</button>
+            <button class="imputRes" onclick="redirectLogin()">Inicia Sesion</button>
         </div>
         </div>
       </form>

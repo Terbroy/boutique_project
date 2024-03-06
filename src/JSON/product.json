@@ -7,7 +7,6 @@
             "main_info": "Candiolo en bombonera verde. Cada flor, seleccionada con esmero, conserva su frescura y color por años. Con tonos suaves y formas exquisitas, este arreglo añade refinamiento a tu espacio, donde la belleza florece siempre.",
             "description": "Elegancia eterna.",
             "price": 110000,
-            "stock": 100,
             "product_cart": 0,
             "images": [
                 "https://bucaro.es/cdn/shop/products/edIMG_8698.jpg?v=1645628046&width=400",
@@ -25,7 +24,6 @@
             "description": "Centro sobre base de mimbre.",
             "price": 130000,
             "product_cart": 0,
-            "stock": 100,
             "images": [
                 "https://verdepimienta.es/646-large_default/centro-de-flores-anacapri-floristeria-verde-pimienta-las-rozas-majadahonda-pozuelo-madrid.jpg",
                 "https://verdepimienta.es/648-large_default/centro-de-flores-anacapri-floristeria-verde-pimienta-las-rozas-majadahonda-pozuelo-madrid.jpg",
@@ -41,7 +39,6 @@
             "description": "Hortensias y elegante jarrón blanco.",
             "price": 145000,
             "product_cart": 0,
-            "stock": 100,
             "images": [
                 "https://verdepimienta.es/693-large_default/centro-flores-secas-assisi-floristeria-verde-pimienta-las-rozas-majadahonda-pozuelo-madrid.jpg",
                 "https://verdepimienta.es/690-large_default/centro-flores-secas-assisi-floristeria-verde-pimienta-las-rozas-majadahonda-pozuelo-madrid.jpg",
@@ -57,7 +54,6 @@
             "description": "Hortensias seleccionadas.",
             "price": 150000,
             "product_cart": 0,
-            "stock": 100,
             "images": [
                 "https://verdepimienta.es/696-large_default/centro-flores-secas-alessandria-floristeria-verde-pimienta-las-rozas-majadahonda-pozuelo-madrid.jpg",
                 "https://verdepimienta.es/698-large_default/centro-flores-secas-alessandria-floristeria-verde-pimienta-las-rozas-majadahonda-pozuelo-madrid.jpg",
@@ -73,7 +69,6 @@
             "description": "Cuidada selección de flores.",
             "price": 90000,
             "product_cart": 0,
-            "stock": 100,
             "images": [
                 "https://bottanico.es/111-medium_default/ramo-preservado-amarillo.jpg",
                 "https://verdepimienta.es/719-large_default/centro-de-flores-secas-minori-floristeria-verde-pimienta-las-rozas-majadahonda-pozuelo-madrid.jpg",
@@ -88,7 +83,6 @@
             "description": "Pureza y brillo.",
             "price": 95000,
             "product_cart": 0,
-            "stock": 100,
             "images": [
                 "https://lorenamarco.com/cdn/shop/products/118.jpg?v=1707383623&width=600",
                 "https://lorenamarco.com/cdn/shop/products/117.jpg?v=1707383623&width=600",
@@ -104,7 +98,6 @@
             "description": "Personaliza tu ramo.",
             "price": 110000,
             "product_cart": 0,
-            "stock": 100,
             "images": [
                 "https://m.media-amazon.com/images/I/81gnH1AdguL._AC_SX679_.jpg",
                 "https://i.pinimg.com/564x/0b/e5/1a/0be51a1dcbcf9a841b367e40959f555c.jpg",
@@ -120,7 +113,6 @@
             "description": "Energía radiante del girasol.",
             "price": 150000,
             "product_cart": 0,
-            "stock": 100,
             "images": [
                 "https://verdepimienta.es/682-large_default/centro-girasoles-ragusa-floristeria-verde-pimienta-las-rozas-majadahonda-pozuelo-madrid.jpg",
                 "https://verdepimienta.es/686-large_default/centro-girasoles-ragusa-floristeria-verde-pimienta-las-rozas-majadahonda-pozuelo-madrid.jpg",
@@ -137,7 +129,6 @@
             "description": "Composición elegante.",
             "price": 160000,
             "product_cart": 0,
-            "stock": 100,
             "images": [
                 "https://verdepimienta.es/275-large_default/centro-de-flores-alcina-floristeria-verde-pimienta-las-rozas-majadahonda-pozuelo-madrid.jpg",
                 "https://verdepimienta.es/276-large_default/centro-de-flores-alcina-floristeria-verde-pimienta-las-rozas-majadahonda-pozuelo-madrid.jpg",
@@ -154,7 +145,6 @@
             "description": "Derroche de belleza.",
             "price": 120000,
             "product_cart": 0,
-            "stock": 100,
             "images": [
                 "https://verdepimienta.es/239-large_default/centro-flores-pavia-floristeria-verde-pimienta-las-rozas-majadahonda-pozuelo-madrid.jpg",
                 "https://verdepimienta.es/240-large_default/centro-flores-pavia-floristeria-verde-pimienta-las-rozas-majadahonda-pozuelo-madrid.jpg",
@@ -169,7 +159,6 @@
             "description": "Flores frescas y vibrantes.",
             "price": 140000,
             "product_cart": 0,
-            "stock": 100,
             "images": [
                 "https://m.media-amazon.com/images/I/81fv9LZoE9L._AC_SX679_.jpg",
                 "https://verdepimienta.es/239-large_default/centro-flores-pavia-floristeria-verde-pimienta-las-rozas-majadahonda-pozuelo-madrid.jpg",
@@ -184,7 +173,6 @@
             "description": "Elegancia y frescura.",
             "price": 135000,
             "product_cart": 0,
-            "stock": 100,
             "images": [
                 "https://verdepimienta.es/624-large_default/centro-de-flores-alcamo-floristeria-verde-pimienta-las-rozas-majadahonda-pozuelo-madrid.jpg",
                 "https://verdepimienta.es/627-large_default/centro-de-flores-alcamo-floristeria-verde-pimienta-las-rozas-majadahonda-pozuelo-madrid.jpg",
@@ -199,7 +187,6 @@
             "description": "Pureza en cada pétalo.",
             "price": 135000,
             "product_cart": 0,
-            "stock": 100,
             "images": [
                 "https://lorenamarco.com/cdn/shop/products/242.jpg?v=1707383625&width=713",
                 "https://lorenamarco.com/cdn/shop/products/101.jpg?v=1707383625&width=713",
@@ -214,7 +201,6 @@
             "description": "Rojo intenso.",
             "price": 120000,
             "product_cart": 0,
-            "stock": 100,
             "images": [
                 "https://lorenamarco.com/cdn/shop/products/422.jpg?v=1707383802&width=600",
                 "https://lorenamarco.com/cdn/shop/products/421.jpg?v=1707383802&width=713",
@@ -229,7 +215,6 @@
             "description": "Sofisticación y encanto.",
             "price": 140000,
             "product_cart": 0,
-            "stock": 100,
             "images": [
                 "https://lorenamarco.com/cdn/shop/products/247.jpg?v=1707383623&width=713",
                 "https://lorenamarco.com/cdn/shop/products/117.jpg?v=1707383623&width=713",
@@ -244,7 +229,6 @@
             "description": "Mezcla de flores multicolores.",
             "price": 100000,
             "product_cart": 0,
-            "stock": 100,
             "images": [
                 "https://lorenamarco.com/cdn/shop/products/177.jpg?v=1707383654&width=713",
                 "https://mohairflores.com/wp-content/uploads/2022/02/MOHAIR_Sombrerera_S__01.jpg",
@@ -259,7 +243,6 @@
             "description": "Elegancia y exuberancia.",
             "price": 130000,
             "product_cart": 0,
-            "stock": 100,
             "images": [
                 "https://m.media-amazon.com/images/I/61EJY4NLA3L._AC_SX679_.jpg",
                 "https://m.media-amazon.com/images/I/71fBtLazxrL._AC_SY450_.jpg",
