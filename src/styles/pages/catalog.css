@@ -219,6 +219,6 @@
 .hide{
     display: none;
 }
-.product__category{
+.product__category--cat, .product__info--cat{
     display: none;
 }
