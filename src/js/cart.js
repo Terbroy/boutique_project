@@ -5,15 +5,9 @@ document.addEventListener("DOMContentLoaded", e => {
   addCart();
 })
 
-async function getCart() {
-  try {
-    const response = await axios.get(`https://binary-best-boutique.up.railway.app/api/v1/productos/`);
-    console.log(response.data);
-    return response.data;
-  } catch (error) {
-    console.log("Error fetching data:", error);
-    return null;
-  }
+function getCart() {
+  const cart = localStorage.getItem("cart-products");
+  return cart ? JSON.parse(cart) : [];
 }
 
 function toggleCart() {
@@ -52,7 +46,7 @@ function addCart() {
                 <p class="item__price"><span>${cart[i].product_cart}</span> X <span>Rs.  ${(cart[i].precio * cart[i].product_cart).toLocaleString()}</span></p>
                 </div>
                 <div class="item__delete-container">
-                <img src="../src/images/delete.svg" class="item__delete">
+                <img src="../src/images/delete.svg"  class="item__delete">
                 </div>
                 </div>
             `;
@@ -61,7 +55,13 @@ function addCart() {
   }
   totalHtml.textContent = total.toLocaleString();
   container__items.innerHTML = content;
-  // Llamar a btnAddCart después de un par de segundos
+  const botonCerrar = document.getElementsByClassName("item__delete");
+  for (let i = 0; i < botonCerrar.length; i++) {
+    let boton = botonCerrar[i];
+    boton.addEventListener("click", e => {
+      eliminarProducto(i);
+    });
+  }
 }
 
 //Redirección imágenes index a catálogo
@@ -76,22 +76,16 @@ for (let i = 0; i < imagenesDestacadas.length; i++) {
 
 //Funciones carrito
 
-function cargarCarrito() {
-  let botonCerrar = document.getElementsByClassName("item__delete");
-  console.log("hola");
-  console.log(botonCerrar);
-  for (let j = 0; j < botonCerrar.length; j++) {
-    let boton = botonCerrar[j];
-    boton.addEventListener("click", function () {
-      eliminarProducto(j);
-    });
-  }
-}
+  
 
 
 function eliminarProducto(e) {
   const cart = getCart();
+  console.log(e);
   cart.splice(e, 1);
   localStorage.setItem("cart-products", JSON.stringify(cart));
   addCart();
 }
+
+
+
