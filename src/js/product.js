@@ -1,5 +1,5 @@
 let urlParams = new URLSearchParams(window.location.search);
-var productoId = urlParams.get("id");
+var productoId = urlParams.get('id');
 
 const cartHtml = document.getElementById("container-cart");
 
@@ -15,24 +15,14 @@ async function fetchProduct() {
   }
 }
 
-async function fetchProductPage() {
+async function fetchProducts() {
   try {
-    const response = await axios.get(`https://binary-best-boutique.up.railway.app/api/v1/productos/${productoId}`);
-    console.log(response);
+    const response = await axios.get("https://binary-best-boutique.up.railway.app/api/v1/productos");
     return response.data;
-  } catch (error) {
+} catch (error) {
     console.log("Error fetching data:", error);
     return null;
-  }
 }
-
-
-function fetchProduct(id) {
-  let products = fetchProducts();
-  let selectedProduct = products.filter((e) => e.id == id);
-  let selected = selectedProduct[0];
-  localStorage.setItem("selected-product", JSON.stringify(selected));
-  return selected;
 }
 
 function getCart() {
@@ -42,9 +32,7 @@ function getCart() {
 
 function fetchProductsCart(product, count) {
   let cart = getCart();
-
-  const existingProduct = cart.find((e) => e.id === product.id);
-
+  const existingProduct = cart.find(e => e.id_productos === product.id_productos);
   if (existingProduct) {
       existingProduct.product_cart = count ? count : existingProduct.product_cart++;
   } else {
@@ -75,8 +63,8 @@ async function addProduct() {
 
 
 document.addEventListener("DOMContentLoaded", async (event) => {
-  let product = await fetchProductPage();
-  let filterProduct = filterProducts(product);
+  let product = await fetchProduct();
+  let filterProduct = await filterProducts(product);
   const relatedContainer = document.getElementById("related-product");
   const container = document.getElementById("container-product");
   let productHTML = document.createElement("section");
@@ -142,7 +130,6 @@ document.addEventListener("DOMContentLoaded", async (event) => {
     });
   });
   container.insertBefore(productHTML, child);
-  setTimeout(agregarEventos, 500);
 });
 
 // aca va la logica de la calificacion del producto
@@ -181,30 +168,20 @@ function calculateAverageRating(ratings) {
     const avg = total / ratings.length;
     const roundedAvg = Math.round(avg);
     const remainingStars = 5 - roundedAvg;
-    avgOutput.innerHTML = `Calificación promedio: <span class="avg-star">${'★'.repeat(roundedAvg)}</span>${'☆'.repeat(remainingStars)}`
-};
-function agregarEventos() {
-  //Capturamos el input desde el HTML
-  let valor = document.getElementsByClassName("product-cant-cart")[0].value;
-  let cantidad = Number(valor);
-
-  //Capturamos el botón mas desde el HTML y le agregamos un evento listener
-  const botonMas = document.getElementsByClassName("plus")[0];
-  botonMas.addEventListener("click", function () {
-    sumar(cantidad);
-  });
-
-  //Capturamos el botón menos desde el HTML y le agregamos un evento listener
-  const botonMenos = document.getElementsByClassName("minus")[0];
-  botonMenos.addEventListener("click", function () {
-    restar(cantidad);
-  });
+    avgOutput.innerHTML = `Calificación promedio: <span class="avg-star">${'★'.repeat(roundedAvg)}</span>${'☆'.repeat(remainingStars)}`;
 }
 
-function sumar(cantidad) {
-  cantidad++;
-  document.getElementsByClassName("product-cant-cart")[0].value = cantidad;
-  agregarEventos();
+
+
+
+function sumar() {
+  const btnValue = document.getElementById("product-cant-cart");
+  let valor = Number(btnValue.textContent);
+  if(valor >= 1){
+    valor++;
+  }
+  btnValue.textContent = valor;
+  
 }
 
 function restar(cantidad) {
@@ -225,13 +202,3 @@ function sumar() {
   btnValue.textContent = valor;
   
 }
-
-function restar() {
-  const btnValue = document.getElementById("product-cant-cart");
-  let valor = Number(btnValue.textContent);
-  if(valor > 1){
-    valor--;
-  }
-  btnValue.textContent = valor;
-}
-

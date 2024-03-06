@@ -132,9 +132,10 @@
     display: flex;
     gap: .5rem;
     color: var(--text-brown);
-    background-color: #e6d3bc;
-    border-color: #aa9479;
+    justify-content: center;
     align-items: center;
+    border: none;
+    background-color: white;
 }
 
 .minus, .plus{
