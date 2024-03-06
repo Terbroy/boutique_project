@@ -1,6 +1,8 @@
 const containerCart = document.getElementById("container-cart");
 const totalHtml = document.getElementById("cart_total");
 
+
+
 document.addEventListener("DOMContentLoaded", e => {
   addCart();
 })
@@ -88,4 +90,26 @@ function eliminarProducto(e) {
 }
 
 
+const checkout = document.getElementById("cart__checkout");
+checkout.addEventListener("click",e=> openWhatsapp())
 
+function openWhatsapp() {
+  const cart = getCart();
+
+let message = "Hola!, estoy interesado en los siguientes productos \n";
+
+for (const product of cart) {
+  message += `${product.nombre} - Unidades: ${product.product_cart}\n`;
+}
+
+message += `${totalHtml.textContent}`
+
+const encodedMessage = encodeURIComponent(message);
+
+const whatsappNumber = "+573122413432";
+
+const url = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodedMessage}`;
+
+window.open(url, "_blank");
+
+}

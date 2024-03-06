@@ -181,7 +181,7 @@ function sumar() {
   
 }
 
-function restar(cantidad) {
+function restar() {
   const btnValue = document.getElementById("product-cant-cart");
   let valor = Number(btnValue.textContent);
   if(valor > 1){
