@@ -9,7 +9,10 @@ function toggleCart() {
 /******************************** */
 document.addEventListener("DOMContentLoaded", e =>{
     displayProductsInCatalog();
-})
+    const button = document.querySelector('#button__search');
+  button.addEventListener('click', () => {
+    button.classList.add('active')});
+});
 
 async function fetchProductData() {
     try {
@@ -38,7 +41,6 @@ function fetchProductsCart(product) {
     toggleCart();
 
 }
-
 async function displayProductsInCatalog(){
     const padreProductos = document.getElementById("padreProductos");
     const products = await fetchProductData();
@@ -58,6 +60,7 @@ async function displayProductsInCatalog(){
                     <p class="product__title">${product.nombre}</p>
                 </a>
                 <p class="product__description">${product.descripcion}</p>
+                <p class="product__category">${product.categorias}</p>
                 <p class="product__price">$${product.precio}</p>
             </div>
         </div>
@@ -71,10 +74,61 @@ async function displayProductsInCatalog(){
         fetchProductsCart(product);
     } );
     })
-
+    filterProduct("Todos");
 }
 
+//CATEGORY - FILTER
+function filterProduct(value) {
+  let buttons = document.querySelectorAll(".list__filter");
+  buttons.forEach((button) => {
+    if (value == button.innerText) {
+      button.classList.add("active");
+    } else {
+      button.classList.remove("active");
+    }
+  });
 
+  const products = document.querySelectorAll(".product--cart");
+  products.forEach((product) => {
+    if (value === "Todos" || product.querySelector(".product__category").innerText.includes(value)) {
+      product.classList.remove("hide");
+    } else {
+      product.classList.add("hide");
+    }
+  });
+}
 
+function searchProduct(value){
+  let buttonSearch = document.querySelector("#button__search");
+  let searchInput = document.getElementById("search__input").value.toLowerCase();
+  const products = document.querySelectorAll(".product--cart");
+  buttonSearch.forEach((searchButton)=>{
+    if (value == button.innerText) {
+      button.classList.add("active");
+    } else {
+      button.classList.remove("active");
+    }
+  });
 
+  products.forEach((product) => {
+    if (product.innerText.toLowerCase().includes(searchInput)) {
+      product.classList.remove("hide");
+    } else {
+      product.classList.add("hide");
+    }
+  });
 
+}
+//SEARCH
+  //   document.getElementById("button__search").addEventListener("click", () => {
+  //   let searchInput = document.getElementById("search__input").value.toLowerCase();
+  //   const products = document.querySelectorAll(".product--cart");
+  
+  //   products.forEach((product) => {
+  //     if (product.innerText.toLowerCase().includes(searchInput)) {
+  //       product.classList.remove("hide");
+  //     } else {
+  //       product.classList.add("hide");
+  //     }
+  //   });
+  // });
